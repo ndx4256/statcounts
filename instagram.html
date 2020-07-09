@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<title>Real-Time Insta Followers Count</title>
+		<link rel="stylesheet" href="odometer-theme-minimal.css" />
+		<script src="odometer.js"></script>
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" href="livecountsbutreddit.css" />
+		
+	<style>
+	
+	*{font-family:Arial !Important}
+	
+	</style>
+	
+		<style>
+		
+		#channelSubs{
+		
+			font-size:32vh;
+			text-align: center;
+		
+		}
+		
+		</style>
+	
+	
+		<style>
+		
+		</style>
+	
+	<style>
+	
+	.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: Arial, sans-serif;
+    line-height: 1.25em
+}
+	
+	</style>
+	
+<style>
+
+#channelSubs,
+#container,
+#subscribeButton,
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
+canvas {
+    position: absolute
+}
+
+</style>
+<style>
+
+
+</style>
+	</head>
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+	
+		var channelName = "";
+		
+		loadChannel("Instagram")
+		
+		function loadChannel(name) {
+			channelName = name;
+			var url = 'https://www.instagram.com/'+name+'/?__a=1'
+			$.getJSON(url, function(data) {
+				channelSubs.innerHTML = data.graphql.user.edge_followed_by.count
+			});
+			
+			var url1 = 'https://www.instagram.com/'+name+'/?__a=1'
+			$.getJSON(url1, function(data){
+				PostContents.innerHTML = data.graphql.user.full_name
+			
+			});
+		}
+		
+		setInterval(function() {
+		
+						var url = 'https://www.instagram.com/'+channelName+'/?__a=1'
+			$.getJSON(url, function(data) {
+				channelSubs.innerHTML = data.graphql.user.edge_followed_by.count
+			});
+			
+		}, 2000);
+		
+		$('#updateChannel').click( function() {
+			loadChannel($('#choose').val());
+			
+		});
+			
+		
+	
+	});
+	
+	
+	</script>
+		<body id="body" style="background-color: rgb(208, 228, 254);">
+				<input id="subscribeButton" type="submit" value="Follow!" style="opacity: 1.007; display: block;">
+				<b id=channelName" style="color: rgb(0, 0, 0); border: 3px none green;"></b>
+				
+				<a style="font-size:2vh;">RealTime Instagram Follower Count by xdn#2049</a>
+				<input type="text" id="choose"></input>
+				<button id="updateChannel">Change Account</button>
+<br></br>
+				<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+									
+
+
+				
+					
+					<p style="font-size: 6vh;"id="PostContents">ay lmao</p>
+				<div class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</div>
+				<br></br>
+	
+				
+				
+				
+			<center>
+			
+			</center>
+			<div id="footerBar"><span id="shareButton"></span><img id="menuIcon" src="https://livecounts.net/menu.svg" alt="Menu" width="25" height="25" onclick="XX()"><div id="menuContent" style="display: none;"><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/privacy/" target="_blank" onclick="YY()">Privacy policy</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/schedule/" target="_blank" onclick="YY()">Schedule</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/giveaway/" target="_blank" onclick="YY()">Giveaway</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/auction/" target="_blank" onclick="YY()">Auction</a></div><hr class="menuDivider"><div class="menuItem"><input id="advancedSearch" type="checkbox" onchange="AO()"><div class="menuItemText">Advanced search</div></div><div class="menuItem"><input id="nightMode" type="checkbox" onchange="AB()"><div class="menuItemText">Night mode</div></div><div class="menuItem"><input id="sound" type="checkbox" onchange="AC()"><div class="menuItemText">Sound</div></div><hr class="menuDivider"><div class="menuItem"><input id="milestone" type="radio" name="smallCount" onchange="AE()"><div class="menuItemText">Subscribers to milestone</div></div><div class="menuItem"><input id="viewCount" type="radio" name="smallCount" onchange="AF()"><div class="menuItemText">View count</div></div><hr class="menuDivider"><div id="bgColor" class="menuItem" onclick="AK()"><div id="bgColorOverlay" class="overlay" style="display:none"></div><div id="bgColorBox" class="colorBox" style="background-color: rgb(208, 228, 254);"></div><input id="bgColorInput" class="colorInput" type="color" value="#d0e4fe" onchange="AG()">Background color...</div><hr class="menuDivider"><div class="menuItem"><div class="menuItemText" onclick="AM()">Reset settings</div></div></div></div>
+		</body>
+</html>
