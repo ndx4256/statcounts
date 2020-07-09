@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">StatCounts - Reddit Upvote Counter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">API</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="alert alert-danger">
+        <strong>News:</strong> IMPORTANT: The site is going to be BROKEN for some time. as im replacing the CSS files slowly. sorry for the trouble bois
+      </div>
+
+<body style="background-color: rgb(74, 74, 74);">
+
 <html>
 	<head>
 		<title>Live Reddit Subscriber Counter</title>
@@ -16,8 +42,8 @@
 		
 		#channelSubs{
 		
-			font-size:32vh;
-			text-align: center;
+			font-size:12vh;
+			
 		
 		}
 		
@@ -46,7 +72,7 @@
 .odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
 .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
 canvas {
-    position: absolute
+    
 }
 
 </style>
@@ -81,7 +107,8 @@ canvas {
 		
 						var url = 'https://www.reddit.com/r/'+channelName+'.json?limit=1'
 			$.getJSON(url, function(data) {
-				channelSubs.innerHTML = (data.data.children[0].data.subreddit_subscribers)
+                channelSubs.innerHTML = (data.data.children[0].data.subreddit_subscribers)
+                
 			});
 			
 		}, 2000);
@@ -98,33 +125,28 @@ canvas {
 	
 	</script>
 		<body id="body" style="background-color: rgb(208, 228, 254);">
-				<input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 1.007; display: block;">
-				<b id=channelName" style="color: rgb(0, 0, 0); border: 3px none green;"></b>
 				
-				<a style="font-size:2vh;">RealTime Reddit Subscriber Count by xdn#2049</a>
-				<input type="text" id="choose" placeholder="Subreddit name (no r/)"></input>
-				<button id="updateChannel">Change subreddit</button>
-<br></br>
-				<br></br>
-					<br></br>
-					<br></br>
-					<br></br>
+				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
+				
+				
+				
+
 									
 
 
-				
-					
-					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p>
-				<div class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</div>
 				<br></br>
-	
+					<div class="container p-3 my-3 bg-dark text-white">       
+                        <img src="https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/08/Reddit-logo.png?fit=900%2C900" alt="Reddit-logo" style="width:150px">
+					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Subscribers</p>
+                <input type="text" id="choose" placeholder="Subreddit name (no r/)"></input>
+				<button type="button" class="btn btn-danger">Change Subreddit</button>
+				
+            </div>
 				
 				
 				
-			<center>
-			
-			</center>
-            <!--the following is stolen from livecounts.net lmfao dont kill me -->
-			<div id="footerBar"><span id="shareButton"></span><img id="menuIcon" src="https://livecounts.net/menu.svg" alt="Menu" width="25" height="25" onclick="XX()"><div id="menuContent" style="display: none;"><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/privacy/" target="_blank" onclick="YY()">Privacy policy</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/schedule/" target="_blank" onclick="YY()">Schedule</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/giveaway/" target="_blank" onclick="YY()">Giveaway</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/auction/" target="_blank" onclick="YY()">Auction</a></div><hr class="menuDivider"><div class="menuItem"><input id="advancedSearch" type="checkbox" onchange="AO()"><div class="menuItemText">Advanced search</div></div><div class="menuItem"><input id="nightMode" type="checkbox" onchange="AB()"><div class="menuItemText">Night mode</div></div><div class="menuItem"><input id="sound" type="checkbox" onchange="AC()"><div class="menuItemText">Sound</div></div><hr class="menuDivider"><div class="menuItem"><input id="milestone" type="radio" name="smallCount" onchange="AE()"><div class="menuItemText">Subscribers to milestone</div></div><div class="menuItem"><input id="viewCount" type="radio" name="smallCount" onchange="AF()"><div class="menuItemText">View count</div></div><hr class="menuDivider"><div id="bgColor" class="menuItem" onclick="AK()"><div id="bgColorOverlay" class="overlay" style="display:none"></div><div id="bgColorBox" class="colorBox" style="background-color: rgb(208, 228, 254);"></div><input id="bgColorInput" class="colorInput" type="color" value="#d0e4fe" onchange="AG()">Background color...</div><hr class="menuDivider"><div class="menuItem"><div class="menuItemText" onclick="AM()">Reset settings</div></div></div></div>
-		</body>
+        </body>
+    </head>
 </html>
