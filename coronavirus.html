@@ -173,6 +173,9 @@ img {
 		type: "GET",
 		success: function(data){
 			var confirmedCases = $($(data).find('div.maincounter-number span')[0]).text().replace(/,/g, "");
+			   var deaths = $($(data).find('.maincounter-number')[1]).text().replace(/,/g, "");
+			var recovered = $($(data).find('.maincounter-number')[2]).text().replace(/,/g, "");
+			var activecases = $($(data).find('div.number-table-main')[0]).text().replace(/,/g, "");
 			channelSubs.innerHTML = confirmedCases
             channelSubs2.innerHTML = deaths
             channelSubs3.innerHTML = activecases
