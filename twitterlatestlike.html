@@ -47,6 +47,13 @@
 		
 		}
 		
+
+        #channelSubs2{
+		
+        font-size:5vh;
+        
+    
+    }
 		</style>
 	
 	
@@ -112,6 +119,7 @@ margin-right: auto;
 			var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+name+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data.status.favorite_count
+                channelSubs2.innerHTML = data.status.retweet_count
 			});
 			
 			var url1 = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+name+''
@@ -126,6 +134,7 @@ margin-right: auto;
 						var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+channelName+''
 			$.getJSON(url, function(data) {
                 channelSubs.innerHTML = (data.status.favorite_count)
+                channelSubs2.innerHTML = data.status.retweet_count
                 $('#imagething').html('<img src="'+data.profile_image_url_https+'"< style="width:150px" id="imagething2"/img>');
 			});
 			
@@ -162,9 +171,10 @@ margin-right: auto;
 				<button id="updateChannel" type="button" class="btn btn-danger">Change User</button>
 				
             </div>
-											       <br></br>
+											    
 					<div class="container p-3 my-3 bg-dark text-white">
-				<p>This Counter is taken directly from the Twitter API. Meaning it's 100% accurate.</p>
+                        <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="subscriberslola" style="color: rgb(230, 230, 230);">Latest Tweet Retweets</p>
 				
             </div>
 											       
