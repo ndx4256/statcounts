@@ -83,9 +83,6 @@ canvas {
     color: white;
 }
 
-img {
-    border-radius: 50%;
-  }
 
 #imagething {
     border: solid .5vh !Important;
@@ -129,7 +126,7 @@ margin-right: auto;
 						var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+channelName+''
 			$.getJSON(url, function(data) {
                 channelSubs.innerHTML = (data.status.favorite_count)
-                $('#imagething').html('<img src="'+data.profile_image_url_https+'"< style="width:150px" id="imagething"/img>');
+                $('#imagething').html('<img src="'+data.profile_image_url_https+'"< style="width:150px" id="imagething2"/img>');
 			});
 			
 		}, 2000);
