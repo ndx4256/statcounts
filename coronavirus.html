@@ -46,6 +46,26 @@
 			
 		
 		}
+
+        #channelSubs2{
+		
+        font-size:5vh;
+        
+    
+    }
+    #channelSubs3{
+		
+        font-size:5vh;
+        
+    
+    }
+
+    #channelSubs4{
+		
+        font-size:5vh;
+        
+    
+    }
 		
 		</style>
 	
@@ -131,8 +151,14 @@ img {
 		url: cors[Math.floor(Math.random()*cors.length)] + url,
 		type: "GET",
 		success: function(data){
-			var confirmedCases = $($(data).find('div.maincounter-number span')[0]).text().replace(/,/g, "");
-			channelSubs.innerHTML = confirmedCases
+			var Cases = $($(data).find('div.maincounter-number span')[0]).text().replace(/,/g, "");
+            var deaths = $($(data).find('.maincounter-number')[1]).text().replace(/,/g, "");
+			var recovered = $($(data).find('.maincounter-number')[2]).text().replace(/,/g, "");
+			var activecases = $($(data).find('div.number-table-main')[0]).text().replace(/,/g, "");
+			channelSubs.innerHTML = Cases
+            channelSubs2.innerHTML = deaths
+            channelSubs3.innerHTML = activecases
+            channelSubs4.innerHTML = recovered
 		},
 		error: function(){}
 	
@@ -148,6 +174,9 @@ img {
 		success: function(data){
 			var confirmedCases = $($(data).find('div.maincounter-number span')[0]).text().replace(/,/g, "");
 			channelSubs.innerHTML = confirmedCases
+            channelSubs2.innerHTML = deaths
+            channelSubs3.innerHTML = activecases
+            channelSubs4.innerHTML = recovered
 		},
 		error: function(){}
 	
@@ -186,6 +215,15 @@ img {
 				<button id="updateChannel" type="button" class="btn btn-danger">You may not change this counter.</button>
 				
             </div>
+            <div class="container p-3 my-3 bg-dark text-white"> 
+                <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(255, 255, 255);">0</p> 
+                <p id="subscriberslola2" style="color: rgb(230, 230, 230);">dead corona bois</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs3" style="color: rgb(255, 255, 255);">0</p> 
+                <p id="subscriberslola2" style="color: rgb(230, 230, 230);">Active Corona bois</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs4" style="color: rgb(255, 255, 255);">0</p> 
+                <p id="subscriberslola3" style="color: rgb(230, 230, 230);">safe (recovered) corona bois</p>
+            </div>
+            
 				
 				
 				
