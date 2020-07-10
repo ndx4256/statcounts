@@ -123,7 +123,7 @@ img {
 			channelName = name;
 			var url = 'https://api.allorigins.win/raw?url=https://raw-yt-api.t1ch.com/yt_channels/'+name+''
 			$.getJSON(url, function(data) {
-				channelSubs.innerHTML = data.items[0].statistics.numbers.estimate
+				channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 			});
 			
 			var url1 = 'https://api.allorigins.win/raw?url=https://raw-yt-api.t1ch.com/yt_channels/'+name+'';
@@ -136,9 +136,9 @@ img {
 		
 		setInterval(function() {
 		
-						var url = 'https://api.allorigins.win/raw?url=https://bastet.socialblade.com/youtube/lookup?query='+channelName+''
+						var url = 'https://api.allorigins.win/raw?url=https://raw-yt-api.t1ch.com/yt_channels/'+channelName+''
 			$.getJSON(url, function(data) {
-				channelSubs.innerHTML = (data)
+				channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 			});
 			
 		}, 2000);
