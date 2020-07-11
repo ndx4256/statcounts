@@ -181,14 +181,14 @@ function v() {
     // points = points + 1;
     // p.innerHTML =  "times clicked "+points;
     var request = new XMLHttpRequest();
-    request.open("POST", "https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/points");
+    request.open("POST", "http://global-clicker.mrcode.io/points");
     request.send();
 }
 
 function gp() {
     var request = new XMLHttpRequest();
     request.addEventListener("load", z);
-    request.open("GET", "https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints");
+    request.open("GET", "http://global-clicker.mrcode.io/getpoints");
     request.send();
 
 }
