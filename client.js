@@ -23,6 +23,4 @@ function gp() {
 
 function z() {
     var points = this.response;
-    console.log(points)
-    p.innerHTML = "times clicked " + points;
 }
