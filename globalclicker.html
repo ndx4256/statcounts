@@ -116,7 +116,7 @@ margin-right: auto;
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://cors-anywhere.herokuapp.com/http://global-clicker.mrcode.io/getpoints'
+			var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data
                 
@@ -126,7 +126,7 @@ margin-right: auto;
 		
 		setInterval(function() {
 		
-						var url = 'https://cors-anywhere.herokuapp.com/http://global-clicker.mrcode.io/getpoints'
+						var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
 			$.getJSON(url, function(data) {
                 channelSubs.innerHTML = data
                 
