@@ -168,7 +168,39 @@ margin-right: auto;
 				
             </div>
             <div class="container p-3 my-3 bg-dark text-white"> 
-                <a button href="http://global-clicker.mrcode.io/"  type="button" class="btn btn-danger btn-block">go to clicker site</button></a>
+				<button id="y" type="button" class="btn btn-danger">+1 click</button>
+				<script type="text/javascript">
+					var u = document.getElementById("y");
+u.addEventListener("click", v);
+
+var p = document.getElementById("r");
+gp();
+setInterval(gp, 100);
+
+function v() {
+    // points = points + 1;
+    // p.innerHTML =  "times clicked "+points;
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://global-clicker.mrcode.io/points");
+    request.send();
+}
+
+function gp() {
+    var request = new XMLHttpRequest();
+    request.addEventListener("load", z);
+    request.open("GET", "http://global-clicker.mrcode.io/getpoints");
+    request.send();
+
+}
+
+function z() {
+    var points = this.response;
+    console.log(points)
+    p.innerHTML = "times clicked " + points;
+}
+
+				</script>
+				
             </div>
 											    
 				
