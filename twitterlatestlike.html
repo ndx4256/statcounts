@@ -133,7 +133,12 @@ margin-right: auto;
 		
 						var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+channelName+''
 			$.getJSON(url, function(data) {
-                channelSubs.innerHTML = (data.status.favorite_count)
+                if (data.status.favorite_count == 0) {
+                    channelSubs.innerHTML = data.status.retweeted_status.favorite_count
+                } else {
+                    channelSubs.innerHTML = data.status.favorite_count
+                }
+                
                 channelSubs2.innerHTML = data.status.retweet_count
                 $('#imagething').html('<img src="'+data.profile_image_url_https+'"< style="width:150px" id="imagething2"/img>');
 			});
