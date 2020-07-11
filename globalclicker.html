@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">StatCounts - Real-Time Global Clicker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">API</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="alert alert-danger">
+        <strong>News:</strong> want to add to this counter? click the link below the counter to join in!
+      </div>
+
+<body style="background-color: rgb(74, 74, 74);">
+
+<html>
+	<head>
+		<title>Real-Time Global Clicker</title>
+		<link rel="stylesheet" href="odometer-theme-minimal.css" />
+		<script src="odometer.js"></script>
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" href="livecountsbutreddit.css" />
+		
+	<style>
+	
+	*{font-family:Arial !Important}
+	
+	</style>
+	
+		<style>
+		
+		#channelSubs{
+		
+			font-size:12vh;
+			
+		
+		}
+		
+
+        #channelSubs2{
+		
+        font-size:5vh;
+        
+    
+    }
+		</style>
+	
+	
+		<style>
+		
+		</style>
+	
+	<style>
+	
+	.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: Arial, sans-serif;
+    line-height: 1.25em
+}
+	
+	</style>
+	
+<style>
+
+#channelSubs,
+#container,
+#subscribeButton,
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
+canvas {
+    
+}
+
+</style>
+<style>
+*{text-align: center;}
+
+#PostContents {
+    color: white;
+}
+
+
+#imagething2 {
+    border: solid .5vh !Important;
+    border-radius: 100%;
+    border-color: rgb(255, 255, 255) !Important;
+}
+
+#imagething {
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+</style>
+	</head>
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+	
+		var channelName = "";
+		
+		loadChannel("realdonaldtrump")
+		
+        function loadChannel(name) {
+			channelName = name;
+			var url = 'https://cors-anywhere.herokuapp.com/http://global-clicker.mrcode.io/getpoints'
+			$.getJSON(url, function(data) {
+				channelSubs.innerHTML = data
+                
+			});
+			
+		}
+		
+		setInterval(function() {
+		
+						var url = 'https://cors-anywhere.herokuapp.com/http://global-clicker.mrcode.io/getpoints'
+			$.getJSON(url, function(data) {
+                channelSubs.innerHTML = data
+                
+                
+                
+			});
+			
+		}, 2000);
+		
+		$('#updateChannel').click( function() {
+			loadChannel($('#choose').val());
+			
+		});
+			
+		
+	
+	});
+	
+	
+	</script>
+		<body id="body" style="background-color: rgb(208, 228, 254);">
+				
+				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
+				
+				
+				
+
+									
+
+
+				<br></br>
+					<div class="container p-3 my-3 bg-dark text-white">       
+                        <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/globe-512.png" id="imagething2" style="width:150px"></p>
+					<p style="font-size: 6vh;"id="PostContents">Global Clicks</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Clicks</p>
+                <input type="text" id="choose" placeholder=""></input>
+				<button id="updateChannel" type="button" class="btn btn-danger">you may not change this counter</button>
+				
+            </div>
+            <div class="container p-3 my-3 bg-dark text-white"> 
+                <a button href="http://global-clicker.mrcode.io/"  type="button" class="btn btn-danger btn-block">go to clicker site</button></a>
+            </div>
+											    
+				
+											       
+				
+				
+				
+        </body>
+    </head>
+</html>
