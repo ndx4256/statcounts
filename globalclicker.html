@@ -117,7 +117,7 @@ margin-right: auto;
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = '/getpoints'
+			var url = 'http://site.statcounts.com/getpoints'
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data
                 
@@ -127,7 +127,7 @@ margin-right: auto;
 		
 		setInterval(function() {
 		
-						var url = '/getpoints'
+						var url = 'http://site.statcounts.com/getpoints'
 			$.getJSON(url, function(data) {
                 channelSubs.innerHTML = data
                 
