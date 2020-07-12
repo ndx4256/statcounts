@@ -54,6 +54,13 @@
         
     
     }
+
+    #Milestone{
+		
+        font-size:5vh;
+        
+    
+    }
 		</style>
 	
 	
@@ -130,6 +137,9 @@ margin-right: auto;
             </div>
             <div class="container p-3 my-3 bg-dark text-white"> 
                 <a button="" href="http://global-clicker.mrcode.io" type="button" class="btn btn-danger btn-block">Add to This Counter!</a>
+                <br></br>
+                <p class="odometer odometer-auto-theme" id="Milestone" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Clicks to 100M</p>
                 <div id="chart"></div>
             </div>
             <script src="https://code.highcharts.com/stock/highstock.js"></script>
@@ -209,6 +219,9 @@ margin-right: auto;
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data
 
+            var goalhandle = 100000000 - data
+            Milestone.innerHTML = goalhandle
+
             var chartthingidk = data
             chart.series[0].addPoint([Date.now(),chartthingidk])
         });
@@ -220,6 +233,10 @@ margin-right: auto;
                     var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data
+            var goalhandle = 100000000 - data
+            Milestone.innerHTML = goalhandle
+            
+
             var chartthingidk = data
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),chartthingidk])
