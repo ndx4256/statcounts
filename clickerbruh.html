@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <p id="channelSubs">0</p>
+
+<script type="text/javascript">
+
+
+        var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
+        $.getJSON(url, function(data) {
+            channelSubs.innerHTML = data
+        });
+        
+
+
+setInterval(function() {
+    
+    var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
+$.getJSON(url, function(data) {
+channelSubs.innerHTML = data
+
+});
+
+}, 1000);
+    </script>
+    </head>
+    </html>
+    
