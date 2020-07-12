@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
@@ -26,7 +26,6 @@
 
 <html>
 	<head>
-		
 		<title>Real-Time Global Clicker</title>
 		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
@@ -117,7 +116,7 @@ margin-right: auto;
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'http://site.statcounts.com/getpoints'
+			var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data
                 
@@ -127,7 +126,7 @@ margin-right: auto;
 		
 		setInterval(function() {
 		
-						var url = 'http://site.statcounts.com/getpoints'
+						var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
 			$.getJSON(url, function(data) {
                 channelSubs.innerHTML = data
                 
@@ -169,40 +168,30 @@ margin-right: auto;
 				
             </div>
             <div class="container p-3 my-3 bg-dark text-white"> 
-				<button id="y" type="button" class="btn btn-danger">+1 click</button>
-				<script type="text/javascript">
-					var u = document.getElementById("y");
-u.addEventListener("click", v);
-
-var p = document.getElementById("r");
-gp();
-setInterval(gp, 100);
-
-function v() {
-    // points = points + 1;
-    // p.innerHTML =  "times clicked "+points;
-    var request = new XMLHttpRequest();
-    request.open("POST", "/points");
-    request.send();
-}
-
-function gp() {
-    var request = new XMLHttpRequest();
-    request.addEventListener("load", z);
-    request.open("GET", "/getpoints");
-    request.send();
-
-}
-
-function z() {
-    var points = this.response;
-    console.log(points)
-}
-
-				</script>
-				
+				<div id='outerdiv'>
+					<iframe src="http://global-clicker.mrcode.io/" id='inneriframe' scrolling=no></iframe>
+					</div>
             </div>
-											    
+			<style>
+				#outerdiv
+				{
+				width:316px;
+				height:193px;
+				overflow:hidden;
+				position:relative;
+				}
+				
+				#inneriframe
+				{
+				position:absolute;
+				top:-200px;
+				left:-475px;
+				right: 100px;
+				width:1280px;
+				height:1200px;
+				
+				}
+				</style>				    
 				
 											       
 				
