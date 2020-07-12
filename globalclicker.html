@@ -219,8 +219,13 @@ margin-right: auto;
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data
 
-            var goalhandle = 100000000 - data
+            if (data > 50000000) {
+            var goalhandle = 60000000 - data
             Milestone.innerHTML = goalhandle
+            } else {
+                var goalhandle = 70000000 - data
+            Milestone.innerHTML = goalhandle
+            }
 
             var chartthingidk = data
             chart.series[0].addPoint([Date.now(),chartthingidk])
@@ -233,9 +238,13 @@ margin-right: auto;
                     var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data
-            var goalhandle = 100000000 - data
+            if (data > 50000000) {
+            var goalhandle = 60000000 - data
             Milestone.innerHTML = goalhandle
-            
+            } else {
+                var goalhandle = 70000000 - data
+            Milestone.innerHTML = goalhandle
+            }
 
             var chartthingidk = data
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
