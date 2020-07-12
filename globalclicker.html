@@ -107,45 +107,6 @@ margin-right: auto;
 </style>
 	</head>
 	<script type="text/javascript">
-	
-	$(document).ready(function() {
-	
-		var channelName = "";
-		
-		loadChannel("realdonaldtrump")
-		
-        function loadChannel(name) {
-			channelName = name;
-			var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
-			$.getJSON(url, function(data) {
-				channelSubs.innerHTML = data
-                
-			});
-			
-		}
-		
-		setInterval(function() {
-		
-						var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
-			$.getJSON(url, function(data) {
-                channelSubs.innerHTML = data
-                
-                
-                
-			});
-			
-		}, 2000);
-		
-		$('#updateChannel').click( function() {
-			loadChannel($('#choose').val());
-			
-		});
-			
-		
-	
-	});
-	
-	
 	</script>
 		<body id="body" style="background-color: rgb(208, 228, 254);">
 				
@@ -168,12 +129,119 @@ margin-right: auto;
 				
             </div>
             <div class="container p-3 my-3 bg-dark text-white"> 
-				<a button="" href="http://global-clicker.mrcode.io" type="button" class="btn btn-danger btn-block">Add to This Counter!</a>
+                <a button="" href="http://global-clicker.mrcode.io" type="button" class="btn btn-danger btn-block">Add to This Counter!</a>
+                <div id="chart"></div>
             </div>
-											    
-				
+            <script src="https://code.highcharts.com/stock/highstock.js"></script>
+            						    
+            <script type="text/javascript">
+            var line = "#ff5454"
+
+            var chart = new Highcharts.chart({
+  chart: {
+      renderTo: 'chart',
+      type: 'spline',
+        zoomType: 'x',
+        backgroundColor: 'transparent',
+        plotBorderColor: 'transparent'
+  },
+  title: {
+      text: 'Total Clicks'
+  },
+  xAxis: {
+      type: 'datetime',
+      tickPixelInterval: 500,
+        gridLineColor: '#666666',
+        labels: {
+            style: {
+                color: '#ff5454'
+            }
+        },
+        lineColor: line,
+        minorGridLineColor: '#505053',
+        tickColor: line,
+        title: {
+            style: {
+                color: '#ff7d7d'
+            }
+        }
+  },
+  yAxis: {
+      title: {
+          text: ''
+      },
+        gridLineColor: 'transparent',
+        labels: {
+            style: {
+                color: '#666666'
+            }
+        },
+        lineColor: '#ff5454',
+        minorGridLineColor: 'transparent',
+        tickColor: '#666666'
+  },
+  credits: {
+      enabled: false,
+      text: ""
+  },
+
+  series: [{
+    showInLegend: false,
+     name: 'Total # of Clicks',
+    marker: { enabled: false },
+    color: '#ff5454',
+    lineColor: '#ff5454'
+  }]
+});
+            
+            </script>	
 											       
-				
+                <script type="text/javascript">
+                    $(document).ready(function() {
+	
+    var channelName = "";
+    
+    loadChannel("realdonaldtrump")
+    
+    function loadChannel(name) {
+        channelName = name;
+        var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
+        $.getJSON(url, function(data) {
+            channelSubs.innerHTML = data
+
+            var chartthingidk = data
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+        });
+        
+    }
+    
+    setInterval(function() {
+    
+                    var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
+        $.getJSON(url, function(data) {
+            channelSubs.innerHTML = data
+            var chartthingidk = data
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+            
+            
+            
+        });
+        
+    }, 2000);
+    
+    $('#updateChannel').click( function() {
+        loadChannel($('#choose').val());
+        
+    });
+        
+    
+
+});
+
+                
+                
+                </script>
 				
 				
         </body>
