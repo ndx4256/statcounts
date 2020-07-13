@@ -247,6 +247,62 @@ lineColor: '#ff5454'
 	
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
+		chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'spline',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: 'Subscribers'
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#ff5454',
+labels: {
+style: {
+    color: 'transparent'
+}
+},
+lineColor: '#ff5454',
+minorGridLineColor: 'transparent',
+tickColor: '#00000',
+title: {
+style: {
+    color: '#000'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#666666'
+}
+},
+lineColor: '#ff5454',
+minorGridLineColor: 'transparent',
+tickColor: 'transparent'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Subscribers',
+marker: { enabled: false },
+color: '#ff5454',
+lineColor: '#ff5454'
+}]
+});
 		
 	});
 		
