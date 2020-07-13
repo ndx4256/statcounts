@@ -144,8 +144,8 @@ img {
 
 				<br></br>
 					<div class="container p-3 my-3 bg-dark text-white">       
-                        
-					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p> <p id="imagething" style="width:150px"></p>
+                        <p id="imagething" style="width:150px"></p>
+					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p> 
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
                 <p id="subscriberslola" style="color: rgb(230, 230, 230);">Subscribers</p>
                 <input type="text" id="choose" placeholder="Channel ID"></input>
@@ -153,8 +153,9 @@ img {
                 <button id="updateChannel" type="button" class="btn btn-danger">Change Channel</button>
                 <br></br>
                 <p class="odometer odometer-auto-theme" id="apicount" style="color: rgb(255, 255, 255);">0</p>
-				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Sub Gap</p>
-                <p style="font-size: 6vh;"id="PostContents2">doodoo internet</p> <p id="imagething3" style="width:150px"></p>
+                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Sub Gap</p>
+                <p id="imagething3" style="width:150px"></p>
+                <p style="font-size: 6vh;"id="PostContents2">doodoo internet</p> 
                 <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(255, 255, 255);">0</p>
                 <p id="subscriberslola2" style="color: rgb(230, 230, 230);">Subscribers</p>
                 <input type="text" id="choose2" placeholder="Channel ID"></input>
@@ -236,8 +237,8 @@ lineColor: '#ff5454'
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = channelSubs - channelSubs2
-			var chartthingidk = channelSubs - channelSubs2
+			apicount.innerHTML = data.subscriberCount - channelSubs2
+			var chartthingidk = data.subscriberCount - channelSubs2
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 			
 		});
@@ -280,9 +281,9 @@ lineColor: '#ff5454'
 					var url = 'https://api.t1ch.com/youtube/'+channelName+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = channelSubs - channelSubs2
+			apicount.innerHTML = data.subscriberCount - channelSubs2
 
-			var chartthingidk = channelSubs - channelSubs2
+			var chartthingidk = data.subscriberCount - channelSubs2
 		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 		});
