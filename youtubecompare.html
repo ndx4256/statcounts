@@ -248,9 +248,8 @@ lineColor: '#ff5454'
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-            apicount.innerHTML = data.subscriberCount -= channelSubs2
-			var chartthingidk = data.subscriberCount -= channelSubs2
-		chart.series[0].addPoint([Date.now(), chartthingidk])
+            apicount.innerHTML = channelSubs.innerHTML -= channelSubs2.innerHTML
+			
 			
 		});
 		
@@ -264,6 +263,21 @@ lineColor: '#ff5454'
 	}
 
 
+    
+function loadgraph() {
+    var chartthingidk = channelSubs.innerHTML -= channelSubs2.innerHTML
+		chart.series[0].addPoint([Date.now(), chartthingidk])
+};
+
+setInterval(() => {
+    var chartthingidk = channelSubs.innerHTML -= channelSubs2.innerHTML
+		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+		chart.series[0].addPoint([Date.now(), chartthingidk])
+}, 2000);
+
+
+
+
     var channelName1 = "";
 	
 	loadChannel2("UCbCmjCuTUZos6Inko4u57UQ")
@@ -273,8 +287,7 @@ lineColor: '#ff5454'
 		var url = 'https://api.t1ch.com/youtube/'+name1+''
 		$.getJSON(url, function(data) {
 			channelSubs2.innerHTML = data.subscriberCount
-			var chartthingidk = data.subscriberCount
-		chart.series[0].addPoint([Date.now(), chartthingidk])
+			
 			
 		});
 		
@@ -292,18 +305,12 @@ lineColor: '#ff5454'
 					var url = 'https://api.t1ch.com/youtube/'+channelName+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = data.subscriberCount -= channelSubs2
-
-			var chartthingidk = data.subscriberCount -= channelSubs2
-		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
-		chart.series[0].addPoint([Date.now(), chartthingidk])
+			apicount.innerHTML = channelSubs.innerHTML -= channelSubs2.innerHTML
 		});
 
         var url = 'https://api.t1ch.com/youtube/'+channelName1+''
 		$.getJSON(url, function(data) {
 			channelSubs2.innerHTML = data.subscriberCount
-			var chartthingidk = channelSubs - channelSubs2
-		chart.series[0].addPoint([Date.now(), chartthingidk])
 			
 		});
 		
