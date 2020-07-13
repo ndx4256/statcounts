@@ -127,6 +127,17 @@ img {
     border-radius: 100%;
     border-color: rgb(255, 255, 255) !Important;
 }
+#imagething3 {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+}
+#imagething4 {
+    border: solid .5vh !Important;
+    border-radius: 100%;
+    border-color: rgb(255, 255, 255) !Important;
+}
 
 </style>
 	</head>
@@ -237,8 +248,8 @@ lineColor: '#ff5454'
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = data.subscriberCount - channelSubs2
-			var chartthingidk = data.subscriberCount - channelSubs2
+            apicount.innerHTML = data.subscriberCount -= channelSubs2
+			var chartthingidk = data.subscriberCount -= channelSubs2
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 			
 		});
@@ -275,15 +286,15 @@ lineColor: '#ff5454'
 		
 		});
 	}
-	
+	// fix pls future me
 	setInterval(function() {
 	
 					var url = 'https://api.t1ch.com/youtube/'+channelName+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = data.subscriberCount - channelSubs2
+			apicount.innerHTML = data.subscriberCount -= channelSubs2
 
-			var chartthingidk = data.subscriberCount - channelSubs2
+			var chartthingidk = data.subscriberCount -= channelSubs2
 		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 		});
