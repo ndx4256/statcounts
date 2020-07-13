@@ -248,7 +248,7 @@ lineColor: '#ff5454'
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-            apicount.innerHTML = channelSubs.innerHTML -= channelSubs2.innerHTML
+            apicount.innerHTML = channelSubs2 - channelSubs
 			
 			
 		});
@@ -265,12 +265,12 @@ lineColor: '#ff5454'
 
     
 function loadgraph() {
-    var chartthingidk = channelSubs.innerHTML -= channelSubs2.innerHTML
+    var chartthingidk = channelSubs2 - channelSubs
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 };
 
-setInterval(() => {
-    var chartthingidk = channelSubs.innerHTML -= channelSubs2.innerHTML
+setInterval(function() {
+    var chartthingidk = channelSubs2 - channelSubs
 		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 }, 2000);
@@ -305,7 +305,7 @@ setInterval(() => {
 					var url = 'https://api.t1ch.com/youtube/'+channelName+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = channelSubs.innerHTML -= channelSubs2.innerHTML
+			apicount.innerHTML = channelSubs2 - channelSubs
 		});
 
         var url = 'https://api.t1ch.com/youtube/'+channelName1+''
