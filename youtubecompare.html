@@ -248,8 +248,8 @@ lineColor: '#ff5454'
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-            apicount.innerHTML = channelSubs2 - channelSubs
-			
+            var chartthingidk = channelSubs2 - channelSubs
+		chart.series[0].addPoint([Date.now(), chartthingidk])
 			
 		});
 		
@@ -263,11 +263,6 @@ lineColor: '#ff5454'
 	}
 
 
-    
-function loadgraph() {
-    var chartthingidk = channelSubs2 - channelSubs
-		chart.series[0].addPoint([Date.now(), chartthingidk])
-};
 
 setInterval(function() {
     var chartthingidk = channelSubs2 - channelSubs
@@ -307,6 +302,9 @@ setInterval(function() {
 			channelSubs.innerHTML = data.subscriberCount
 			apicount.innerHTML = channelSubs2 - channelSubs
 		});
+
+        apicount.innerHTML = channelSubs2 - channelSubs
+
 
         var url = 'https://api.t1ch.com/youtube/'+channelName1+''
 		$.getJSON(url, function(data) {
