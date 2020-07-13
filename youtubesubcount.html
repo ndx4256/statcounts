@@ -119,56 +119,6 @@ img {
 </style>
 	</head>
 	<script type="text/javascript">
-	
-	$(document).ready(function() {
-	
-		var channelName = "";
-		
-		loadChannel("UC-lHJZR3Gqxm24_Vd_AJ5Yw")
-		
-		function loadChannel(name) {
-			channelName = name;
-			var url = 'https://api.t1ch.com/youtube/'+name+''
-			$.getJSON(url, function(data) {
-				channelSubs.innerHTML = data.subscriberCount
-				apicount.innerHTML = data.subCountAPI
-				var chartthingidk = data.subscriberCount
-            chart.series[0].addPoint([Date.now(), chartthingidk])
-				
-			});
-			
-			var url1 = 'https://api.t1ch.com/caching/'+name+'';
-			$.getJSON(url1, function(data){
-                PostContents.innerHTML = data.channeltitle 
-                $('#imagething').html('<img src="'+data.cached.picURL+'"< style="width:150px" id="imagething2"/img>');
-			
-			});
-		}
-		// fix pls
-		setInterval(function() {
-		
-						var url = 'https://api.t1ch.com/youtube/'+channelName+''
-			$.getJSON(url, function(data) {
-				channelSubs.innerHTML = data.subscriberCount
-				apicount.innerHTML = data.subCountAPI
-
-				var chartthingidk = data.subscriberCount
-            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
-            chart.series[0].addPoint([Date.now(), chartthingidk])
-			});
-			
-		}, 2000);
-		
-		$('#updateChannel').click( function() {
-			loadChannel($('#choose').val());
-			
-		});
-			
-		
-	
-	});
-	
-	
 	</script>
 		<body id="body" style="background-color: rgb(208, 228, 254);">
 				
@@ -255,7 +205,57 @@ lineColor: '#ff5454'
 }]
 });
 				</script>
-				
+				<script type="text/javascript">
+						$(document).ready(function() {
+	
+	var channelName = "";
+	
+	loadChannel("UC-lHJZR3Gqxm24_Vd_AJ5Yw")
+	
+	function loadChannel(name) {
+		channelName = name;
+		var url = 'https://api.t1ch.com/youtube/'+name+''
+		$.getJSON(url, function(data) {
+			channelSubs.innerHTML = data.subscriberCount
+			apicount.innerHTML = data.subCountAPI
+			var chartthingidk = data.subscriberCount
+		chart.series[0].addPoint([Date.now(), chartthingidk])
+			
+		});
+		
+		var url1 = 'https://api.t1ch.com/caching/'+name+'';
+		$.getJSON(url1, function(data){
+			PostContents.innerHTML = data.channeltitle 
+			$('#imagething').html('<img src="'+data.cached.picURL+'"< style="width:150px" id="imagething2"/img>');
+		
+		});
+	}
+	// fix pls
+	setInterval(function() {
+	
+					var url = 'https://api.t1ch.com/youtube/'+channelName+''
+		$.getJSON(url, function(data) {
+			channelSubs.innerHTML = data.subscriberCount
+			apicount.innerHTML = data.subCountAPI
+
+			var chartthingidk = data.subscriberCount
+		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+		chart.series[0].addPoint([Date.now(), chartthingidk])
+		});
+		
+	}, 2000);
+	
+	$('#updateChannel').click( function() {
+		loadChannel($('#choose').val());
+		
+	});
+		
+	
+
+});
+
+
+				</script>
         </body>
     </head>
 </html>
