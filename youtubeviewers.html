@@ -176,7 +176,8 @@ img {
 				<div id="chart"></div>
 			</div>
 			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
-				<script type="text/javascript">
+                <script type="text/javascript">
+                var line = "#ff5454"
 				var chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
@@ -307,10 +308,11 @@ if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(), chartthingidk])
 });
 
-}, 2000);
+}, 3000);
 	
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
+        var line = "#ff5454"
 		chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
