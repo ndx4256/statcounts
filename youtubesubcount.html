@@ -47,7 +47,7 @@
 		
 		}
 
-		#apicount{
+		#viewcount{
 		
 		font-size: 5vh;
 		
@@ -142,8 +142,8 @@ img {
 			</div>
 			
 			<div class="container p-3 my-3 bg-dark text-white">  
-				<p class="odometer odometer-auto-theme" id="apicount" style="color: rgb(255, 255, 255);">0</p>
-				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Count Displayed on YouTube</p>
+				<p class="odometer odometer-auto-theme" id="viewcount" style="color: rgb(255, 255, 255);">0</p> 
+				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Total Video Views</p>
 				<div id="chart"></div>
 			</div>
 			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
@@ -207,20 +207,26 @@ lineColor: '#ff5454'
 				
 				
 						$(document).ready(function() {
+
+	var lolxdhahafunni = "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U";
 	
 	var channelName = "";
 	
-	loadChannel("UCq-Fj5jknLsUf-MWSy4_brA")
+	loadChannel("UC-lHJZR3Gqxm24_Vd_AJ5Yw")
 	
 	function loadChannel(name) {
 		channelName = name;
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = data.subCountAPI
 			var chartthingidk = data.subscriberCount
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 			
+		});
+
+		var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&key='+lolxd+''
+		$.getJSON(url, function(data) {
+			viewcount.innerHTML = data.items[0].statistics.viewCount
 		});
 		
 		var url1 = 'https://api.t1ch.com/caching/'+name+'';
@@ -233,17 +239,25 @@ lineColor: '#ff5454'
 	// fix pls
 	setInterval(function() {
 	
-					var url = 'https://api.t1ch.com/youtube/'+channelName+''
+		var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&key='+lolxdhahafunni+''
 		$.getJSON(url, function(data) {
-			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = data.subCountAPI
-
-			var chartthingidk = data.subscriberCount
-		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
-		chart.series[0].addPoint([Date.now(), chartthingidk])
-		});
+			viewcount.innerHTML = data.items[0].statistics.viewCount
+		})
 		
-	}, 2000);
+	}, 999000);
+
+	setInterval(function() {
+	
+	var url = 'https://api.t1ch.com/youtube/'+channelName+''
+$.getJSON(url, function(data) {
+channelSubs.innerHTML = data.subscriberCount
+
+var chartthingidk = data.subscriberCount
+if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+chart.series[0].addPoint([Date.now(), chartthingidk])
+});
+
+}, 2000);
 	
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
