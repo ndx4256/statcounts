@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">StatCounts - YouTube Viewer Counter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">API</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="alert alert-danger">
+        <strong></strong> #DontAbuseStatCountsAPiKeysPlease :(
+      </div>
+
+<body style="background-color: rgb(74, 74, 74);">
+
+<html>
+	<head>
+		<title>Live YouTube Subscriber Counter</title>
+		<link rel="stylesheet" href="odometer-theme-minimal.css" />
+		<script src="odometer.js"></script>
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" href="livecountsbutreddit.css" />
+		
+	<style>
+	
+	*{font-family:Arial !Important}
+	
+	</style>
+	
+		<style>
+		
+		#channelSubs{
+		
+			font-size:12vh;
+			
+		
+		}
+
+		#viewcount{
+		
+		font-size: 5vh;
+		
+	
+	}
+		
+		</style>
+	
+	
+		<style>
+		
+		</style>
+	
+	<style>
+	
+	.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: Arial, sans-serif;
+    line-height: 1.25em
+}
+	
+	</style>
+	
+<style>
+
+#channelSubs,
+#container,
+#subscribeButton,
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
+canvas {
+    
+}
+
+</style>
+<style>
+*{text-align: center;}
+
+#PostContents {
+    color: white;
+}
+
+img {
+    border-radius: 50%;
+  }
+
+#img {
+    border: solid .5vh !Important;
+    border-radius: 100%;
+    border-color: rgb(79, 79, 79) !Important;
+}
+
+#imagething {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+}
+#body > div.container.p-3.my-3.bg-dark.text-white {
+    text-align: center;
+}
+
+#imagething2 {
+    border: solid .5vh !Important;
+    border-radius: 100%;
+    border-color: rgb(255, 255, 255) !Important;
+}
+
+</style>
+	</head>
+	<script type="text/javascript">
+	</script>
+		<body id="body" style="background-color: rgb(208, 228, 254);">
+				
+				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
+				
+				
+				
+
+									
+
+
+				<br></br>
+					<div class="container p-3 my-3 bg-dark text-white">       
+                        <p id="imagething" style="width:150px">
+					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
+				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Concurrent Viewers</p>
+
+				<button id="lollllll" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter" >Change Stream</button>
+				
+			
+			</div>
+			<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLongTitle">Change Live-Stream</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<b>so i was going to add a search feature, but it failed. I'm currently working on a "stream name" rather than a more advanced search.</b>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+				  <span class="input-group-text" id="lol">https://www.youtube.com/watch?v=</span>
+				</div>
+				<input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
+			  </div>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+		  <button id="updateChannel"type="button" class="btn btn-danger" data-dismiss="modal">Change Stream</button>
+		  </div>
+	  </div>
+	</div>
+  </div>
+			<div class="container p-3 my-3 bg-dark text-white">  
+				<p class="odometer odometer-auto-theme" id="viewcount" style="color: rgb(255, 255, 255);">0</p> 
+				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Views</p>
+				<div id="chart"></div>
+			</div>
+			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
+				<script type="text/javascript">
+				var chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'spline',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: 'Viewers'
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#ff5454',
+labels: {
+style: {
+    color: 'transparent'
+}
+},
+lineColor: '#ff5454',
+minorGridLineColor: 'transparent',
+tickColor: '#00000',
+title: {
+style: {
+    color: '#000'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#666666'
+}
+},
+lineColor: '#ff5454',
+minorGridLineColor: 'transparent',
+tickColor: 'transparent'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Viewers',
+marker: { enabled: false },
+color: '#ff5454',
+lineColor: '#ff5454'
+}]
+});
+				
+				
+						$(document).ready(function() {
+
+	
+	var channelName = "";
+	
+	loadChannel("1e1NCIEKamA")
+	
+	function loadChannel(name) {
+
+        var lolxdhahafunni = [
+            "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+            "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+            "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+            "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k"
+        ]   
+
+
+
+
+		channelName = name;
+        
+		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		$.getJSON(url, function(data) {
+            
+			channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
+			var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
+		chart.series[0].addPoint([Date.now(), chartthingidk])
+			
+		});
+		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		$.getJSON(url, function(data) {
+			viewcount.innerHTML = data.items[0].statistics.viewCount
+		});
+		
+		var url1 = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		$.getJSON(url1, function(data){
+			PostContents.innerHTML = data.items[0].snippet.title
+			$('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
+		
+		});
+	}
+	// fix pls
+	setInterval(function() {
+        var lolxdhahafunni = [
+            "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+            "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+            "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+            "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k"
+        ]
+		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		$.getJSON(url, function(data) {
+			viewcount.innerHTML = data.items[0].statistics.viewCount
+		})
+		
+	}, 15000);
+
+	setInterval(function() {
+        var lolxdhahafunni = [
+            "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+            "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+            "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+            "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k"
+        ]
+	var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+$.getJSON(url, function(data) {
+channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
+
+var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
+if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+chart.series[0].addPoint([Date.now(), chartthingidk])
+});
+
+}, 2000);
+	
+	$('#updateChannel').click( function() {
+		loadChannel($('#choose').val());
+		chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'spline',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: 'Viewers'
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#ff5454',
+labels: {
+style: {
+    color: 'transparent'
+}
+},
+lineColor: '#ff5454',
+minorGridLineColor: 'transparent',
+tickColor: '#00000',
+title: {
+style: {
+    color: '#000'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#666666'
+}
+},
+lineColor: '#ff5454',
+minorGridLineColor: 'transparent',
+tickColor: 'transparent'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Viewers',
+marker: { enabled: false },
+color: '#ff5454',
+lineColor: '#ff5454'
+}]
+});
+		
+	});
+		
+	
+
+});
+
+
+				</script>
+        </body>
+    </head>
+</html>
