@@ -178,7 +178,7 @@ img {
   </div>
 			<div class="container p-3 my-3 bg-dark text-white">  
 				<p class="odometer odometer-auto-theme" id="viewcount" style="color: rgb(255, 255, 255);">0</p> 
-				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Total Video Views</p>
+				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Count Displayed on YouTube</p>
 				<div id="chart"></div>
 			</div>
 			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
@@ -260,11 +260,7 @@ lineColor: '#ff5454'
 		var lolxdhahafunni = "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U";
 		var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&key='+lolxdhahafunni+''
 		$.getJSON(url, function(data) {
-			if (choosecounterlol.val == yes) {
 			viewcount.innerHTML = data.items[0].statistics.subscriberCount
-			} else {
-				viewcount.innerHTML = data.items[0].statistics.viewCount
-			}
 		});
 		
 		var url1 = 'https://api.t1ch.com/caching/'+name+'';
