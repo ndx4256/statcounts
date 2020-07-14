@@ -195,7 +195,7 @@ img {
 	
 	var channelName = "";
 	
-	loadChannel("MN9dbVgzEl4")
+	loadChannel("1e1NCIEKamA")
 	
 	function loadChannel(name) {
 
@@ -222,6 +222,7 @@ img {
 		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url, function(data) {
 			viewcount.innerHTML = data.items[0].statistics.viewCount
+            likeCountlol.innerHTML = data.items[0].statistics.likeCount
 
 		});
 		
@@ -246,6 +247,20 @@ img {
 		})
 		
 	}, 15000);
+
+    setInterval(function() {
+        var lolxdhahafunni = [
+            "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+            "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+            "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+            "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k"
+        ]
+		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		$.getJSON(url, function(data) {
+			likeCountlol.innerHTML = data.items[0].statistics.likeCount
+		})
+		
+	}, 3000);
 
 	setInterval(function() {
         var lolxdhahafunni = [
