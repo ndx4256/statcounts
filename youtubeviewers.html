@@ -235,7 +235,8 @@ lineColor: '#ff5454'
 }]
 });
 				
-				
+</script>
+<script type="text/javascript">		
 						$(document).ready(function() {
 
 	
@@ -302,7 +303,6 @@ lineColor: '#ff5454'
 	var url = 'https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 $.getJSON(url, function(data) {
 channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
-
 var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(), chartthingidk])
@@ -313,7 +313,7 @@ var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
         var line = "#ff5454"
-		chart = new Highcharts.chart({
+chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
 type: 'spline',
