@@ -311,7 +311,7 @@ $.getJSON(url, function(data) {
 	if (data.subscriberCount < 1000) {
 			channelSubs.innerHTML = data.subscriberCount
 			} else {
-				var url2 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+name+''
+				var url2 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+channelName+''
 				$.getJSON(url2, function(data) {
 					channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 
