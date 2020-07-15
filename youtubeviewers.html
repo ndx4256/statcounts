@@ -188,10 +188,18 @@ canvas {
                 <script type="text/javascript">			
 </script>
 <script type="text/javascript">		
+
+var defaultCID = "MN9dbVgzEl4";			
+function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
 
 	
 	var channelName = "";
+    if(getUrlVars()['user'] !== undefined) {
+					loadChannel(getUrlVars()['user']);
+				} else  {
+					loadChannel(defaultCID);
+				}
 	
 	loadChannel("MN9dbVgzEl4")
 	
@@ -282,6 +290,7 @@ channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
 	
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
+        getUrlVars($('#choose').val());
         var line = "#ff5454"
 
 		
