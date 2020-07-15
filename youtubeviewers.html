@@ -204,7 +204,8 @@ img {
             "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
             "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
             "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-	"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ"
+	"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+	"AIzaSyBK5JphqLqrr1GhhYqozm56my1kRY9dCiU"
         ]   
 
 
@@ -234,13 +235,14 @@ img {
 	}
 	// fix pls
 	setInterval(function() {
-        var lolxdhahafunni = [
+                var lolxdhahafunni = [
             "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
             "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
             "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
             "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-		"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ"
-        ]
+	"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+	"AIzaSyBK5JphqLqrr1GhhYqozm56my1kRY9dCiU"
+        ] 
 		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url, function(data) {
 			viewcount.innerHTML = data.items[0].statistics.viewCount
@@ -249,13 +251,14 @@ img {
 	}, 15000);
 
     setInterval(function() {
-          var lolxdhahafunni = [
+                 var lolxdhahafunni = [
             "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
             "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
             "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
             "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-		"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ"
-        ]
+	"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+	"AIzaSyBK5JphqLqrr1GhhYqozm56my1kRY9dCiU"
+        ] 
 		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url, function(data) {
 			likeCountlol.innerHTML = data.items[0].statistics.likeCount
@@ -264,13 +267,14 @@ img {
 	}, 3000);
 
 	setInterval(function() {
-               var lolxdhahafunni = [
+                       var lolxdhahafunni = [
             "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
             "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
             "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
             "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-		"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ"
-        ]
+	"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+	"AIzaSyBK5JphqLqrr1GhhYqozm56my1kRY9dCiU"
+        ] 
 	var url = 'https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 $.getJSON(url, function(data) {
 channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
