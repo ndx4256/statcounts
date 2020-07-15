@@ -106,7 +106,6 @@ img {
 
 #img {
     border: solid .5vh !Important;
-    border-radius: 100%;
     border-color: rgb(79, 79, 79) !Important;
 }
 
@@ -122,7 +121,7 @@ img {
 
 #imagething2 {
     border: solid .5vh !Important;
-    border-radius: 100%;
+    border-radius: 0%;
     border-color: rgb(255, 255, 255) !Important;
 }
 
@@ -229,7 +228,7 @@ img {
 		var url1 = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url1, function(data){
 			PostContents.innerHTML = data.items[0].snippet.title
-			$('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
+			$('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:300px" id="imagething2"/img>');
 		
 		});
 	}
