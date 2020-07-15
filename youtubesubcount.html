@@ -93,6 +93,13 @@ canvas {
     color: white;
 }
 
+#speedyboi {
+position: absolute;
+left: 51.5%;
+bottom: 62.5%;
+
+}
+
 img {
     border-radius: 50%;
   }
@@ -123,6 +130,7 @@ img {
 	</head>
 	<script type="text/javascript">
 	</script>
+	<img id="speedyboi" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/fire_1f525.png" style="width: 50px; opacity: 0;" ><img>
 		<body id="body" style="background-color: rgb(208, 228, 254);">
 				
 				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
@@ -134,15 +142,16 @@ img {
 
 
 				<br></br>
+				
 					<div class="container p-3 my-3 bg-dark text-white">       
-                        <p id="imagething" style="width:150px">
+						<p id="imagething" style="width:150px"> 
 					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p>
+					
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
 				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Subscribers</p>
 
 				<button id="lollllll" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter" >Change Channel</button>
 				
-			
 			</div>
 			<!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -253,6 +262,12 @@ lineColor: '#ff5454'
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.subscriberCount
+
+			if (data.estSubGain < -35000) {
+				$('#speedyboi').html('style="opacity: 100;"')
+			} else {
+				console.log('not speedi enough 4 da firez (im cringe ok)')
+			}
 			var chartthingidk = data.subscriberCount
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 			
