@@ -188,10 +188,17 @@ canvas {
                 <script type="text/javascript">			
 </script>
 <script type="text/javascript">		
+var defaultCID = "j9S3I-_S3QQ";			
+function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
 
 	
 	var channelName = "";
+    if(getUrlVars()['user'] !== undefined) {
+					loadChannel(getUrlVars()['user']);
+				} else  {
+					loadChannel(defaultCID);
+				}
 	
 	loadChannel("j9S3I-_S3QQ")
 	
@@ -284,6 +291,7 @@ channelSubs.innerHTML = data.items[0].statistics.viewCount
 	
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
+        getUrlVars($('#choose').val());
 
 		
 	});
