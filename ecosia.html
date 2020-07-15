@@ -105,7 +105,7 @@ img {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://api.allorigins.win/raw?url=https://api.ecosia.org/v1/trees/count'
+			var url = 'https://cors.t1ch.com/https://api.ecosia.org/v1/trees/count'
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = (data.count)
 			});
@@ -115,7 +115,7 @@ img {
 		
 		setInterval(function() {
 			channelName = name;
-						var url = 'https://api.allorigins.win/raw?url=https://api.ecosia.org/v1/trees/count'
+						var url = 'https://cors.t1ch.com/https://api.ecosia.org/v1/trees/count'
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = (data.count)
 				
