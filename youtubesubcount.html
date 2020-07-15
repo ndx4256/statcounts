@@ -275,7 +275,7 @@ lineColor: '#ff5454'
 		var lolxdhahafunni = "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U";
 		var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+channelName+'&key='+lolxdhahafunni+''
 		$.getJSON(url, function(data) {
-			viewcount.innerHTML = data.items[0].statistics.viewCount
+			viewcount.innerHTML = data.items[0].statistics.subscriberCount
 		})
 		
 	}, 90000);
