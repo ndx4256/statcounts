@@ -105,12 +105,12 @@ img {
 		
 		function loadChannel(name) {
 			channelName = name;
-			var url = 'https://api.allorigins.win/raw?url=https://groups.roblox.com/v1/groups/'+name+''
+			var url = 'https://cors.t1ch.com/https://groups.roblox.com/v1/groups/'+name+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data.memberCount
 			});
 			
-			var url1 = 'https://api.allorigins.win/raw?url=https://groups.roblox.com/v1/groups/'+name+'';
+			var url1 = 'https://cors.t1ch.com/https://groups.roblox.com/v1/groups/'+name+'';
 			$.getJSON(url1, function(data){
 				PostContents.innerHTML = data.name
 			
@@ -119,7 +119,7 @@ img {
 		
 		setInterval(function() {
 		
-						var url = 'https://api.allorigins.win/raw?url=https://groups.roblox.com/v1/groups/'+channelName+''
+						var url = 'https://cors.t1ch.com/https://groups.roblox.com/v1/groups/'+channelName+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = (data.memberCount)
 			});
