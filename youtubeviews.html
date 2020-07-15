@@ -176,8 +176,8 @@ position: absolute;
 	</div>
   </div>
 			<div class="container p-3 my-3 bg-dark text-white">  
-				<p class="odometer odometer-auto-theme" id="viewcount" style="color: rgb(255, 255, 255);">0</p> 
-				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Views</p>
+				<p class="odometer odometer-auto-theme" id="CommentsBruh" style="color: rgb(255, 255, 255);">0</p> 
+				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Comments</p>
             </div>
             
             <div class="container p-3 my-3 bg-dark text-white">  
@@ -193,7 +193,7 @@ position: absolute;
 	
 	var channelName = "";
 	
-	loadChannel("MN9dbVgzEl4")
+	loadChannel("j9S3I-_S3QQ")
 	
 	function loadChannel(name) {
 
@@ -215,6 +215,7 @@ position: absolute;
 		$.getJSON(url, function(data) {
             
 			channelSubs.innerHTML = data.items[0].statistics.viewCount
+            CommentsBruh.innerHTML = data.items[0].statistics.commentCount
 			
 		});
 		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
@@ -260,6 +261,7 @@ position: absolute;
 		var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url, function(data) {
 			likeCountlol.innerHTML = data.items[0].statistics.likeCount
+            CommentsBruh.innerHTML = data.items[0].statistics.commentCount
 		})
 		
 	}, 3000);
