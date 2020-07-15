@@ -192,6 +192,7 @@ img {
 			</div>
 			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
 				<script type="text/javascript">
+				
 				var chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
@@ -248,14 +249,16 @@ color: '#ff5454',
 lineColor: '#ff5454'
 }]
 });
-				
-				
+var defaultCID = "UC4QobU6STFB0P71PMvOGN5A";			
+function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
-
 	
 	var channelName = "";
-	
-	loadChannel("UC4QobU6STFB0P71PMvOGN5A")
+				if(getUrlVars()['user'] !== undefined) {
+					loadChannel(getUrlVars()['user']);
+				} else  {
+					loadChannel(defaultCID);
+				}
 	
 	function loadChannel(name) {
 		channelName = name;
@@ -270,10 +273,9 @@ lineColor: '#ff5454'
 
 				});
 			}
-			
 
 			if (data.estSubGain < -35000) {
-				$('#speedyboi').html('<img id="speedyboilol" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/fire_1f525.png" style="width: 50px;" /img>')
+				$('#speedyboi').html('<img id="speedyboilol" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/fire_1f525.png" style="width: 50px;"></img>')
 			} else {
 				console.log('not speedi enough 4 da firez (im cringe ok)')
 			}
@@ -323,9 +325,10 @@ chart.series[0].addPoint([Date.now(), chartthingidk])
 });
 
 }, 2000);
-	
+
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
+		getUrlVars($('#choose').val());
 		chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
