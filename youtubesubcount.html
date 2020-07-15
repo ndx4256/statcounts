@@ -265,8 +265,8 @@ lineColor: '#ff5454'
 		
 		var url1 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+name+'';
 		$.getJSON(url1, function(data){
-			PostContents.innerHTML = data.items[0].channel.title 
-			$('#imagething').html('<img src="'+data.items[0].pictures.avatar+'"< style="width:150px" id="imagething2"/img>');
+			PostContents.innerHTML = data.items[0].snippet.channel.title 
+			$('#imagething').html('<img src="'+data.items[0].snippet.pictures.avatar+'"< style="width:150px" id="imagething2"/img>');
 		
 		});
 	}
