@@ -261,7 +261,16 @@ lineColor: '#ff5454'
 		channelName = name;
 		var url = 'https://api.t1ch.com/youtube/'+name+''
 		$.getJSON(url, function(data) {
+			if (data.subscriberCount < 1000) {
 			channelSubs.innerHTML = data.subscriberCount
+			} else {
+				var url2 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+name+''
+				$.getJSON(url2, function(data) {
+					channelSubs.innerHTML = data.items[0].statistics.subscriberCount
+
+				});
+			}
+			
 
 			if (data.estSubGain < -35000) {
 				$('#speedyboi').html('<img id="speedyboilol" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/fire_1f525.png" style="width: 50px;" /img>')
@@ -299,8 +308,15 @@ lineColor: '#ff5454'
 	
 	var url = 'https://api.t1ch.com/youtube/'+channelName+''
 $.getJSON(url, function(data) {
-channelSubs.innerHTML = data.subscriberCount
+	if (data.subscriberCount < 1000) {
+			channelSubs.innerHTML = data.subscriberCount
+			} else {
+				var url2 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+name+''
+				$.getJSON(url2, function(data) {
+					channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 
+				});
+			}
 var chartthingidk = data.subscriberCount
 if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(), chartthingidk])
