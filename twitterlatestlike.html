@@ -116,13 +116,13 @@ margin-right: auto;
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+name+''
+			var url = 'https://cors.t1ch.com/https://socialbearing.com/scripts/get-user.php?user='+name+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data.status.favorite_count
                 channelSubs2.innerHTML = data.status.retweet_count
 			});
 			
-			var url1 = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+name+''
+			var url1 = 'https://cors.t1ch.com/https://socialbearing.com/scripts/get-user.php?user='+name+''
 			$.getJSON(url1, function(data){
 				PostContents.innerHTML = data.name
 			
@@ -131,7 +131,7 @@ margin-right: auto;
 		
 		setInterval(function() {
 		
-						var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+channelName+''
+						var url = 'https://cors.t1ch.com/https://socialbearing.com/scripts/get-user.php?user='+channelName+''
 			$.getJSON(url, function(data) {
                 if (data.status.favorite_count == 0) {
                     channelSubs.innerHTML = data.status.retweeted_status.favorite_count
