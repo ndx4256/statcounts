@@ -254,12 +254,25 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 						$(document).ready(function() {
 	
 	var channelName = "";
+	var isusingname = false;
+	var searchTerm = getUrlVars()['name'];
 				if(getUrlVars()['user'] !== undefined) {
 					loadChannel(getUrlVars()['user']);
 				} else  {
-					loadChannel(defaultCID);
+				$.getJSON("https://raw-ai-yt.glitch.me/yt_channels/searchFor/"+searchTerm, function(data){
+				if(data.channels[0] == undefined) {
+					return;
 				}
-	
+				isusingname = true;
+				var gsnippet = data.channels[0];
+				defaultCID = gsnippet.cid;
+				loadChannel(defaultCID);
+				return;
+				});
+					if(isusingname == false) {
+						loadChannel(defaultCID);
+					}
+				}
 	function loadChannel(name) {
 		channelName = name;
 		var url = 'https://api.t1ch.com/youtube/'+name+''
