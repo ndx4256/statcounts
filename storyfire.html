@@ -278,6 +278,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 	var url = 'https://cors.t1ch.com/https://storyfire.com/app/users/getProfile/'+channelName+''
 $.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.followersCount
+														  viewcount.innerHTML = data.followingCount
 var chartthingidk = data.followersCount
 if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(), chartthingidk])
