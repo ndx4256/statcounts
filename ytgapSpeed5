@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <body style="background-color: rgb(74, 74, 74);">
+        <head>
+            
+            <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+            <p id="sfgap" style="font-size: 43px;">Sub Gap: : +0</p>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <p id="optimus" style="font-size: 43px;">0</p>
+            <p id="whoeverelse" style="font-size: 43px;">0</p>
+
+<style>
+    #sfgap {
+        color: white;
+        
+    }
+
+    
+</style>
+<script src="numeral.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+	
+    var channelName = "UCIPPMRA040LQr5QPyJEbmXA";
+    var channelName2 = "UCTkXRDQl0luXxVQrRQvWS6w";
+    
+    loadChannel1("UCIPPMRA040LQr5QPyJEbmXA")
+    
+    function loadChannel1(name) {
+        channelName = name;
+        var url = 'https://storyfire.com/app/users/getProfile/'+name+''
+        $.getJSON(url, function(data1) {
+             optimus.innerHTML = data1.followersCount
+        });
+        
+    }
+    loadChannel2("UCTkXRDQl0luXxVQrRQvWS6w")
+    function loadChannel2(name2) {
+        var channelName2 = name2;
+        var url = 'https://storyfire.com/app/users/getProfile/'+name2+''
+        $.getJSON(url, function(data1) {
+            whoeverelse.innerHTML = data1.followersCount
+        });
+        
+    }
+
+
+        var gapnumber = optimus.innerHTML - whoeverelse.innerHTML
+        if  (optimus.innerHTML < whoeverelse.innerHTML) {
+            sfgap.innerHTML = "Sub Gap: Optimus: +'+gapnumber+'"
+        }
+        
+    
+
+    
+    
+    setInterval(function() {
+    
+                    var url1 = 'https://api.t1ch.com/youtube/'+channelName+''
+        $.getJSON(url1, function(data1) {
+            optimus.innerHTML = data1.subscriberCount
+        });
+        
+
+        var url2 = 'https://api.t1ch.com/youtube/'+channelName2+''
+        $.getJSON(url2, function(data2) {
+            whoeverelse.innerHTML = data2.subscriberCount
+        });
+
+        var gapnumber = Math.floor(optimus.innerHTML - whoeverelse.innerHTML);
+        var gapnumbercorrect = Math.abs(gapnumber)
+        var oki = numeral(gapnumber).format('0,0');
+        var okicorrect = numeral(gapnumbercorrect).format('0,0');
+        if  (optimus.innerHTML > whoeverelse.innerHTML) {
+            sfgap.innerHTML = "Sub Gap: MrBeast Gaming: " + "+" + oki // start with less
+        } else {
+            sfgap.innerHTML = "Sub Gap: Dream: " + "+" + okicorrect // start with more
+        }
+    }, 1000);
+    
+                });
+            
+            </script>
+        </head>
+    </body>
+</html>
