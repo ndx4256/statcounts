@@ -266,6 +266,8 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
                 countName.innerHTML = "Subscribers"
         }
 
+        // the StoryFire account is total accounts*
+
 			var chartthingidk = data.followersCount
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 			
@@ -283,13 +285,14 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 	var url = 'https://cors.t1ch.com/https://storyfire.com/app/users/getProfile/'+channelName+''
 $.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.followersCount
-														  viewcount.innerHTML = data.followingCount
+												  viewcount.innerHTML = data.followingCount
+												  var maxlol = 1500
 var chartthingidk = data.followersCount
-if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+if (chart.series[0].points.length == maxlol) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(), chartthingidk])
 });
 
-}, 3500);
+}, 2000);
 
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
@@ -368,26 +371,6 @@ lineColor: '#ff5454'
 
   gtag('config', 'UA-172872844-1');
 </script>
-									      <!-- Default Statcounter code for statcounts.com
-https://site.statcounts.com/ -->
-<script type="text/javascript">
-var sc_project=12359926; 
-var sc_invisible=0; 
-var sc_security="cae44fab"; 
-var sc_text=2; 
-var sc_https=1; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/12359926/0/cae44fab/0/"
-alt="Web Analytics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-<a href="https://statcounter.com/p12359926/?guest=1">uh</a>
         </body>
     </head>
 </html>
