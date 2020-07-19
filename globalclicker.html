@@ -223,7 +223,7 @@ margin-right: auto;
     
     function loadChannel(name) {
         channelName = name;
-        var url = 'https://cors.t1ch.com/http://global-clicker.mrcode.io/getpoints'
+        var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data
 
@@ -245,7 +245,7 @@ margin-right: auto;
 
         
     
-                    var url = 'https://cors.t1ch.com/http://global-clicker.mrcode.io/getpoints'
+                    var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data
             if (data > 70000000) {
