@@ -256,7 +256,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 	
 	function loadChannel(name) {
 		channelName = name;
-		var url = 'https://cors.t1ch.com/https://storyfire.com/app/users/getProfile/'+name+''
+		var url = 'https://api.allorigins.win/raw?url=https://storyfire.com/app/users/getProfile/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.followersCount
 			viewcount.innerHTML = data.followingCount
@@ -273,7 +273,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 			
 		});
 		
-		var url1 = 'https://cors.t1ch.com/https://storyfire.com/app/users/getProfile/'+name+'';
+		var url1 = 'https://api.allorigins.win/raw?url=https://storyfire.com/app/users/getProfile/'+name+'';
 		$.getJSON(url1, function(data){
 			PostContents.innerHTML = data.username
 			$('#imagething').html('<img src="'+data.userimage+'"< style="width:150px" id="imagething2"/img>');
@@ -282,7 +282,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 	}
 	setInterval(function() {
 	
-	var url = 'https://cors.t1ch.com/https://storyfire.com/app/users/getProfile/'+channelName+''
+	var url = 'https://api.allorigins.win/raw?url=https://storyfire.com/app/users/getProfile/'+channelName+''
 $.getJSON(url, function(data) {
 			channelSubs.innerHTML = data.followersCount
 												  viewcount.innerHTML = data.followingCount
