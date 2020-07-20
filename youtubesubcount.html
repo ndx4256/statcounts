@@ -280,7 +280,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 			if (data.subscriberCount > 1000) {
 			channelSubs.innerHTML = data.subscriberCount
 			} else {
-				var url2 = 'https://cors.t1ch.com/https://raw-api-yt.t1ch.com/yt_channels/'+name+''
+				var url2 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+name+''
 				$.getJSON(url2, function(data) {
 					channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 
@@ -297,12 +297,12 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 			
 		});
 		var lolxdhahafunni = "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U";
-		var url = 'https://cors.t1ch.com/https://raw-api-yt.t1ch.com/yt_channels/'+name+''
+		var url = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+name+''
 		$.getJSON(url, function(data) {
 			viewcount.innerHTML = data.items[0].statistics.subscriberCount
 		});
 		
-		var url1 = 'https://cors.t1ch.com/https://raw-api-yt.t1ch.com/yt_channels/'+name+'';
+		var url1 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+name+'';
 		$.getJSON(url1, function(data){
 			PostContents.innerHTML = data.items[0].snippet.channel.title 
 			$('#imagething').html('<img src="'+data.items[0].snippet.pictures.avatar+'"< style="width:150px" id="imagething2"/img>');
@@ -326,7 +326,7 @@ $.getJSON(url, function(data) {
 	if (data.subscriberCount > 1000) {
 			channelSubs.innerHTML = data.subscriberCount
 			} else {
-				var url2 = 'https://cors.t1ch.com/https://raw-api-yt.t1ch.com/yt_channels/'+channelName+''
+				var url2 = 'https://cors.t1ch.com/https://raw-ai-yt.glitch.me/yt_channels/'+channelName+''
 				$.getJSON(url2, function(data) {
 					channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 
