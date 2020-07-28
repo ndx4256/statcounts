@@ -147,7 +147,7 @@ margin-right: auto;
             
             <div class="container p-3 my-3 bg-dark text-white"> 
                 <p class="odometer odometer-auto-theme" id="Milestone" style="color: rgb(255, 255, 255);">0</p>
-                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Clicks to Milestone</p>
+                <p id="subscriberslola" style="color: rgb(230, 230, 230);">The Final Goal/p>
                 <div id="chart"></div>
             </div>
             <script src="https://code.highcharts.com/stock/highstock.js"></script>
@@ -248,8 +248,8 @@ margin-right: auto;
                     var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data
-            if (data > 80000000) {
-            var goalhandle = 90000000 - data
+            if (data > 90000000) {
+            var goalhandle = 100000000 - data
             Milestone.innerHTML = goalhandle
             } else {
                 var goalhandle = 70000000 - data
