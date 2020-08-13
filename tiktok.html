@@ -250,21 +250,21 @@ $(document).ready(function() {
 	
 	function loadChannel(name) {
 		channelName = name;
-		var url = 'https://tiktokapi.t1ch.com/tt/'+name+''
+		var url = 'https://azure-veiled-guava.glitch.me/tiktok_estimation/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = (data.estfollowers)
 			var chartthingidk = data.estfollowers
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 		});
 		
-		var url1 = 'https://tiktokapi.t1ch.com/tt/'+name+'';
+		var url1 = 'https://azure-veiled-guava.glitch.me/tiktok_estimation/'+name+'';
 		$.getJSON(url1, function(data){
 			PostContents.innerHTML = data.cid
 		
 		});
 
 
-		var url1 = 'https://tiktokapi.t1ch.com/ttapi/'+name+'';
+		var url1 = 'https://azure-veiled-guava.glitch.me/ttapi/'+name+'';
 		$.getJSON(url1, function(data){
 			TikTokHearts.innerHTML = data.heart
 			$('#imagething').html('<img src="'+data.coversMedium[0]+'"< style="width:150px" id="imagething2"/img>');
@@ -274,7 +274,7 @@ $(document).ready(function() {
 	
 	setInterval(function() {
 	
-					var url = 'https://tiktokapi.t1ch.com/tt/'+channelName+''
+					var url = 'https://azure-veiled-guava.glitch.me/tiktok_estimation/'+channelName+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = (data.estfollowers)
 			var chartthingidk = data.estfollowers
@@ -286,7 +286,7 @@ chart.series[0].addPoint([Date.now(), chartthingidk])
 	}, 2000);
 
 	setInterval(function() {
-		var url1 = 'https://tiktokapi.t1ch.com/ttapi/'+channelName+'';
+		var url1 = 'https://azure-veiled-guava.glitch.me/ttapi/'+channelName+'';
 		$.getJSON(url1, function(data){
 			TikTokHearts.innerHTML = data.heart
 			$('#imagething').html('<img src="'+data.coversMedium[0]+'"< style="width:150px" id="imagething2"/img>');
