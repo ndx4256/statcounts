@@ -252,14 +252,14 @@ $(document).ready(function() {
 		channelName = name;
 		var url = 'https://azure-veiled-guava.glitch.me/tiktok_estimation/'+name+''
 		$.getJSON(url, function(data) {
-			channelSubs.innerHTML = (data.estfollowers)
-			var chartthingidk = data.estfollowers
+			channelSubs.innerHTML = (data.followerCount)
+			var chartthingidk = data.followerCount;
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 		});
 		
 		var url1 = 'https://azure-veiled-guava.glitch.me/tiktok_estimation/'+name+'';
 		$.getJSON(url1, function(data){
-			PostContents.innerHTML = data.cid
+			PostContents.innerHTML = data.username
 		
 		});
 
@@ -276,8 +276,8 @@ $(document).ready(function() {
 	
 					var url = 'https://azure-veiled-guava.glitch.me/tiktok_estimation/'+channelName+''
 		$.getJSON(url, function(data) {
-			channelSubs.innerHTML = (data.estfollowers)
-			var chartthingidk = data.estfollowers
+			channelSubs.innerHTML = (data.followerCount)
+			var chartthingidk = data.followerCount
 if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(), chartthingidk])
 
