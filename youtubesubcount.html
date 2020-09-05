@@ -323,7 +323,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 
 	setInterval(function() {
 
-	var url = 'htt[s://api.t1ch.com/youtube_estimation/'+channelName+''
+	var url = 'https://api.t1ch.com/youtube_estimation/'+channelName+''
 $.getJSON(url, function(data) {
 	if (data.subscriberCount > 1000) {
 			channelSubs.innerHTML = data.subscriberCount
