@@ -34,46 +34,46 @@
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 		<link rel="stylesheet" href="livecountsbutreddit.css" />
-		
+
 	<style>
-	
+
 	*{font-family:Arial !Important}
-	
+
 	</style>
-	
+
 		<style>
-		
+
 		#channelSubs{
-		
+
 			font-size:12vh;
-			
-		
+
+
 		}
 
 		#viewcount{
-		
+
 		font-size: 5vh;
-		
-	
+
+
 	}
-		
+
 		</style>
-	
-	
+
+
 		<style>
-		
+
 		</style>
-	
+
 	<style>
-	
+
 	.odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
     font-family: Arial, sans-serif;
     line-height: 1.25em
 }
-	
+
 	</style>
-	
+
 <style>
 
 #channelSubs,
@@ -82,7 +82,7 @@
 .odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
 .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
 canvas {
-    
+
 }
 
 </style>
@@ -132,26 +132,26 @@ img {
 	</script>
 	<img id="speedyboi" src="" style="width: 50px;" ><img>
 		<body id="body" style="background-color: rgb(208, 228, 254);">
-				
-				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
-				
-				
-				
 
-									
+				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
+
+
+
+
+
 
 
 				<br></br>
-				
-					<div class="container p-3 my-3 bg-dark text-white">       
-						<p id="imagething" style="width:150px"> 
+
+					<div class="container p-3 my-3 bg-dark text-white">
+						<p id="imagething" style="width:150px">
 					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p>
-					
+
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
 				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Subscribers</p>
 
 				<button id="lollllll" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter" >Change Channel</button>
-				
+
 			</div>
 			<!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -185,14 +185,14 @@ img {
 	  </div>
 	</div>
   </div>
-			<div class="container p-3 my-3 bg-dark text-white">  
-				<p class="odometer odometer-auto-theme" id="viewcount" style="color: rgb(255, 255, 255);">0</p> 
+			<div class="container p-3 my-3 bg-dark text-white">
+				<p class="odometer odometer-auto-theme" id="viewcount" style="color: rgb(255, 255, 255);">0</p>
 				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Total Video Views</p>
 				<div id="chart"></div>
 			</div>
-			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
+			<script src="https://code.highcharts.com/stock/highstock.js"></script>
 				<script type="text/javascript">
-				
+
 				var chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
@@ -249,21 +249,21 @@ color: '#ff5454',
 lineColor: '#ff5454'
 }]
 });
-var defaultCID = "UC4QobU6STFB0P71PMvOGN5A";	
+var defaultCID = "UC4QobU6STFB0P71PMvOGN5A";
 var serversList = ['api.allorigins.win', 'cors.t1ch.com'];
 function tryServerName() {
 	return serversList[Math.round(Math.random()*serversList.length)];
-}		
+}
 function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
-	
+
 	var channelName = "";
 	var isusingname = false;
 	var searchTerm = getUrlVars()['name'];
 				if(getUrlVars()['user'] !== undefined) {
 					loadChannel(getUrlVars()['user']);
 				} else  {
-				$.getJSON("https://raw-ai-yt.glitch.me/yt_channels/searchFor/"+searchTerm, function(data){
+				$.getJSON("https://congruous-colossal-lime.glitch.me/yt_channels/searchFor/"+searchTerm, function(data){
 				if(data.channels[0] == undefined) {
 					return;
 				}
@@ -279,12 +279,12 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 				}
 	function loadChannel(name) {
 		channelName = name;
-		var url = 'https://decisive-courageous-screen.glitch.me/youtube_estimation/'+name+''
+		var url = 'https://api.t1ch.com/youtube_estimation/'+name+''
 		$.getJSON(url, function(data) {
 			if (data.subscriberCount > 1000) {
 			channelSubs.innerHTML = data.subscriberCount
 			} else {
-				var url2 = 'https://raw-ai-yt.glitch.me/yt_channels/'+name+''
+				var url2 = 'https://congruous-colossal-lime.glitch.me/yt_channels/'+name+''
 				$.getJSON(url2, function(data) {
 					channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 //lol
@@ -292,15 +292,15 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 			}
 			var chartthingidk = data.subscriberCount
 		chart.series[0].addPoint([Date.now(), chartthingidk])
-			
+
 		});
 
-		
-		var url1 = 'https://raw-ai-yt.glitch.me/yt_channels/'+name+'';
+
+		var url1 = 'https://api.t1ch.com/youtube_estimation/'+name+'';
 		$.getJSON(url1, function(data){
-			PostContents.innerHTML = data.items[0].snippet.channel.title 
-			$('#imagething').html('<img src="'+data.items[0].snippet.pictures.avatar+'"< style="width:150px" id="imagething2"/img>');
-		
+			PostContents.innerHTML = data.cname
+			$('#imagething').html('<img src="'+data.cimage+'"< style="width:150px" id="imagething2"/img>');
+
 		});
 	}
 	// fuck
@@ -312,23 +312,23 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
 	        "AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
 	        "AIzaSyBK5JphqLqrr1GhhYqozm56my1kRY9dCiU"
-        ] 
-		
+        ]
+
 		var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url, function(data) {
 			viewcount.innerHTML = data.items[0].statistics.viewCount
 		})
-		
+
 	}, 12000);
 
 	setInterval(function() {
-	
-	var url = 'https://decisive-courageous-screen.glitch.me/youtube_estimation/'+channelName+''
+
+	var url = 'htt[s://api.t1ch.com/youtube_estimation/'+channelName+''
 $.getJSON(url, function(data) {
 	if (data.subscriberCount > 1000) {
 			channelSubs.innerHTML = data.subscriberCount
 			} else {
-				var url2 = 'https://raw-ai-yt.glitch.me/yt_channels/'+channelName+''
+				var url2 = 'https://congruous-colossal-lime.glitch.me/yt_channels/'+channelName+''
 				$.getJSON(url2, function(data) {
 					channelSubs.innerHTML = data.items[0].statistics.subscriberCount
 
@@ -400,10 +400,10 @@ color: '#ff5454',
 lineColor: '#ff5454'
 }]
 });
-		
+
 	});
-		
-	
+
+
 
 });
 
@@ -421,11 +421,11 @@ lineColor: '#ff5454'
 									      <!-- Default Statcounter code for statcounts.com
 https://site.statcounts.com/ -->
 <script type="text/javascript">
-var sc_project=12359926; 
-var sc_invisible=0; 
-var sc_security="cae44fab"; 
-var sc_text=2; 
-var sc_https=1; 
+var sc_project=12359926;
+var sc_invisible=0;
+var sc_security="cae44fab";
+var sc_text=2;
+var sc_https=1;
 var scJsHost = "https://";
 document.write("<sc"+"ript type='text/javascript' src='" +
 scJsHost+
