@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
@@ -35,46 +35,46 @@
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 		<link rel="stylesheet" href="livecountsbutreddit.css" />
-		
+
 	<style>
-	
+
 	*{font-family:Arial !Important}
-	
+
 	</style>
-	
+
 		<style>
-		
+
 		#channelSubs{
-		
+
 			font-size:12vh;
-			
-		
+
+
 		}
 
 		#TikTokHearts{
-		
+
 		font-size:5vh;
-		
-	
+
+
 	}
-		
+
 		</style>
-	
-	
+
+
 		<style>
-		
+
 		</style>
-	
+
 	<style>
-	
+
 	.odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
     font-family: Arial, sans-serif;
     line-height: 1.25em
 }
-	
+
 	</style>
-	
+
 <style>
 
 #channelSubs,
@@ -83,7 +83,7 @@
 .odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
 .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
 canvas {
-    
+
 }
 
 </style>
@@ -119,7 +119,7 @@ img {
     border-radius: 100%;
     border-color: rgb(255, 255, 255) !Important;
 }
-	
+
 
 
 </style>
@@ -127,22 +127,22 @@ img {
 	<script type="text/javascript">
 	</script>
 		<body id="body" style="background-color: rgb(208, 228, 254);">
-				
-				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
-				
-				
-				
 
-									
+				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
+
+
+
+
+
 
 
 				<br></br>
-					<div class="container p-3 my-3 bg-dark text-white">       
+					<div class="container p-3 my-3 bg-dark text-white">
                         <p id="imagething" style="width:150px"></p>
 					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p>
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
                 <p id="subscriberslola" style="color: rgb(230, 230, 230);">Followers</p>
-                
+
 				<button id="lollllll" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter" >Change User</button>
 
 				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -170,11 +170,11 @@ img {
 					  </div>
 					</div>
 				  </div>
-				
-			</div>
-			<div class="container p-3 my-3 bg-dark text-white">  
 
-				<p class="odometer odometer-auto-theme" id="TikTokHearts" style="color: rgb(255, 255, 255);">0</p>	
+			</div>
+			<div class="container p-3 my-3 bg-dark text-white">
+
+				<p class="odometer odometer-auto-theme" id="TikTokHearts" style="color: rgb(255, 255, 255);">0</p>
 				<p id="subscriberslola" style="color: rgb(230, 230, 230);">Hearts</p>
 				<div id="chart"></div>
 
@@ -182,7 +182,7 @@ img {
 				</div>
 
 
-			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
+			<script src="https://code.highcharts.com/stock/highstock.js"></script>
 			<script type="text/javascript">
 			var chart = new Highcharts.chart({
 chart: {
@@ -241,40 +241,40 @@ lineColor: '#ff5454'
 }]
 });
 
-	
+
 $(document).ready(function() {
-	
+
 	var channelName = "";
-	
+
 	loadChannel("charlidamelio")
-	
+
 	function loadChannel(name) {
 		channelName = name;
-		var url = 'https://good-quasar-talk.glitch.me/tiktok_estimation/'+name+''
+		var url = 'https://api.t1ch.com/tiktok_estimation/'+name+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = (data.followerCount)
 			var chartthingidk = data.followerCount;
 		chart.series[0].addPoint([Date.now(), chartthingidk])
 		});
-		
-		var url1 = 'https://good-quasar-talk.glitch.me/tiktok_estimation/'+name+'';
+
+		var url1 = 'https://api.t1ch.com/tiktok_estimation/'+name+'';
 		$.getJSON(url1, function(data){
 			PostContents.innerHTML = data.username
-		
+
 		});
 
 
-		var url1 = 'https://azure-veiled-guava.glitch.me/ttapi/'+name+'';
+		var url1 = 'https://api.t1ch.com/tiktok_api/'+name+'';
 		$.getJSON(url1, function(data){
 			TikTokHearts.innerHTML = data.heart
 			$('#imagething').html('<img src="'+data.coversMedium[0]+'"< style="width:150px" id="imagething2"/img>');
-		
+
 		});
 	}
-	
+
 	setInterval(function() {
-	
-					var url = 'https://good-quasar-talk.glitch.me/tiktok_estimation/'+channelName+''
+
+					var url = 'https://api.t1ch.com/tiktok_estimation/'+channelName+''
 		$.getJSON(url, function(data) {
 			channelSubs.innerHTML = (data.followerCount)
 			var chartthingidk = data.followerCount
@@ -282,19 +282,19 @@ if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(), chartthingidk])
 
 		});
-		
+
 	}, 2000);
 
 	setInterval(function() {
-		var url1 = 'https://good-quasar-talk.glitch.me/tiktok_estimation/'+channelName+'';
+		var url1 = 'https://api.t1ch.com/tiktok_api/'+channelName+'';
 		$.getJSON(url1, function(data){
 			TikTokHearts.innerHTML = data.heart
 			$('#imagething').html('<img src="'+data.coversMedium[0]+'"< style="width:150px" id="imagething2"/img>');
-		
+
 		});
-		
+
 }, 120000);
-	
+
 	$('#updateChannel').click( function() {
 		loadChannel($('#choose').val());
 		chart = new Highcharts.chart({
@@ -353,15 +353,15 @@ color: '#ff5454',
 lineColor: '#ff5454'
 }]
 });
-		
+
 	});
-		
-	
+
+
 
 });
 
 
-		
+
 
 
 			</script>
@@ -377,11 +377,11 @@ lineColor: '#ff5454'
 									      <!-- Default Statcounter code for statcounts.com
 https://site.statcounts.com/ -->
 <script type="text/javascript">
-var sc_project=12359926; 
-var sc_invisible=0; 
-var sc_security="cae44fab"; 
-var sc_text=2; 
-var sc_https=1; 
+var sc_project=12359926;
+var sc_invisible=0;
+var sc_security="cae44fab";
+var sc_text=2;
+var sc_https=1;
 var scJsHost = "https://";
 document.write("<sc"+"ript type='text/javascript' src='" +
 scJsHost+
@@ -394,8 +394,8 @@ src="https://c.statcounter.com/12359926/0/cae44fab/0/"
 alt="Web Analytics"></a></div></noscript>
 <!-- End of Statcounter Code -->
 <a href="https://statcounter.com/p12359926/?guest=1">uh</a>
-				
-				
+
+
         </body>
     </head>
 </html>
