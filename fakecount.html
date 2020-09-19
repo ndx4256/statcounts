@@ -159,13 +159,13 @@ img {
 			<b>!! THIS IS MAINLY BEST FOR ESTIMATING COUNTERS!! This is basically t1ch's api but you control the stats. "Subs today" is the subscriber count you want to start at. "Subs Yesterday" controls the rate, the bigger the difference the faster the count. if its higher than Today, it will decrease.</b>
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
-				  <span class="input-group-text" id="misubRate">Subs Yesterday (lower, the faster)</span>
+				  <span class="input-group-text" id="misubRate">Subscriber Count</span>
 				</div>
 				<input type="text" class="form-control" id="choose1" aria-describedby="misubRate"></input>
               </div>
               <div class="input-group mb-3">
 				<div class="input-group-prepend">
-				  <span class="input-group-text" id="masubRate">Subs Today (now)</span>
+				  <span class="input-group-text" id="masubRate">subGain Daily Average:</span>
 				</div>
 				<input type="text" class="form-control" id="choose2" aria-describedby="masubRate"></input>
 			  </div>
@@ -263,20 +263,23 @@ lineColor: '#ff5454'
 }]
 });
 var y = 0;
-				var lastHour = 0;
-				var _0x4e78=['abs','floor','random','log'];(function(_0x451cb1,_0x4e7882){var _0x5bb862=function(_0x494205){while(--_0x494205){_0x451cb1['push'](_0x451cb1['shift']());}};_0x5bb862(++_0x4e7882);}(_0x4e78,0x76));var _0x5bb8=function(_0x451cb1,_0x4e7882){_0x451cb1=_0x451cb1-0x0;var _0x5bb862=_0x4e78[_0x451cb1];return _0x5bb862;};var Div=0x0;function getRandomInt(_0x311cd9,_0x24b207){return Math[_0x5bb8('0x3')](Math['random']()*(_0x24b207-_0x311cd9+0x1))+_0x311cd9;}function getRandInt(_0x243e45,_0x2f8cd2){return Math[_0x5bb8('0x3')](Math[_0x5bb8('0x0')]()*(_0x2f8cd2-_0x243e45+0x1))+_0x243e45;}function getMin(_0x3ef25f,_0x5818f4,_0x188ebe){return 0x1-(_0x5818f4+_0x3ef25f)/_0x3ef25f;}function getMax(_0x244321,_0x324ab7,_0x4e70e4){return 0x1+(_0x324ab7+_0x244321)/_0x244321;}function getEstSubGain(_0xa71004,_0x489846){return(_0x489846-_0xa71004)/0x64;}function randomNumber(_0x22e8bf,_0x14f379){return Math[_0x5bb8('0x3')](Math[_0x5bb8('0x0')]()*(_0x14f379-_0x22e8bf))+_0x22e8bf;}function toAvgSubs(_0x779361,_0xddcaff,_0x1a3c3a,_0x13baab){var _0x1f26be=getEstSubGain(_0x1a3c3a,_0x13baab)/0x21c0,_0x7531e0=getMin(_0x1a3c3a,_0x13baab,_0x1f26be),_0x2171b1=getMax(_0x1a3c3a,_0x13baab,_0x1f26be),_0x406c7a=_0x7531e0-_0x2171b1,_0x68eb87=_0x7531e0+_0x2171b1;console[_0x5bb8('0x1')](_0x7531e0),console[_0x5bb8('0x1')](_0x2171b1);var _0x30ebff=randomNumber(_0x7531e0,_0x2171b1),_0x35cce9=0x0,_0x1371b7=0x0;if(_0x1f26be>0x0)Div=Div+randomNumber(_0x7531e0,_0x2171b1+getEstSubGain(_0x1a3c3a,_0x13baab)/0x15180);else _0x1f26be<0x0&&(Div=Div-randomNumber(Math[_0x5bb8('0x2')](_0x7531e0),_0x2171b1+getEstSubGain(_0x1a3c3a,_0x13baab)/0x15180));console[_0x5bb8('0x1')](_0x1f26be);var _0x2bcfdc=(_0x7531e0^_0x2171b1^_0x779361)/((_0x7531e0^_0x2171b1^_0x1f26be)/(_0x2171b1^_0x7531e0^_0x1f26be)*(_0x7531e0^_0x2171b1^_0x1f26be)/_0x1f26be);if(_0x13baab>=0x989680)return Div;return _0x2bcfdc;}
+var Data = undefined;
+var funcTimers = [];
+var _0x1ed9=['round','length','push'];(function(_0x2b40ad,_0x1ed968){var _0x504ba3=function(_0x4c4bed){while(--_0x4c4bed){_0x2b40ad['push'](_0x2b40ad['shift']());}};_0x504ba3(++_0x1ed968);}(_0x1ed9,0x140));var _0x504b=function(_0x2b40ad,_0x1ed968){_0x2b40ad=_0x2b40ad-0x0;var _0x504ba3=_0x1ed9[_0x2b40ad];return _0x504ba3;};function _min(_0x4c4bed,_0x533738){var _0x146b9a=_0x504b,_0x168a96=_0x4c4bed,_0x2fc6b5=_0x4c4bed/0x15180*0x4,_0x2e0ea7=[],_0x1507cb=0x0;_0x2e0ea7[_0x146b9a('0x0')](_0x168a96);for(var _0x55c3aa=0x1;_0x55c3aa<_0x533738;_0x55c3aa++){_0x2e0ea7['push']((_0x168a96+_0x2fc6b5)/_0x55c3aa),_0x1507cb+=_0x2e0ea7[_0x55c3aa];}return-Math[_0x146b9a('0x1')](_0x1507cb/_0x2e0ea7[_0x146b9a('0x2')]*0x4/_0x4c4bed);}function _max(_0x5c16d3,_0x40ee48){var _0x25bd5f=_0x504b,_0x8b3181=_0x5c16d3,_0x1e3050=_0x5c16d3/0x15180*0x4,_0x3078bd=[],_0x2d417a=0x0;_0x3078bd['push'](_0x8b3181);for(var _0x26687c=0x1;_0x26687c<_0x40ee48;_0x26687c++){_0x3078bd['push'](_0x8b3181-_0x1e3050),_0x2d417a+=_0x3078bd[_0x26687c];}return Math[_0x25bd5f('0x1')](_0x2d417a/_0x3078bd['length']*0x4/_0x5c16d3);}
+var _0x3b4f=['now','apiSubCount','estSubGain','log','random','subscriberCountTemp','duration','lastTime','expiresNow','cid','pow','round'];(function(_0x18f727,_0x3b4f17){var _0x518b51=function(_0x34a092){while(--_0x34a092){_0x18f727['push'](_0x18f727['shift']());}};_0x518b51(++_0x3b4f17);}(_0x3b4f,0x112));var _0x518b=function(_0x18f727,_0x3b4f17){_0x18f727=_0x18f727-0x0;var _0x518b51=_0x3b4f[_0x18f727];return _0x518b51;};function easing(_0x34a092,_0x1683dd,_0x24bc26){var _0x46a527=_0x518b;return _0x34a092*0x3/Math['pow'](_0x1683dd,0x3)*Math[_0x46a527('0x0')](_0x24bc26,0x2);}function getMin(_0x3b9dfa){var _0x3c819a=_0x518b;return Math[_0x3c819a('0x1')](_min(_0x3b9dfa,0x1e));}function getMax(_0x10788b){return Math['round'](_max(_0x10788b,0x1e));}function random(_0x10b92a,_0x36b5fa){var _0x1f880d=_0x518b;return Math['floor'](Math[_0x1f880d('0x6')]()*(_0x36b5fa-_0x10b92a))+_0x10b92a;}function startCalcAvgSubs(_0x4198f0,_0xebf5bc){var _0x53de43=_0x518b,_0x49c33b=_0x4198f0['estSubGain'],_0x4d741a=Math[_0x53de43('0x1')](_0x4198f0[_0x53de43('0x9')]),_0x13924c=Math['abs'](_0x4d741a/_0x49c33b),_0x578bc2=Math[_0x53de43('0x1')](Date[_0x53de43('0x2')]()+_0x13924c/0x15180*0x4),_0x5cad77=_0x4198f0[_0x53de43('0x9')];(_0x4198f0[_0x53de43('0xa')]==undefined||_0x4198f0[_0x53de43('0xa')]==![])&&(_0x4198f0[_0x53de43('0x8')]=_0x578bc2,_0x4198f0[_0x53de43('0xa')]=!![]);(_0x4198f0[_0x53de43('0x8')]==null||_0x4198f0[_0x53de43('0x8')]==undefined)&&(_0x4198f0['expiresNow']=![]);if(_0x4198f0[_0x53de43('0x8')]<=0x0||_0x4198f0[_0x53de43('0x8')]>=Infinity||_0x4198f0['duration']==NaN)return;funcTimers[_0x4198f0[_0x53de43('0xb')]]=setTimeout(function(){var _0x3f68cb=_0x53de43,_0x2b6969=_0x4198f0[_0x3f68cb('0x4')],_0x52810d=getMin(_0x4198f0[_0x3f68cb('0x4')]),_0x230d87=getMax(_0x4198f0[_0x3f68cb('0x4')]),_0x4b39b2=_0x4198f0[_0x3f68cb('0x3')];console[_0x3f68cb('0x5')](_0x13924c/0x15180*0x4);var _0x375f22=Math[_0x3f68cb('0x1')](_0x4198f0[_0x3f68cb('0x4')]/0x15180*_0x230d87),_0x2591c3=random(_0x52810d,_0x230d87+_0x375f22),_0x2c7506=_0x2591c3;if(_0x49c33b>=0x1&&Date['now']()>=_0x4198f0['duration'])_0x4198f0['subscriberCountTemp']+=_0x2591c3,_0x4198f0['expiresNow']=![];else _0x49c33b<=-0x1&&Date[_0x3f68cb('0x2')]()>=_0x4198f0[_0x3f68cb('0x8')]&&(_0x4198f0[_0x3f68cb('0x7')]-=_0x2591c3,_0x4198f0[_0x3f68cb('0xa')]=![]);});}
 function updateSubCount(count) {
 	channelSubs.innerHTML = count
 	var chartthingidk = count
 if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(), chartthingidk])
 }
-
+//var Data = undefined;
 $('#updateRate').click( function() {
 	//y = $('#choose69').val();
 	lastHour = Date.now()
-	updateSubCount(Math.round(parseInt($('#choose2').val())+toAvgSubs((Date.now()/1000)-(lastHour/1000), "a", parseInt($('#choose1').val()), parseInt($('#choose2').val()))));
-	//toAvgSubsManual((Date.now()/1000)-(lastHour/1000), parseInt($('#choose1').val()), parseInt($('#choose2').val()),  parseInt(y));
+	Data = {"cid":"fakecount","apiSubCount":parseInt($('#choose1').val()),"subscriberCountTemp":parseInt($('#choose1').val().substring(3)),"_duration":3,"estSubGain":parseInt($('#choose2').val()),"lastTime":Date.now()};
+	startCalcAvgSubs(Data,0);
+	updateSubCount(Math.round(Data.apiSubCount+Data.subscriberCountTemp));
 	chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
@@ -336,8 +339,10 @@ lineColor: '#ff5454'
 });
 
 setInterval((aylmao) => {
-	if(lastHour != 0) {
-		updateSubCount(Math.round(parseInt($('#choose2').val())+toAvgSubs((Date.now()/1000)-(lastHour/1000), "a", parseInt($('#choose1').val()), parseInt($('#choose2').val()))));
+	if(Data != undefined) {
+	startCalcAvgSubs(Data,0);
+	updateSubCount(Math.round(Data.apiSubCount+Data.subscriberCountTemp));
+	//updateSubCount(Math.round(parseInt($('#choose2').val())+toAvgSubs((Date.now()/1000)-(lastHour/1000), "a", parseInt($('#choose1').val()), parseInt($('#choose2').val()))));
 	}
 }, 2000);
 
