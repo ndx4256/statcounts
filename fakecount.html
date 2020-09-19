@@ -277,9 +277,10 @@ chart.series[0].addPoint([Date.now(), chartthingidk])
 $('#updateRate').click( function() {
 	//y = $('#choose69').val();
 	lastHour = Date.now()
-	Data = {"cid":"fakecount","apiSubCount":parseInt($('#choose1').val()),"subscriberCountTemp":parseInt($('#choose1').val().substring(3)),"_duration":3,"estSubGain":parseInt($('#choose2').val()),"lastTime":Date.now()};
+	//var api = parseInt($('#choose1').val().substring(3)),"_;
+	Data = {"cid":"fakecount","apiSubCount":0,"subscriberCountTemp":parseInt($('#choose1').val()),"_duration":3,"estSubGain":parseInt($('#choose2').val()),"lastTime":Date.now()};
 	startCalcAvgSubs(Data,0);
-	updateSubCount(Math.round(Data.apiSubCount+Data.subscriberCountTemp));
+	updateSubCount(Math.round(Data.subscriberCountTemp));
 	chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
@@ -341,7 +342,7 @@ lineColor: '#ff5454'
 setInterval((aylmao) => {
 	if(Data != undefined) {
 	startCalcAvgSubs(Data,0);
-	updateSubCount(Math.round(Data.apiSubCount+Data.subscriberCountTemp));
+	updateSubCount(Math.round(Data.subscriberCountTemp));
 	//updateSubCount(Math.round(parseInt($('#choose2').val())+toAvgSubs((Date.now()/1000)-(lastHour/1000), "a", parseInt($('#choose1').val()), parseInt($('#choose2').val()))));
 	}
 }, 2000);
