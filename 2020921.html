@@ -324,6 +324,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var url1 = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url1, function(data){
 			PostContents.innerHTML = data.items[0].snippet.title
+            channelSubs2.innerHTML = data.items[0].statistics.likeCount
 			$('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
             $('#imagething1233').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething3"/img>');
 		
@@ -346,6 +347,8 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
 
+            
+            var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
@@ -354,7 +357,6 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var url1 = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(url1, function(data){
 			channelSubs2.innerHTML = data.items[0].statistics.likeCount
-		
 		});
             
             
