@@ -2,14 +2,21 @@
 <head>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">StatCounts - Twitter Latest Like Counter</a>
+            <a class="nav-link" href="#">SC</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
@@ -18,15 +25,17 @@
           </li>
         </ul>
       </nav>
-      <div class="alert alert-danger">
-        <strong>News:</strong> I'm hosting a logo design contest! (winner gets a 5 day shoutout!) Send your logo's to xdn#2049 on Discord!
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Server</button>
+   
       </div>
+      
 
-<body style="background-color: rgb(74, 74, 74);">
+<body style="background-color: rgb(255, 255, 255);"></body>
+
 
 <html>
 	<head>
-		<title>Live Twitter Latest Like Counter</title>
+		<title>v2- Discord</title>
 		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
@@ -34,7 +43,9 @@
 		
 	<style>
 	
-	*{font-family:Arial !Important}
+	*{
+        font-family: Roboto;
+    }
 	
 	</style>
 	
@@ -43,12 +54,31 @@
 		#channelSubs{
 		
 			font-size:12vh;
+            font-weight: bold;
 			
 		
 		}
 		
 
         #channelSubs2{
+		
+        font-size:5vh;
+        
+    
+    }
+
+    bgimage{
+        filter: blur(4px);
+    }
+
+    #clickrate{
+		
+        font-size:3vh;
+        
+    
+    }
+
+    #Milestone{
 		
         font-size:5vh;
         
@@ -66,145 +96,308 @@
 	.odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
     font-family: Arial, sans-serif;
-    line-height: 1.25em
+    line-height: 1.4em
 }
 	
-	</style>
+    </style>
+    
 	
 <style>
 
-#channelSubs,
-#container,
-#subscribeButton,
-.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
-.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
-canvas {
-    
+#PostContents{
+    color: rgb(0, 0, 0);
 }
+
+
+
+#imagething2{
+    object-fit: cover;
+    z-index: -1;
+    width: 900px !important; /* width of container */
+    height: 140px !Important; /* height of container */
+    filter:blur(8px)
+}
+
+#imagething3{
+    border: solid .95vh !Important;
+    border-radius: 11%;
+    border-color: rgb(33, 96, 231) !Important;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+*{
+    text-align: center !Important;
+}
+
+
+
 
 </style>
 <style>
-*{text-align: center;}
+
+
+#subscriberslola{
+    font-weight:bold !Important;
+}
 
 #PostContents {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
-#imagething2 {
-    border: solid .5vh !Important;
-    border-radius: 100%;
-    border-color: rgb(255, 255, 255) !Important;
-}
 
-#imagething {
+#imagething1233 {
 
 display: block;
 margin-left: auto;
-margin-right: auto;
+margin-right: 2.5%;
+margin-top: -13%;
+
 }
+
+
+
+
+#PostContents{
+    font-weight:bold !Important;
+}
+
+
 
 </style>
 	</head>
 	<script type="text/javascript">
-	
-	$(document).ready(function() {
-	
-		var channelName = "";
-		
-		loadChannel("realdonaldtrump")
-		
-        function loadChannel(name) {
-			channelName = name;
-			var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+name+''
-			$.getJSON(url, function(data) {
-				channelSubs.innerHTML = data.status.favorite_count
-                channelSubs2.innerHTML = data.status.retweet_count
-			});
-			
-			var url1 = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+name+''
-			$.getJSON(url1, function(data){
-				PostContents.innerHTML = data.name
-			
-			});
-		}
-		
-		setInterval(function() {
-		
-						var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+channelName+''
-			$.getJSON(url, function(data) {
-                if (data.status.favorite_count == 0) {
-                    channelSubs.innerHTML = data.status.retweeted_status.favorite_count
-                } else {
-                    channelSubs.innerHTML = data.status.favorite_count
-                }
-                
-                channelSubs2.innerHTML = data.status.retweet_count
-                $('#imagething').html('<img src="'+data.profile_image_url_https+'"< style="width:150px" id="imagething2"/img>');
-			});
-			
-		}, 2000);
-		
-		$('#updateChannel').click( function() {
-			loadChannel($('#choose').val());
-			
-		});
-			
-		
-	
-	});
-	
-	
 	</script>
-		<body id="body" style="background-color: rgb(208, 228, 254);">
+		<body id="body" style="background-color: rgb(0, 0, 0);">
 				
-				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
+				<b id=channelName" style="color: rgb(0, 0, 0); border: 3px none green;"></b>
 				
 				
 				
 
 									
 
-
+                <script src="https://code.highcharts.com/stock/highstock.js"></script>
 				<br></br>
-					<div class="container p-3 my-3 bg-dark text-white">       
-                        <p id="imagething" style="width:150px"></p>
-					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p>
-                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
-                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Latest Tweet Likes</p>
-                <input type="text" id="choose" placeholder="@"></input>
-				<button id="updateChannel" type="button" class="btn btn-danger">Change User</button>
-				
-            </div>
-											    
-					<div class="container p-3 my-3 bg-dark text-white">
-                        <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(255, 255, 255);">0</p>
-                        <p id="subscriberslola" style="color: rgb(230, 230, 230);">Latest Tweet Retweets</p>
-				
-            </div>
+                <div  class="container p-3 my-3 border">    
+                    <div id="imagething" style="width:150px"></div>
+                    <div id="imagething1233" style="width:150px"></div>
+					<p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol </p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
+                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Members</p>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Change Server</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <b>tf u doin over here?</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol">discord.gg/</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                          <button id="updateChannel"type="button" class="btn btn-primary" data-dismiss="modal">Change Server</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                <div id="chart"></div>
+            
+            						    
+            <script type="text/javascript">
+            var line = "#4287f5"
+
+            var chart = new Highcharts.chart({
+  chart: {
+      renderTo: 'chart',
+      type: 'line',
+        zoomType: 'x',
+        backgroundColor: 'transparent',
+        plotBorderColor: 'transparent'
+  },
+  title: {
+      text: ''
+  },
+  xAxis: {
+      type: 'datetime',
+      tickPixelInterval: 500,
+        gridLineColor: '#4287f5',
+        labels: {
+            style: {
+                color: '#4287f5'
+            }
+        },
+        lineColor: line,
+        minorGridLineColor: '#4287f5',
+        tickColor: line,
+        title: {
+            style: {
+                color: '#4287f5'
+            }
+        }
+  },
+  yAxis: {
+      title: {
+          text: ''
+      },
+        gridLineColor: 'transparent',
+        labels: {
+            style: {
+                color: '#4287f5'
+            }
+        },
+        lineColor: '#4287f5',
+        minorGridLineColor: 'transparent',
+        tickColor: '#4287f5'
+  },
+  credits: {
+      enabled: false,
+      text: ""
+  },
+
+  series: [{
+    showInLegend: false,
+     name: 'Total # of Clicks',
+    marker: { enabled: false },
+    color: '#4287f5',
+    lineColor: '#4287f5'
+  }]
+});
+            
+            </script>	
 											       
+                <script type="text/javascript">
+                    $(document).ready(function() {
+	
+                        var defaultCID = "mrbeast";			
+function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
+						$(document).ready(function() {
+	
+	var channelName = "";
+				if(getUrlVars()['user'] !== undefined) {
+					loadChannel(getUrlVars()['user']);
+				} else  {
+					loadChannel(defaultCID);
+				}
+    
+    
+    function loadChannel(name) {
+        channelName = name;
+        var url = 'https://discord.com/api/v6/invites/'+name+'?with_counts=true'
+        $.getJSON(url, function(data) {
+            channelSubs.innerHTML = data.approximate_member_count
+            PostContents.innerHTML = data.guild.name
+            $('#imagething').html('<img src="https://cdn.discordapp.com/banners/'+data.guild.id+'/'+data.guild.banner+'.jpeg"< style="width:150px" id="imagething2"/img>');
+            $('#imagething1233').html('<img src="https://cdn.discordapp.com/icons/'+data.guild.id+'/'+data.guild.icon+'.png"< style="width:150px" id="imagething3"/img>');
+
+            var chartthingidk = data.approximate_member_count
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+            
+        });
+        
+    }
+    
+    setInterval(function() {
+
+        
+    
+        var url = 'https://discord.com/api/v6/invites/'+channelName+'?with_counts=true'
+        $.getJSON(url, function(data) {
+            channelSubs.innerHTML = data.approximate_member_count
+    
+            var chartthingidk = data.approximate_member_count
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+            
+            
+            
+        });
+
+
+    }, 2000);
+    
+    $('#updateChannel').click( function() {
+        loadChannel($('#choose').val());
+        var line = "#4287f5"
+
+chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'spline',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#4287f5',
+labels: {
+style: {
+    color: '#4287f5'
+}
+},
+lineColor: line,
+minorGridLineColor: '#4287f5',
+tickColor: line,
+title: {
+style: {
+    color: '#4287f5'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#4287f5'
+}
+},
+lineColor: '#4287f5',
+minorGridLineColor: 'transparent',
+tickColor: '#4287f5'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Total # of Clicks',
+marker: { enabled: false },
+color: '#4287f5',
+lineColor: '#4287f5'
+}]
+});
+        
+    });
+        
+    
+
+});
+                    })
+
+                
+                
+                </script>
 				
 				
-		<!-- Default Statcounter code for statcounts.com
-https://site.statcounts.com/ -->
-<script type="text/javascript">
-var sc_project=12359926; 
-var sc_invisible=0; 
-var sc_security="cae44fab"; 
-var sc_text=2; 
-var sc_https=1; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/12359926/0/cae44fab/0/"
-alt="Web Analytics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-<a href="https://statcounter.com/p12359926/?guest=1">uh</a>		
         </body>
     </head>
 </html>
