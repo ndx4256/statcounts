@@ -25,7 +25,7 @@
           </li>
         </ul>
       </nav>
-      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Twitter Account</button>
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change YouTube Live Stream</button>
      
       </div>
       
@@ -70,13 +70,6 @@
 
     bgimage{
         filter: blur(4px);
-    }
-
-    #clickrate{
-		
-        font-size:3vh;
-        
-    
     }
 
     #Milestone{
@@ -194,23 +187,23 @@ margin-top: -13%;
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Change Profile</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Change Stream</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                            <b>Enter the name of the Twitter User you want to track the likes of said user's latest tweet.</b>
+                            <b>Enter the name of the YT Stream you want to track the Viewers of.</b>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="lol">twitter.com/</span>
+                                  <span class="input-group-text" id="lol">youtube.com/watch?v=</span>
                                 </div>
                                 <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
                               </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-                          <button id="updateChannel"type="button" class="btn btn-primary" data-dismiss="modal">Change Channel</button>
+                          <button id="updateChannel"type="button" class="btn btn-primary" data-dismiss="modal">Change Stream</button>
                           </div>
                       </div>
                     </div>
@@ -219,7 +212,7 @@ margin-top: -13%;
                   <div  class="container p-3 my-3 border">   
                     <div  class="container p-3 my-3 border">
                         <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(0, 0, 0);">0</p>
-                        <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Latest Tweet Likes</p>
+                        <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Concurrent Viewers</p>
                           </div>
                 <div id="chart"></div>
                   </div>
@@ -316,8 +309,11 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var url = 'https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
-           var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
-            chart.series[0].addPoint([Date.now(),chartthingidk])
+
+            var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
+
+                if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+                    chart.series[0].addPoint([Date.now(),chartthingidk])
             
         });
 
@@ -337,9 +333,9 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
             "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
             "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-	"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
-	"AIzaSyBK5JphqLqrr1GhhYqozm56my1kRY9dCiU"
-        ] 
+	        "AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+	        "AIzaSyBK5JphqLqrr1GhhYqozm56my1kRY9dCiU"
+             ] 
         
     
         var url = 'https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
@@ -348,6 +344,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 
 
             var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
+
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
