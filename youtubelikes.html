@@ -320,6 +320,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].statistics.likeCount
+            idlol.innerHTML = channelName
                 var yeslol = data.items[0].statistics.likeCount
             var chartthingidk = yeslol
 
