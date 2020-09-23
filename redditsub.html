@@ -301,8 +301,14 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.data.subscribers
             PostContents.innerHTML = data.data.title
-            $('#imagething').html('<img src="'+data.data.banner_img+'"< style="width:150px" id="imagething2"/img>');
-            $('#imagething1233').html('<img src="'+data.data.icon_img+'"< style="width:150px" id="imagething3"/img>');
+			     if (data.data.icon_img == "") {
+                $('#imagething1233').html('<img src="https://www.iconfinder.com/data/icons/social-media-2285/512/1_Reddit_colored_svg-512.png"< style="width:150px" id="imagething3"/img>');
+                $('#imagething').html('<img src="https://i.imgur.com/2jj1JDa.png"< style="width:150px" id="imagething2"/img>');
+            } else {
+                $('#imagething1233').html('<img src="'+data.data.icon_img+'"< style="width:150px" id="imagething3"/img>');
+														   $('#imagething').html('<img src="'+data.data.banner_img+'"< style="width:150px" id="imagething2"/img>');
+            }
+           
 
             var chartthingidk = data.subscribers
             chart.series[0].addPoint([Date.now(),chartthingidk])
