@@ -214,7 +214,7 @@ margin-top: -13%;
                         <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(0, 0, 0);">0</p>
                         <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Likes</p>
                           </div>
-               
+									     <div id="chart"></div>
                   </div>
                   
             						    
@@ -313,7 +313,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             var chartthingidk = yeslol
 
                 if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
-                    chart.series[0].addPoint([Date.now(),chartthingidk])
+                   chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
             
         });
 
@@ -346,7 +346,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
 
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
-            chart.series[0].addPoint([Date.now(),chartthingidk])
+            chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
             
         });
 
