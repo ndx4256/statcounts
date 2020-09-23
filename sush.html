@@ -182,7 +182,7 @@ margin-top: -13%;
                   
                     <p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol</p>
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
-                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Latest Tweet Likes</p>
+                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Concurrent Viewers</p>
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
@@ -212,7 +212,7 @@ margin-top: -13%;
                   <div  class="container p-3 my-3 border">   
                     <div  class="container p-3 my-3 border">
                         <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(0, 0, 0);">0</p>
-                        <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Concurrent Viewers</p>
+                        <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Likes</p>
                           </div>
                 <div id="chart"></div>
                   </div>
@@ -309,8 +309,8 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var url = 'https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].liveStreamingDetails.concurrentViewers
-
-            var chartthingidk = data.items[0].liveStreamingDetails.concurrentViewers
+                var yeslol = data.items[0].liveStreamingDetails.concurrentViewers
+            var chartthingidk = yeslol
 
                 if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
                     chart.series[0].addPoint([Date.now(),chartthingidk])
