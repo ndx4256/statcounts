@@ -282,13 +282,16 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             channelSubs.innerHTML = data.followers_count
             PostContents.innerHTML = data.name
             $('#imagething').html('<img src="'+data.profile_banner_url+'"< style="width:150px" id="imagething2"/img>');
-            $('#imagething1233').html('<img src="'+data.profile_image_url+'"< style="width:150px" id="imagething3"/img>');
+            
 
             var chartthingidk = data.followers_count            
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
         });
-        
+        var url123 = 'https://mixerno.space/api/twitter/user/'+name+''
+        $.getJSON(url123, function(data) {
+            $('#imagething1233').html('<img src="'+data.pfp+'"< style="width:150px" id="imagething3"/img>');
+        });
     }
     
     setInterval(function() {
