@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-
+    <script async src="https://arc.io/widget.js#Zs8wbDVz"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -25,8 +25,8 @@
           </li>
         </ul>
       </nav>
-      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Twitter Account</button>
- 
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Subreddit</button>
+
       </div>
       
 
@@ -35,12 +35,11 @@
 
 <html>
 	<head>
-		<title>v2- Twitter</title>
+		<title>v2- Reddit</title>
 		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-        <link rel="stylesheet" href="livecountsbutreddit.css" />
-        <script src="https://kit.fontawesome.com/229e496f46.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="livecountsbutreddit.css" />
 		
 	<style>
 	
@@ -61,16 +60,36 @@
 		}
 		
 
+        #channelSubs2{
+		
+        font-size:5vh;
+        
+    
+    }
 
     bgimage{
         filter: blur(4px);
     }
 
+    #clickrate{
+		
+        font-size:3vh;
+        
+    
+    }
 
-
-
+    #Milestone{
+		
+        font-size:5vh;
+        
+    
+    }
 		</style>
 	
+	
+		<style>
+		
+		</style>
 	
 	<style>
 	
@@ -94,8 +113,8 @@
 #imagething2{
     object-fit: cover;
     z-index: -1;
-    width: 900px !important; 
-    height: 140px !Important; 
+    width: 900px !important; /* width of container */
+    height: 140px !Important; /* height of container */
     filter:blur(8px)
 }
 
@@ -137,12 +156,14 @@ margin-top: -13%;
 }
 
 
-
+#PostContents:hover{
+    color:rgb(73, 23, 153) !important;
+    transition: 0.3s !important;
+}
 
 #PostContents{
     font-weight:bold !Important;
 }
-
 
 
 
@@ -163,39 +184,38 @@ margin-top: -13%;
 				<br></br>
                 <div  class="container p-3 my-3 border">    
                     <div id="imagething" style="width:150px"></div>
-                    <div id="imagething1233" style="width:150px"></div> 
-                  
-                    <p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol</p>
+                    <div id="imagething1233" style="width:150px"></div>
+					<p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol </p>
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
-                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Followers</p>
+                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Subscribers</p>
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Change User</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Change Subreddit</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                            <b>Enter the name of the Twitter User you want to track the likes of said user's latest tweet.</b>
+                            <b>Enter the NAME of the subreddit! (no r/)</b>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="lol">twitter.com/</span>
+                                  <span class="input-group-text" id="lol">r/</span>
                                 </div>
                                 <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
                               </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-                          <button id="updateChannel"type="button" class="btn btn-primary" data-dismiss="modal">Change User</button>
+                          <button id="updateChannel"type="button" class="btn btn-primary" data-dismiss="modal">Change Subreddit</button>
                           </div>
                       </div>
                     </div>
                   </div>
-                  <div  class="container p-3 my-3 border">   
+                  <div  class="container p-3 my-3 border">    
                 <div id="chart"></div>
-                  </div>
+                </div>  
             
             						    
             <script type="text/javascript">
@@ -263,7 +283,7 @@ margin-top: -13%;
                 <script type="text/javascript">
                     $(document).ready(function() {
 	
-                        var defaultCID = "realdonaldtrump";			
+                        var defaultCID = "funny";			
 function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
 	
@@ -277,14 +297,14 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     function loadChannel(name) {
         channelName = name;
-        var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+name+''
+        var url = 'https://api.reddit.com/r/'+name+'/about'
         $.getJSON(url, function(data) {
-            channelSubs.innerHTML = data.followers_count
-            PostContents.innerHTML = data.name
-            $('#imagething').html('<img src="'+data.profile_banner_url+'"< style="width:150px" id="imagething2"/img>');
-            $('#imagething1233').html('<img src="'+data.profile_image_url+'"< style="width:150px" id="imagething3"/img>');
+            channelSubs.innerHTML = data.data.subscribers
+            PostContents.innerHTML = data.data.title
+            $('#imagething').html('<img src="'+data.data.banner_img+'"< style="width:150px" id="imagething2"/img>');
+            $('#imagething1233').html('<img src="'+data.data.icon_img+'"< style="width:150px" id="imagething3"/img>');
 
-            var chartthingidk = data.followers_count            
+            var chartthingidk = data.subscribers
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
         });
@@ -295,29 +315,30 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 
         
     
-        var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+channelName+''
+        var url = 'https://api.reddit.com/r/'+channelName+'/about'
         $.getJSON(url, function(data) {
-            
-                channelSubs.innerHTML = data.followers_count
-        
-            var chartthingidk = data.followers_count
+            channelSubs.innerHTML = data.data.subscribers
+            if (data.data.icon_img == "") {
+                $('#imagething1233').html('<img src="https://www.iconfinder.com/data/icons/social-media-2285/512/1_Reddit_colored_svg-512.png"< style="width:150px" id="imagething3"/img>');
+                $('#imagething').html('<img src="https://i.imgur.com/2jj1JDa.png"< style="width:150px" id="imagething2"/img>');
+            } else {
+                $('#imagething1233').html('<img src="'+data.data.icon_img+'"< style="width:150px" id="imagething3"/img>');
+            }
+            var chartthingidk = data.data.subscribers
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
             
+            
         });
-      
-        
+
 
     }, 2000);
-
-
     
     $('#updateChannel').click( function() {
         loadChannel($('#choose').val());
         var line = "#4287f5"
-
- chart = new Highcharts.chart({
+        chart = new Highcharts.chart({
   chart: {
       renderTo: 'chart',
       type: 'line',
@@ -384,7 +405,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
                 
                 
                 </script>
-			<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -392,7 +413,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
   gtag('js', new Date());
 
   gtag('config', 'UA-172872844-1');
-</script>			
+</script>		
 				
         </body>
     </head>
