@@ -308,7 +308,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
                 }
             PostContents.innerHTML = data.name
             $('#imagething').html('<img src="'+data.profile_banner_url+'"< style="width:150px" id="imagething2"/img>');
-            $('#imagething1233').html('<img src="'+data.profile_image_url+'"< style="width:150px" id="imagething3"/img>');
+           
 
             if (data.status.favorite_count == 0) {
                     var chartthingidk = data.status.retweeted_status.favorite_count
@@ -318,6 +318,11 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
+        });
+														  
+	var url123 = 'https://mixerno.space/api/twitter/user/'+name+''
+        $.getJSON(url123, function(data) {
+            $('#imagething1233').html('<img src="'+data.pfp+'"< style="width:150px" id="imagething3"/img>');
         });
         
     }
