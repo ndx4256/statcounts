@@ -348,7 +348,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
                 var yeslol = data.items[0].statistics.likeCount
 
                 avg.push(Math.floor(data.items[0].statistics.likeCount))
-        if (avg.length >= 30) {avg.shift()}
+        if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
             console.log(i)
@@ -396,7 +396,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             channelSubs.innerHTML = data.items[0].statistics.likeCount
 
             avg.push(Math.floor(data.items[0].statistics.likeCount))
-        if (avg.length >= 30) {avg.shift()}
+        if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
             console.log(i)
