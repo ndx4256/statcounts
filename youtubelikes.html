@@ -1,144 +1,504 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@ndx4256 
-ndx4256
-/
-statcounts
-1
-10
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-statcounts
-/
-youtubelikes.html
- 
-
-Tabs
-
-8
-
-No wrap
-1
 <!DOCTYPE html>
-2
 <head>
-3
     <script async src="https://arc.io/widget.js#Zs8wbDVz"></script>
-4
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-5
-​
-6
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-7
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-8
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-9
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-10
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
-11
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-12
         <ul class="navbar-nav">
-13
           <li class="nav-item active">
-14
             <a class="nav-link" href="#">SC</a>
-15
           </li>
-16
           <li class="nav-item">
-17
             <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
-18
           </li>
-19
           
-20
           <li class="nav-item">
-21
             <a class="nav-link" href="#"></a>
-22
           </li>
-23
           <li class="nav-item">
-24
             <a class="nav-link disabled" href="#">API</a>
-25
           </li>
-26
         </ul>
-27
       </nav>
-28
       <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change YouTube Views</button>
-29
      
-30
       </div>
-31
       
-32
-​
-33
+
 <body style="background-color: rgb(255, 255, 255);"></body>
-34
-​
-35
-​
-36
+
+
 <html>
-37
-        <head>
-38
-                <title>v2- YouTube</title>
-39
-                <link rel="stylesheet" href="odometer-theme-minimal.css" />
-40
-                <script src="odometer.js"></script>
-41
-                <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-42
+	<head>
+		<title>v2- YouTube</title>
+		<link rel="stylesheet" href="odometer-theme-minimal.css" />
+		<script src="odometer.js"></script>
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
         <link rel="stylesheet" href="livecountsbutreddit.css" />
-43
         <script src="https://kit.fontawesome.com/229e496f46.js" crossorigin="anonymous"></script>
-44
-                
-45
-        <style>
-@ndx4256
-Commit changes
-Commit summary
-Update youtubelikes.html
-Optional extended description
-Add an optional extended description…
- Commit directly to the master branch.
- Create a new branch for this commit and start a pull request. Learn more about pull requests.
- 
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+		
+	<style>
+	
+	*{
+        font-family: Roboto;
+    }
+	
+	</style>
+	
+		<style>
+		
+		#channelSubs{
+		
+			font-size:12vh;
+            font-weight: bold;
+			
+		
+		}
+		
+
+        #channelSubs2{
+		
+        font-size:5vh;
+        
+    
+    }
+    #channelSubs3{
+		
+        font-size:5vh;
+        
+    
+    }
+
+    bgimage{
+        filter: blur(4px);
+    }
+
+    #Milestone{
+		
+        font-size:5vh;
+        
+    
+    }
+		</style>
+	
+	
+	<style>
+	
+	.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: Arial, sans-serif;
+    line-height: 1.4em
+}
+	
+    </style>
+    
+	
+<style>
+
+#PostContents{
+    color: rgb(0, 0, 0);
+}
+
+
+
+#imagething2{
+    object-fit: cover;
+    z-index: -1;
+    width: 900px !important; 
+    height: 140px !Important; 
+    filter:blur(8px)
+}
+
+#imagething3{
+    border: solid .95vh !Important;
+    border-radius: 11%;
+    border-color: rgb(33, 96, 231) !Important;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    height: 150px;
+    object-fit: fill;
+}
+
+*{
+    text-align: center !Important;
+}
+
+
+
+
+</style>
+<style>
+
+#idlol{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 45%;
+}
+
+
+#subscriberslola{
+    font-weight:bold !Important;
+}
+
+#PostContents {
+    color: rgb(0, 0, 0);
+}
+
+
+
+#imagething1233 {
+
+display: block;
+margin-left: auto;
+margin-right: 2.5%;
+margin-top: -13%;
+
+}
+
+
+
+#PostContents:hover{
+    color:rgb(73, 23, 153) !important;
+    transition: 0.3s !important;
+}
+#PostContents{
+    font-weight:bold !Important;
+}
+
+
+
+
+
+</style>
+	</head>
+	<script type="text/javascript">
+	</script>
+		<body id="body" style="background-color: rgb(0, 0, 0);">
+				
+				<b id=channelName" style="color: rgb(0, 0, 0); border: 3px none green;"></b>
+				
+				
+				
+
+									
+
+                <script src="https://code.highcharts.com/stock/highstock.js"></script>
+				<br></br>
+                <div  class="container p-3 my-3 border">    
+                    <div id="imagething" style="width:150px"></div>
+                    <div id="imagething1233" style="width:150px"></div> 
+                  
+                    <p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol</p>
+                    
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
+                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Likes</p>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Change Video</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <b>Enter the name of the YT Video you want to track the Likes of.</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol">youtube.com/watch?v=</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                          <button id="updateChannel"type="button" class="btn btn-primary" data-dismiss="modal">Change Video</button>
+                          </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div  class="container p-3 my-3 border">   
+                    <div  class="container p-3 my-3 border">
+                        <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(0, 0, 0);">0</p>
+                        <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Views</p>
+                          </div>
+                          <div  class="container p-3 my-3 border">   
+                            <div  class="container p-3 my-3 border">
+                                <p class="odometer odometer-auto-theme" id="channelSubs3" style="color: rgb(0, 0, 0);">0</p>
+                                <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Avg Likes/Minute</p>
+                                  </div>
+									     <div id="chart"></div>
+                  </div>
+                  
+            						    
+            <script type="text/javascript">
+            var line = "#4287f5"
+
+            var chart = new Highcharts.chart({
+  chart: {
+      renderTo: 'chart',
+      type: 'line',
+        zoomType: 'x',
+        backgroundColor: 'transparent',
+        plotBorderColor: 'transparent'
+  },
+  title: {
+      text: ''
+  },
+  xAxis: {
+      type: 'datetime',
+      tickPixelInterval: 500,
+        gridLineColor: '#bdbdbd',
+        labels: {
+            style: {
+                color: '#bdbdbd'
+            }
+        },
+        lineColor: line,
+        minorGridLineColor: '#bdbdbd',
+        tickColor: '#bdbdbd',
+        title: {
+            style: {
+                color: '#bdbdbd'
+            }
+        }
+  },
+  yAxis: {
+      title: {
+          text: ''
+      },
+        gridLineColor: '#bdbdbd',
+        labels: {
+            style: {
+                color: '#bdbdbd'
+            }
+        },
+        lineColor: '#bdbdbd',
+        minorGridLineColor: '#bdbdbd',
+        tickColor: '#bdbdbd'
+  },
+  credits: {
+      enabled: false,
+      text: ""
+  },
+
+  series: [{
+    showInLegend: false,
+     name: 'Data',
+    marker: { enabled: true },
+    color: 'transparent',
+    lineColor: '#4287f5'
+  }]
+});
+            
+            </script>	
+											       
+                <script type="text/javascript">
+                var avg = [];
+                    $(document).ready(function() {
+                       
+	
+                        var defaultCID = "u27z9aFMJ8Y";			
+function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
+						$(document).ready(function() {
+	
+	var channelName = "";
+				if(getUrlVars()['user'] !== undefined) {
+					loadChannel(getUrlVars()['user']);
+				} else  {
+					loadChannel(defaultCID);
+				}
+    
+    
+    function loadChannel(name) {
+
+        var lolxdhahafunni = [
+            "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+            "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+            "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+            "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+	        "AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+	        
+		"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+		"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+		"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0"
+             ] 
+        channelName = name;
+        var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+        $.getJSON(url, function(data) {
+            channelSubs.innerHTML = data.items[0].statistics.likeCount
+                var yeslol = data.items[0].statistics.likeCount
+
+                avg.push(Math.floor(data.items[0].statistics.likeCount))
+        if (avg.length >= 30) {avg.shift()}
+        var count = 0;
+        for(var i = 0; i < avg.length;i++) {
+            console.log(i)
+          if(i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
+          }
+        }
+        var deta = count/avg.length
+        channelSubs3.innerHTML = deta*60
+            var chartthingidk = yeslol
+
+                if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+                chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
+            
+        });
+
+        var url1 = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		$.getJSON(url1, function(data){
+			PostContents.innerHTML = data.items[0].snippet.title
+			$('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
+            $('#imagething1233').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething3"/img>');
+		
+		});
+        
+    }
+    
+    setInterval(function() {
+        var lolxdhahafunni = [
+            "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+            "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+            "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+            "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+	        "AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+	        
+		"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+		"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+		"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0"
+             ] 
+        
+    
+        var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+        $.getJSON(url, function(data) {
+            channelSubs.innerHTML = data.items[0].statistics.likeCount
+
+            avg.push(Math.floor(data.items[0].statistics.likeCount))
+        if (avg.length >= 30) {avg.shift()}
+        var count = 0;
+        for(var i = 0; i < avg.length;i++) {
+            console.log(i)
+          if(i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
+          }
+        }
+        var deta = count/avg.length
+        channelSubs3.innerHTML = deta*60
+            var chartthingidk = data.items[0].statistics.likeCount
+
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
+            
+        });
+
+       
+            
+            
+             var url1 = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		$.getJSON(url1, function(data){
+			channelSubs2.innerHTML = data.items[0].statistics.viewCount
+		});
+            
+     
+                 
+
+    }, 2000);
+					 
+							 
+    $('#updateChannel').click( function() {
+        loadChannel($('#choose').val());
+        var line = "#4287f5"
+
+ chart = new Highcharts.chart({
+  chart: {
+      renderTo: 'chart',
+      type: 'line',
+        zoomType: 'x',
+        backgroundColor: 'transparent',
+        plotBorderColor: 'transparent'
+  },
+  title: {
+      text: ''
+  },
+  xAxis: {
+      type: 'datetime',
+      tickPixelInterval: 500,
+        gridLineColor: '#bdbdbd',
+        labels: {
+            style: {
+                color: '#bdbdbd'
+            }
+        },
+        lineColor: line,
+        minorGridLineColor: '#bdbdbd',
+        tickColor: '#bdbdbd',
+        title: {
+            style: {
+                color: '#bdbdbd'
+            }
+        }
+  },
+  yAxis: {
+      title: {
+          text: ''
+      },
+        gridLineColor: '#bdbdbd',
+        labels: {
+            style: {
+                color: '#bdbdbd'
+            }
+        },
+        lineColor: '#bdbdbd',
+        minorGridLineColor: '#bdbdbd',
+        tickColor: '#bdbdbd'
+  },
+  credits: {
+      enabled: false,
+      text: ""
+  },
+
+  series: [{
+    showInLegend: false,
+     name: 'Data',
+    marker: { enabled: true },
+    color: 'transparent',
+    lineColor: '#4287f5'
+  }]
+});
+        
+    });
+        
+    
+
+
+                   
+
+                    }); 
+                    
+                    });
+                </script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172872844-1');
+</script>		
+				
+        </body>
+    </head>
+</html>
