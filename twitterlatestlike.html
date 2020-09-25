@@ -352,7 +352,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
           }
         }
         var deta = count/avg.length
-        channelSubs3.innerHTML = Math.round(deta*60)
+        channelSubs3.innerHTML = Math.trunc(deta*60)
                 } else {
                     var avg = [];
                     avg.push(Math.floor(data.status.favorite_count))
@@ -367,7 +367,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
           }
         }
         var deta = count/avg.length
-        channelSubs3.innerHTML = Math.round(deta*60)
+        channelSubs3.innerHTML = Math.trunc(deta*60)
                 }
 
                 
