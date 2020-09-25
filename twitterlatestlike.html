@@ -416,7 +416,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
           }
         }
         var deta = count/avg.length
-        channelSubs3.innerHTML = Math.round(deta*60)
+        channelSubs3.innerHTML = Math.trunc(deta*60)
                 } else {
                     avg.push(Math.floor(data.status.favorite_count))
                     if (avg.length >= 5) {avg.shift()}
@@ -430,7 +430,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
           }
         }
         var deta = count/avg.length
-        channelSubs3.innerHTML = Math.round(deta*60)
+        channelSubs3.innerHTML = Math.trunc(deta*60)
                 }
             
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
