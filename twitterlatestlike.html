@@ -339,8 +339,9 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
                     var chartthingidk = data.status.favorite_count
                 }
                 if (data.status.favorite_count == 0) {
+                    var avg = [];
                     avg.push(Math.floor(data.status.retweeted_status.favorite_count))
-                    if (avg.length >= 30) {avg.shift()}
+                    if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
             console.log(i)
@@ -353,8 +354,9 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var deta = count/avg.length
         channelSubs3.innerHTML = Math.round(deta*60)
                 } else {
+                    var avg = [];
                     avg.push(Math.floor(data.status.favorite_count))
-                    if (avg.length >= 30) {avg.shift()}
+                    if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
             console.log(i)
@@ -388,6 +390,8 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
         var url = 'https://api.allorigins.win/raw?url=https://socialbearing.com/scripts/get-user.php?user='+channelName+''
         $.getJSON(url, function(data) {
+
+            
             channelSubs2.innerHTML = data.followers_count
             if (data.status.favorite_count == 0) {
                     channelSubs.innerHTML = data.status.retweeted_status.favorite_count
@@ -401,7 +405,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
                 }
                 if (data.status.favorite_count == 0) {
                     avg.push(Math.floor(data.status.retweeted_status.favorite_count))
-                    if (avg.length >= 30) {avg.shift()}
+                    if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
             console.log(i)
@@ -415,7 +419,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         channelSubs3.innerHTML = Math.round(deta*60)
                 } else {
                     avg.push(Math.floor(data.status.favorite_count))
-                    if (avg.length >= 30) {avg.shift()}
+                    if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
             console.log(i)
@@ -441,6 +445,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     $('#updateChannel').click( function() {
         loadChannel($('#choose').val());
+        
         var line = "#4287f5"
 
  chart = new Highcharts.chart({
@@ -499,6 +504,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     lineColor: '#4287f5'
   }]
 });
+var avg = [];
         
     });
         
