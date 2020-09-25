@@ -222,6 +222,11 @@ margin-top: -13%;
                         <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(0, 0, 0);">0</p>
                         <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Views</p>
                           </div>
+                          <div  class="container p-3 my-3 border">   
+                            <div  class="container p-3 my-3 border">
+                                <p class="odometer odometer-auto-theme" id="channelSubs3" style="color: rgb(0, 0, 0);">0</p>
+                                <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Avg Subs/Minute</p>
+                                  </div>
 									     <div id="chart"></div>
                   </div>
                   
@@ -289,7 +294,9 @@ margin-top: -13%;
             </script>	
 											       
                 <script type="text/javascript">
+                var avg = [];
                     $(document).ready(function() {
+                       
 	
                         var defaultCID = "u27z9aFMJ8Y";			
 function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
@@ -321,6 +328,20 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].statistics.likeCount
                 var yeslol = data.items[0].statistics.likeCount
+
+                avg.push(Math.floor(data.items[0].statistics.likeCount))
+        if (avg.length >= 30) {avg.shift()}
+        var count = 0;
+        for(var i = 0; i < avg.length;i++) {
+            console.log(i)
+          if(i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
+          }
+        }
+        var deta = count/avg.length
+document.getElementById('#channelSubs3').innerHTML = deta
             var chartthingidk = yeslol
 
                 if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
@@ -356,7 +377,19 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].statistics.likeCount
 
-
+            avg.push(Math.floor(data.items[0].statistics.likeCount))
+        if (avg.length >= 30) {avg.shift()}
+        var count = 0;
+        for(var i = 0; i < avg.length;i++) {
+            console.log(i)
+          if(i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
+          }
+        }
+        var deta = count/avg.length
+document.getElementById('#channelSubs3').innerHTML = deta
             var chartthingidk = data.items[0].statistics.likeCount
 
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
