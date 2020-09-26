@@ -25,7 +25,7 @@
           </li>
         </ul>
       </nav>
-      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change YouTube Views</button>
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change YouTube Channel</button>
      
       </div>
       
@@ -203,12 +203,12 @@ margin-top: -13%;
                     <p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol</p>
                     
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
-                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Likes</p>
+                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Subscribers</p>
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Change Video</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Change Channel</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -349,7 +349,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             channelSubs.innerHTML = data.subscriberCount
             PostContents.innerHTML = data.cname
             $('#imagething1233').html('<img src="'+data.cimage+'"< style="width:150px" id="imagething3"/img>');
-                var yeslol = data.data.subscriberCount
+                var yeslol = data.subscriberCount
                
 
                 avg.push(Math.floor(data.data.subscriberCount))
@@ -371,8 +371,20 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
                 chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
             
         });
-
-        var bannerurl = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+'?part=brandingSettings'
+        var lolxdhahafunni = [
+ "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+ "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+ "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+ "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
+"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
+"AIzaSyBb7Mjoeud_bvvI1VfNAa4TtgT4zv-nahY",
+"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
+  ]
+        var bannerurl = 'https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 		$.getJSON(bannerurl, function(data){
 			
 			$('#imagething').html('<img src="'+data.items[0].brandingSettings.image.bannerImageUrl+'"< style="width:150px" id="imagething2"/img>');
