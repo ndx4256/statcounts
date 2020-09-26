@@ -60,7 +60,13 @@
 			
 		
 		}
+        #channelSubs{
 		
+        font-size:12vh;
+        font-weight: bold;
+        
+    
+    }
 
         #channelSubs2{
 		
@@ -94,7 +100,13 @@
     color: rgb(0, 0, 0);
 }
 
-
+#channelSubs3{
+		
+        font-size:5vh;
+        
+        
+    
+    }
 
 #imagething2{
     object-fit: cover;
@@ -142,6 +154,14 @@ margin-top: -13%;
 }
 
 
+#lol2{
+    width: 40%;
+    display: inline-block;
+}
+#lol3{
+    width: 40%;
+    display: inline-block;
+}
 
 
 #PostContents{
@@ -202,6 +222,17 @@ margin-top: -13%;
                       </div>
                     </div>
                   </div>
+                  <div  class="container p-3 my-3 border">
+                    <div id="lol3" class="container p-3 my-3 border">
+                        <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(0, 0, 0);">0</p>
+                        <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Friends</p>
+                      
+                          </div>
+                          <div  id="lol2" class="container p-3 my-3 border">
+                            <p class="odometer odometer-auto-theme" id="channelSubs3" style="color: rgb(0, 0, 0);">0</p>
+                            <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Followers to Milestone</p>
+                              </div>
+                        </div>
                   <div  class="container p-3 my-3 border">   
                 <div id="chart"></div>
                   </div>
@@ -270,9 +301,10 @@ margin-top: -13%;
             </script>	
 											       
                 <script type="text/javascript">
+                 var avg = [];
                     $(document).ready(function() {
 	
-                        var defaultCID = "1";			
+                        var defaultCID = "339310190";			
 function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
 	
@@ -289,17 +321,35 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var url = 'https://api.allorigins.win/raw?url=https://friends.roblox.com/v1/users/'+name+'/followers/count'
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.count
-          
+                var avg = [];
+                    avg.push(Math.floor(data.count))
+                    if (avg.length >= 5) {avg.shift()}
+        var count = 0;
+        for(var i = 0; i < avg.length;i++) {
+            console.log(i)
+          if(i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
+          }
+        }
+        var deta = count/avg.length
+        channelSubs3.innerHTML = Math.round(deta*60)
         
 
-             var chartthingidk = data.followers_count            
+             var chartthingidk = data.count        
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
         });
 
+        var nofriendsSad = 'https://api.allorigins.win/raw?url=https://friends.roblox.com/v1/users/'+name+'/friends/count'
+        $.getJSON(nofriendsSad, function(data) {
+            channelSubs2.innerHTML = data.count
+        });
+
         var url1 = 'https://cors-anywhere.herokuapp.com/https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds='+name+'&size=720x720&format=Png&isCircular=false'
         $.getJSON(url1, function(data) {
-            $('#imagething').html('<img src="'+data.data[0].imageUrl+'"< style="width:150px" id="imagething2"/img>');
+            $('#imagething').html('<img src="https://i.ytimg.com/vi/2iRHDTFQYpY/maxresdefault.jpg"< style="width:150px" id="imagething2"/img>');
             $('#imagething1233').html('<img src="'+data.data[0].imageUrl+'"< style="width:150px" id="imagething3"/img>');
 
         });
@@ -317,11 +367,15 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
         var url = 'https://api.allorigins.win/raw?url=https://friends.roblox.com/v1/users/'+channelName+'/followers/count'
         $.getJSON(url, function(data) {
-            
+            function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+  channelSubs3.innerHTML = GetGoal(data.count)
                 channelSubs.innerHTML = data.count
-        
+               
+                
             var chartthingidk = data.count
-            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+          
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
             
