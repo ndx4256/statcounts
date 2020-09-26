@@ -434,6 +434,18 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 			 // seperate the view count so api quota no go bye bye :)
 
  setInterval(function() {
+    var lolxdhahafunni = [
+ "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+ "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+ "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+ "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
+"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
+"AIzaSyBb7Mjoeud_bvvI1VfNAa4TtgT4zv-nahY"
+  ] 
  var url1 = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
  $.getJSON(url1, function(data){
    channelSubs2.innerHTML = data.items[0].statistics.viewCount
