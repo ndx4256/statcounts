@@ -1,94 +1,305 @@
 <!DOCTYPE html>
 <head>
-     <script async src="https://arc.io/widget.js#Zs8wbDVz"></script>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">StatCounts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">API</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="alert alert-danger">
-        <strong>News:</strong>StatCounts v2 is in the proccess of releasing! Counters with the "v2" badge will be updated. the main page will change once everything is done. (THERE WILL BE BUGS)
-      </div>
-<title>StatCounts - Track YouTube, Twitter, TikTok & 7 other platforms</title>
+    <script async src="https://arc.io/widget.js#Zs8wbDVz"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-<body style="background-color: rgb(74, 74, 74);">
-    <br></br>
-    <div class="container p-3 my-3 bg-dark text-white">
-        <h1>count thing !!!</h1>
-        <br></br>
-        <h1 class="display-5">Reddit Real-Time</h1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+</head>    
 
-        <a button href="https://ndx4256.github.io/statcounts/redditupvote.html"  type="button" class="btn btn-danger btn-block">Reddit Upvote Counter</button></a>
-        <a button href="https://ndx4256.github.io/statcounts/redditsub.html"  type="button" class="btn btn-danger btn-block">Reddit Subscriber Counter [v2]</button></a>
-        <br></br>
-        <h1 class="display-5">Roblox Real-Time</h1>
-        <a button href="https://ndx4256.github.io/statcounts/robloxfollowers.html"  type="button" class="btn btn-primary btn-block">Roblox Followers Counter [v2]</button></a>
-        <a button href="https://ndx4256.github.io/statcounts/membersroblox.html"  type="button" class="btn btn-primary btn-block">Roblox Group Members Counter</button></a>
-        <br></br>
-        <h1 class="display-5">Twitter Real-Time</h1>
-        <a button href="https://ndx4256.github.io/statcounts/twitter.html"  type="button" class="btn btn-info btn-block">Twitter Followers Count [v2]</button></a>
-        <a button href="https://ndx4256.github.io/statcounts/twitterlatestlike.html"  type="button" class="btn btn-info btn-block">Twitter LATEST Tweet Like Count [v2]</button></a>
-        <br></br>
-        <h1 class="display-5">YouTube Real-Time</h1>
-<a button href="https://ndx4256.github.io/statcounts/youtubesubcount.html"  type="button" class="btn btn-danger btn-block" disabled>YouTube Subscriber Counter (est. t1ch.com)</button></a>
-<a button href="https://ndx4256.github.io/statcounts/youtubeviewers.html"  type="button" class="btn btn-danger btn-block">YouTube Live Stream Viewer Counter (YT API!) [v2]</button></a>
-<a button href="https://ndx4256.github.io/statcounts/youtubeviews.html"  type="button" class="btn btn-danger btn-block">YouTube Video Views (YT API)</button></a>
-<a button href="https://ndx4256.github.io/statcounts/youtubelikes.html"  type="button" class="btn btn-danger btn-block">YouTube Video Likes (YT API) [v2]</button></a>
-<a button href="https://ndx4256.github.io/statcounts/fakecount.html"  type="button" class="btn btn-danger btn-block">YouTube Custom Sub Count [v2 - IMPROVED]</button></a>
-<br></br>
-<h1 class="display-5">Twitch Real-Time</h1>
-<a button href="https://ndx4256.github.io/statcounts/twitch.html"  type="button" class="btn btn-primary btn-block">Twitch Followers Count [v2]</button></a>
-<br></br>
-<br></br>
-<h1 class="display-5">TikTok Real-Time</h1>
-<a button href="https://ndx4256.github.io/statcounts/tiktok.html"  type="button" class="btn btn-light btn-block" disabled>TikTok Followers Count</button></a>
-<br></br>
-<h1 class="display-5">Discord Real-Time</h1>
-<a button href="https://ndx4256.github.io/statcounts/discord.html"  type="button" class="btn btn-primary btn-block">Discord Members Count [v2]</button></a>
-<br></br>
-<h1 class="display-5">StoryFire Real-Time</h1>
-<a button href="https://ndx4256.github.io/statcounts/storyfire.html"  type="button" class="btn btn-warning btn-block">Storyfire Subscriber Count</button></a>
-<a button href="https://ndx4256.github.io/statcounts/storyfireviews"  type="button" class="btn btn-warning btn-block">Storyfire Views Count</button></a>
-<br></br>
-<h1 class="display-5">Other Real-Time Counters</h1>
-<a button href="https://ndx4256.github.io/statcounts/ecosia.html"  type="button" class="btn btn-success btn-block">Ecosia Tree Count</button></a>
-<a button href="https://ndx4256.github.io/statcounts/coronavirus.html"  type="button" class="btn btn-warning btn-block">COVID-19 Live Case Count</button></a>
-<a button href="https://ndx4256.github.io/statcounts/globalclicker.html"  type="button" class="btn btn-success btn-block">[NEW!] Live Shared Global Click Counter</button></a>
-<a button href="https://ndx4256.github.io/statcounts/strawpoll"  type="button" class="btn btn-danger btn-block">Straw Poll Vote Counter [v2]</button></a>
-</div>
-
+<body style="background-color: #eef5f9;"></body>
+<title>StatCounts v2 - Easy Real-Time Counters</title>
 <style>
-    *{font-family: Arial !Important}
-
-
 
 *{
-    text-align: center 
+        font-family: Roboto Light;
+    }
+#boxcounts{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 30%;
+  display: inline-block;
+  margin-left: 13%;
+  margin-top: 5%;
+  overflow: hidden;
+  
+  
 }
-     body > nav > ul > li.nav-item.active > a {
-          font-weight:Bold;
-     }
+#boxcounts2{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 30%;
+  display: inline-block;
+  margin-left: 13%;
+  margin-top: 5%;
+  overflow: hidden;
+  
+  
+}
+#boxcounts3{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 30%;
+  display: inline-block;
+  margin-left: 13%;
+  margin-top: 5%;
+  overflow: hidden;
+  
+  
+}
 
+#boxcounts4{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 30%;
+  display: inline-block;
+  margin-left: 13%;
+  margin-top: 5%;
+  overflow: hidden;
+  
+  
+}
+#boxcounts5{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 30%;
+  display: inline-block;
+  margin-left: 13%;
+  margin-top: 5%;
+  overflow: hidden;
+  
+  
+}
+#boxcounts6{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 30%;
+  display: inline-block;
+  margin-left: 13%;
+  margin-top: 5%;
+  overflow: hidden;
+  
+  
+}
+#btnyt1{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnyt2{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnyt3{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnyt4{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnyt5{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btntwt1{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btntwt2{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btntwt3{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnr1{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnr2{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnr3{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnr4{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnr5{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#rbx1{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#rbx2{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#o1{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#o2{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#o3{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#o4{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#o5{
+    display: block  ;
+    margin-left: 4%;
+    margin-right: 4%;
+}
 </style>
-<!--   idk   -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-<a href="https://statcounter.com/p12359926/?guest=1">uh</a>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">SC</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">API</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="alert alert-success">
+    <strong>v2:</strong> Most counters should be done soon! Thanks for all of the support on SC v2!! <3
+  </div>
+  <p></p>
+  <p> </p>
+  <p> </p>
+  <h1 style="text-align: center; color: black; font-size: 9vh;" id="Header">StatCounts  v2</h1>
+<div id="boxcounts" class="card card-3">
+    <p></p>
+      <h2 style="text-align: center; color: black;" id="YTCountText">YouTube Real-Time</h2>
+      <a id="btnyt1" type="button" class="btn btn-outline-danger" href="https://site.statcounts.com/youtubesubcount">YouTube Subscriber Count</a>
+      <p></p>
+      <a id="btnyt2" type="button" class="btn btn-outline-danger" href="https://site.statcounts.com/youtubelikes">YouTube Like Count</a>
+      <p></p>
+      <a id="btnyt3" type="button" class="btn btn-outline-danger" href="https://site.statcounts.com/youtubeviewers">YouTube Concurrent Viewer Count</a>
+      <p></p>
+      <a id="btnyt4" type="button" class="btn btn-outline-danger" href="https://site.statcounts.com/fakecount">Fake Count</a>
+      <p></p>
+      <a id="btnyt5" type="button" class="btn btn-outline-danger" href="https://site.statcounts.com/youtubeviews">YouTube View Count</a>
+      <p></p>
+    </div>
+    
+
+    
+<div id="boxcounts2" class="card card-4">
+    <p></p>
+      <h2 style="text-align: center; color: black;" id="YTCountText">Twitter Real-Time</h2>
+      <a id="btntwt1" type="button" class="btn btn-outline-primary" href="https://site.statcounts.com/twitter">Twitter Followers Count</a>
+      <p></p>
+      <a id="btntwt2" type="button" class="btn btn-outline-primary" href="https://site.statcounts.com/twitterlatestlike">Twitter Like Count</a>
+      <p></p>
+      <a id="btntwt3" type="button" class="btn btn-outline-primary" href="#">More Soon!</a>
+      <p></p>
+      <a id="btntwt3" type="button" class="btn btn-outline-primary" href="#">More Soon!</a>
+      <p></p>
+      <a id="btntwt3" type="button" class="btn btn-outline-primary" href="#">More Soon!</a>
+      <p></p>
+    </div>
+
+
+    <div id="boxcounts3" class="card card-5">
+        <p></p>
+          <h2 style="text-align: center; color: black;" id="YTCountText">Reddit Real-Time</h2>
+          <a id="btnr1" type="button" class="btn btn-outline-warning" href="https://site.statcounts.com/redditsub">Reddit Subscriber Count</a>
+          <p></p>
+          <a id="btnr2" type="button" class="btn btn-outline-warning" href="https://site.statcounts.com/redditupvote">Reddit Upvote Count</a>
+          <p></p>
+          <a id="btnr3" type="button" class="btn btn-outline-warning" href="#">More Soon!</a>
+          <p></p>
+          <a id="btnr4" type="button" class="btn btn-outline-warning" href="#">More Soon!</a>
+          <p></p>
+          <a id="btnr5" type="button" class="btn btn-outline-warning" href="#">More Soon!</a>
+          <p></p>
+        </div>
+
+        <div id="boxcounts4" class="card card-6">
+            <p></p>
+              <h2 style="text-align: center; color: black;" id="YTCountText">Roblox Real-Time</h2>
+              <a id="rbx1" type="button" class="btn btn-outline-dark" href="https://site.statcounts.com/robloxfollowers">Roblox Followers Count</a>
+              <p></p>
+              <a id="rbx2" type="button" class="btn btn-outline-dark" href="https://site.statcounts.com/membersroblox">Roblox Group Members Count</a>
+              <p></p>
+              <a id="rbx2" type="button" class="btn btn-outline-dark" href="#">More Soon!</a>
+              <p></p>
+              <a id="rbx2" type="button" class="btn btn-outline-dark" href="#">More Soon!</a>
+              <p></p>
+              <a id="rbx2" type="button" class="btn btn-outline-dark" href="#">More Soon!</a>
+              <p></p>
+            </div>
+
+            <div id="boxcounts5" class="card card-7">
+                <p></p>
+                  <h2 style="text-align: center; color: black;" id="YTCountText">Other/un-grouped Real-Time</h2>
+                  <a id="o1" type="button" class="btn btn-outline-success" href="https://site.statcounts.com/globalclicker">Global Clicker</a>
+                  <p></p>
+                  <a id="o2" type="button" class="btn btn-outline-info" href="https://site.statcounts.com/twitch">Twitch.tv Followers Count</a>
+                  <p></p>
+                  <a id="rbx2" type="button" class="btn btn-outline-warning" href="https://site.statcounts.com/coronavirus">COVID-19 Count</a>
+                  <p></p>
+                  <a id="o4" type="button" class="btn btn-outline-primary" href="https://site.statcounts.com/discord">Discord Members Count</a>
+                  <p></p>
+                  <a id="o5" type="button" class="btn btn-outline-secondary" href="https://site.statcounts.com/tiktok">TikTok Followers Count</a>
+                  <p></p>
+                </div>
+
+                <div id="boxcounts6" class="card card-8">
+                    <p></p>
+                      <h2 style="text-align: center; color: black;" id="YTCountText">StoryFire Real-Time</h2>
+                      <a id="rbx1" type="button" class="btn btn-outline-warning" href="https://site.statcounts.com/storyfire">Storyfire Subscribers Count</a>
+                      <p></p>
+                      <a id="rbx2" type="button" class="btn btn-outline-warning" href="https://site.statcounts.com/storyfireviews">Storyfire Views Count</a>
+                      <p></p>
+                      <a id="rbx2" type="button" class="btn btn-outline-warning" href="#">More Soon!</a>
+                      <p></p>
+                      <a id="rbx2" type="button" class="btn btn-outline-warning" href="#">More Soon!</a>
+                      <p></p>
+                      <a id="rbx2" type="button" class="btn btn-outline-warning" href="#">More Soon!</a>
+                      <p></p>
+                    </div>
+                    <br></br>
+
+                    	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -96,6 +307,4 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-172872844-1');
-</script>
-</body>
-</head>
+</script>		
