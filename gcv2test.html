@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
+<script src="odometer.js"></script>
+</head>
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" href="clickthememinimal.css" />
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Thanks to:</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://twitter.com/mixernospace">Mixerno</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://twitter.com/t1chdotcom">HEXZD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><3</a>
+      </li>
+    </ul>
+  </nav>
+  </div>
+<style>
+
+@font-face {
+    font-family: SegoeUI !Important;
+    src:
+        local("Segoe UI Light"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype");
+    font-weight: 200;
+}
+
+    #boxcounts{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 70%;
+  display: inline-block;
+  margin-left: 15%;
+  margin-top: 5%;
+  overflow: hidden;
+  
+  
+}
+#ohmyfuckinggod{
+    width: 65%;
+}
+#clickcnt{
+    font-size: 4vh;
+}
+*{text-align: center;}
+</style>
+<body>
+    <div id="boxcounts" class="card card-3">
+        <h2>Global Clicker v2</h2>
+        <p>help defeat the original!</p>
+        <a id="ohmyfuckinggod"type="button" class="btn btn-outline-info">+1 pt</a>
+        <p></p>
+        <p id="cringe" style="font-size: 2vh;">default text</p>
+        <p class="odometer odometer-auto-theme" id="clickcnt" style="color: rgb(0, 0, 0);">0</p>
+    </div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        // sorry
+        var iwanttofuckingdie = [
+            "pretend its a like button",
+            "smash it",
+            "wtf",
+            "you're cringe if you don't smash this. like me",
+            "text",
+            "Global Clicker v2 must win!",
+            "Subscribe to StatCounts",
+            "Subscribe to Mixerno",
+            "subscribe to HEXZD",
+            "we can do this gamers",
+            "Times this co- you thought i was gonna not put something else here?",
+            "1+1 = 2.1335735345348543534",
+            "hi",
+            "lol",
+            "tweet @mixernospace with 20 flushed emojis",
+            "bye"
+        ]
+        // im even more sorry
+        cringe.innerHTML = iwanttofuckingdie[Math.floor(Math.random()*iwanttofuckingdie.length)]
+
+        setInterval(function() {
+            var clickcount = 'http://globalclickerv2.glitch.me/api/getdata'
+        $.getJSON(clickcount, function(data) {
+            clickcnt.innerHTML = data.totalClicks
+        });
+        }, 2000);
+       
+//post
+        $('#ohmyfuckinggod').click( function() {
+            var postclickurl = 'http://globalclickerv2.glitch.me/api/postclick'
+            $.post("postclickurl", function(data) {
+
+            });
+        });
+    });
+
+</script>
