@@ -100,7 +100,7 @@
         cringe.innerHTML = iwanttofuckingdie[Math.floor(Math.random()*iwanttofuckingdie.length)]
 
         setInterval(function() {
-            var clickcount = 'http://globalclickerv2.glitch.me/api/getdata'
+            var clickcount = 'https://globalclickerv2.glitch.me/api/getdata'
         $.getJSON(clickcount, function(data) {
             clickcnt.innerHTML = data.totalClicks
         });
@@ -108,7 +108,7 @@
        
 //post
         $('#ohmyfuckinggod').click( function() {
-            var postclickurl = 'http://globalclickerv2.glitch.me/api/postclick'
+            var postclickurl = 'https://globalclickerv2.glitch.me/api/postclick'
             $.post("postclickurl", function(data) {
 
             });
