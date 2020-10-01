@@ -33,7 +33,7 @@
     </ul>
   </nav>
   </div>
-  <a id="lollllll" type="button" class="btn btn-light btn-block" href="https://site.statcounts.com/globalclicker2">Watch this Grow!</a>
+  <button id="lollllll" type="button" class="btn btn-light btn-block" href="https://site.statcounts.com/globalclicker2">Watch this Grow!</button>
 <style>
 
 @font-face {
@@ -56,7 +56,7 @@
   
   
 }
-#ohmyfuckinggod{
+#clickmepls{
     width: 65%;
 }
 #clickcnt{
@@ -68,7 +68,7 @@
     <div id="boxcounts" class="card card-3">
         <h2>Global Clicker v2</h2>
         <p>help defeat the original!</p>
-        <a id="ohmyfuckinggod"type="button" class="btn btn-outline-info">+1 pt</a>
+        <a id="clickmepls"type="button" class="btn btn-outline-info">+1 pt</a>
         <p></p>
         <p id="cringe" style="font-size: 2vh;">default text</p>
         <p class="odometer odometer-auto-theme" id="clickcnt" style="color: rgb(0, 0, 0);">0</p>
@@ -76,16 +76,13 @@
 </body>
 
 <script type="text/javascript">
+//  this is jquery btw
     $(document).ready(function() {
 
         // sorry
-        var iwanttofuckingdie = [
+        var lmaowhat = [
             "pretend its a like button",
-            "smash it",
-            "wtf",
-            "you're cringe if you don't smash this. like me",
             "text",
-            "Global Clicker v2 must win!",
             "Subscribe to StatCounts",
             "Subscribe to Mixerno",
             "subscribe to HEXZD",
@@ -94,25 +91,25 @@
             "1+1 = 2.1335735345348543534",
             "hi",
             "lol",
-            "tweet @mixernospace with 20 flushed emojis",
+            "tweet @mixernospace with 20 random emojis",
             "bye"
         ]
         // im even more sorry
-        cringe.innerHTML = iwanttofuckingdie[Math.floor(Math.random()*iwanttofuckingdie.length)]
+        cringe.innerHTML = lmaowhat[Math.floor(Math.random()*lmaowhat.length)]
 
         setInterval(function() {
             
-            var clickcount = 'https://globalclickerv2.t1ch.com/api/getdata'
+            var clickcount = 'https://globalclickerv2.glitch.me/api/getdata'
         $.getJSON(clickcount, function(data) {
-            clickcnt.innerHTML = data.totalClicks
+            clickcnt.innerHTML = data
         });
         }, 2000);
        
 //post
-        $('#ohmyfuckinggod').click( function() {
-            var postclickurl = 'https://globalclickerv2.t1ch.com/api/postclick'
+        $('#clickmepls').click( function() {
+            var postclickurl = 'https://globalclickerv2.glitch.me/api/postclick'
             $.post(postclickurl, function(data) {
-                console.log("lol")
+                console.log("this POST is supposed to be empty")
             });
         });
     });
