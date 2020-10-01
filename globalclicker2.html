@@ -307,14 +307,14 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
   channelName = name;
         var url =  'https://globalclickerv2.glitch.me/api/getdata'
         $.getJSON(url, function(data) {
-            channelSubs.innerHTML = data.totalClicks
-                var yeslol = data.totalClicks
+            channelSubs.innerHTML = data
+                var yeslol = data
                 function GetGoal(count) {
     if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
   }
-  channelSubs2.innerHTML = GetGoal(data.totalClicks)
+  channelSubs2.innerHTML = GetGoal(data)
 
-                avg.push(Math.floor(data.totalClicks))
+                avg.push(Math.floor(data))
         if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
@@ -350,10 +350,10 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             function GetGoal(count) {
         if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
   }
-         channelSubs2.innerHTML = GetGoal(data.totalClicks)
-            channelSubs.innerHTML = data.totalClicks
+         channelSubs2.innerHTML = GetGoal(data)
+            channelSubs.innerHTML = data
 
-            avg.push(Math.floor(data.totalClicks))
+            avg.push(Math.floor(data))
         if (avg.length >= 5) {avg.shift()}
         var count = 0;
         for(var i = 0; i < avg.length;i++) {
@@ -366,7 +366,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         }
         var deta = count/avg.length
         channelSubs3.innerHTML = Math.round(deta*60)
-            var chartthingidk = data.totalClicks
+            var chartthingidk = data
 
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
