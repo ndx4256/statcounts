@@ -411,7 +411,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var deta = count/avg.length
         channelSubs3.innerHTML = Math.round(deta*60)
             var chartthingidk = data.items[0].statistics.likeCount
-	var limitlol = 400
+	var limitlol = 200
             if (chart.series[0].points.length >= limitlol) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
             
