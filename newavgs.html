@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>avgs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
+</head>
+
+<body>
+    <div class="table-responsive" style="border-style: none;">
+        <table class="table table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th style="border-style: solid;border-right-style: solid;">MINECRAFT LIVE</th>
+                    <th style="border-bottom-style: solid;">1s Avg</th>
+                    <th style="border-bottom-style: solid;">1min Avg</th>
+                    <th style="border-bottom-style: solid;">1hr Avg</th>
+                    <th style="border-bottom-style: solid;">12hrs Avg</th>
+                    <th style="border-bottom-style: solid;">1d Avg</th>
+                    <th style="border-bottom-style: solid;">7d Avg</th>
+                </tr>
+            </thead>
+            <tbody style="border-style: none;">
+                <tr>
+                    <td style="border-style: solid;border-right-style: solid;border-left-style: none;"><strong>Likes</strong></td>
+                    <td id="11s">TBC</td>
+                    <td id="11min">TBC</td>
+                    <td id="11hr">TBC</td>
+                    <td id="112hr">TBC</td>
+                    <td id="11d">TBC</td>
+                    <td id="17d">TBC</td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid;border-left-style: solid;"><strong>Dislikes</strong></td>
+                    <td id="21s">TBC<br></td>
+                    <td id="21min">TBC<br></td>
+                    <td id="21hr">TBC</td>
+                    <td id="212hr">TBC</td>
+                    <td id="21d">TBC</td>
+                    <td id="27d">TBC</td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid;border-left-style: solid;"><strong>Time till takeover</strong></td>
+                    <td id="takeover" colspan="6">TBC<br></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script>
+              var lolxdhahafunni = [
+ "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+ "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+ "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+ "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+
+"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
+"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
+"AIzaSyBb7Mjoeud_bvvI1VfNAa4TtgT4zv-nahY",
+"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
+  ] 
+      const url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=DWZIfsaIgtE&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+'';
+      const url1 = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=DWZIfsaIgtE&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+'';
+
+      var prevCount = [];
+    	var firstLive = [false, false];
+
+
+    	var rates = {
+    		counts: [[],[]],
+    		vals: [0, 0],
+    		divisor: [0, 0],
+    		add: function (i, a) {
+    			a = Number(a);
+    			rates.vals[i] *= rates.counts[i].length;
+    			rates.counts[i].push(a);
+    			var sub = rates.counts[i].length > 60 ? rates.counts[i].shift() : 0;
+    			rates.vals[i] += (a - sub);
+    			rates.vals[i] = (rates.vals[i] / rates.counts[i].length).toFixed(60);
+    		}
+    	};
+
+      function getTime(t) {
+      var str = ['', '', '', '', '', ' seconds'];
+      var s = t, m = '', h = '', d= '', m= '', y='';
+      //minutes
+      if (t >= 60) {
+        str[4] = ' minutes ';
+        m = parseInt(t / 60);
+        s -= m * 60;
+      }
+      //hours
+      if (t >= 3600) {
+        str[3] = ' hours ';
+        h = parseInt(t / 3600);
+        m -= h * 60;
+      }
+      //days
+      if (t >= 86400) {
+        str[2] = ' days ';
+        d = parseInt(t / 86400);
+        h -= d * 24;
+      }
+      return d + str[2] + h + str[3] + m + str[4] + s + str[5];
+    }
+
+      setInterval(function () {
+        $.getJSON(url, function (data) {
+
+          $.getJSON(url1, function (data1) {
+
+      if(!firstLive[0] || !firstLive[1]) {
+        prevCount[0] = data.items[0].statistics.likeCount;
+        firstLive[0] = true;
+        prevCount[1] = data1.items[0].statistics.dislikeCount;
+        firstLive[1] = true;
+      } else {
+        rates.add(0, data.items[0].statistics.likeCount - prevCount[0]);
+        rates.add(1, data1.items[0].statistics.dislikeCount - prevCount[1]);
+        prevCount[0] = data.items[0].statistics.likeCount;
+        prevCount[1] = data1.items[0].statistics.dislikeCount;
+
+        var avgRate1 = rates.vals[0];
+        var avgRate2 = rates.vals[1];
+
+        var final11 = Math.trunc(avgRate1);
+        var final12 = numeral(avgRate1 * 60).format('0,0');
+        var final13 = numeral(avgRate1 * 3600).format('0,0');
+        var final14 = numeral(avgRate1 * 43200).format('0,0');
+        var final15 = numeral(avgRate1 * 86400).format('0,0');
+        var final16 = numeral(avgRate1 * 604800).format('0,0');
+
+        var final21 = Math.trunc(avgRate2);
+        var final22 = numeral(avgRate2 * 60).format('0,0');
+        var final23 = numeral(avgRate2 * 3600).format('0,0');
+        var final24 = numeral(avgRate2 * 43200).format('0,0');
+        var final25 = numeral(avgRate2 * 86400).format('0,0');
+        var final26 = numeral(avgRate2 * 604800).format('0,0');
+
+        updateAvg1(final11, final12, final13, final14, final15, final16);
+        updateAvg2(final21, final22, final23, final24, final25, final26);
+      }
+
+
+      if ((data.items[0].statistics.likeCount && !isNaN(data1.items[0].statistics.dislikeCount)) || (data1.items[0].statistics.dislikeCount && !isNaN(data.items[0].statistics.likeCount))) {
+
+      var more = data > data1 ? 0 : 1, less = 1 - more;
+
+
+      var gap = Math.floor(data.items[0].statistics.likeCount - data1.items[0].statistics.dislikeCount);
+      var secsLeft = parseInt(gap / (rates.vals[less] - rates.vals[more]));
+      updateTakeover(secsLeft);
+      }
+
+          });
+          });
+      }, 5000);
+
+
+    function updateAvg1(val1, val2, val3, val4, val5, val6) {
+        $('#11s').html(val1);
+        $('#11min').html(val2);
+        $('#11hr').html(val3);
+        $('#112hr').html(val4);
+        $('#11d').html(val5);
+        $('#17d').html(val6);
+    }
+
+    function updateAvg2(val1, val2, val3, val4, val5, val6) {
+        $('#21s').html(val1);
+        $('#21min').html(val2);
+        $('#21hr').html(val3);
+        $('#212hr').html(val4);
+        $('#21d').html(val5);
+        $('#27d').html(val6);
+    }
+
+    function updateTakeover(val) {
+        $('#takeover').html(val >= 0 ? getTime(val) : 'Never');
+    }
+    </script>
+</body>
+
+</html>
