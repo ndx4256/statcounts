@@ -1,0 +1,61 @@
+<head>
+	<!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div style="background-color: transparent;"id='graphlol'><!-- Plotly chart will be drawn inside this DIV --></div>
+</body>
+<body style="background-color: black;"></body>
+<p id="uhhh"></p>
+<p id="uhhm"></p>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var lolxdhahafunni = [
+ "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+ "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+ "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+ "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+
+"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
+"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
+"AIzaSyBb7Mjoeud_bvvI1VfNAa4TtgT4zv-nahY",
+"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
+  ] 
+        var url = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
+        $.getJSON(url, function(data) {
+            uhhh.innerHTML = data
+        });
+       
+        setInterval(function() {
+            var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=DWZIfsaIgtE&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+        $.getJSON(url, function(data) {
+            uhhm.innerHTML = data.items[0].statistics.likeCount
+        });
+        var url1 = 'https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints'
+        $.getJSON(url1, function(data) {
+          uhhh.innerHTML = data
+        });
+
+      
+        var gap = Math.floor(uhhm.innerHTML)
+        var date = new Date();
+           Plotly.plot('graphlol',[{
+                      x:[date],
+                      y:[gap],
+                      type:'line',
+                      title:'All-Time gap'
+                    }]);
+                  
+                        Plotly.extendTraces('graphlol',{ x:[[date]], y:[[gap]]}, [0]);
+                        Plotly.deleteTraces('graphlol', [1]);
+
+                
+        
+        }, 5000);
+    });
+</script>
