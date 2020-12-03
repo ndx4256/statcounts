@@ -1,0 +1,70 @@
+<body style="background-color:#d0e4fe;">
+    <head>
+        <script src="odometer.js"></script>
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" href="odometer-theme-minimal.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>live cunts.space</title>
+      
+    </head>
+    <style>
+        *{font-family:Arial !Important;}
+    </style>
+    <body>
+    <div>
+        <button id="bruh">Change Video</button>
+        <input id="choose">
+        <input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 18.9865; display: block;">
+        <div id="channelName"></div>
+        <div class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0); font-size: 15.5vw;">0</div>
+        <div id="footerBar"><span id="shareButton"></span><img id="menuIcon" src="https://livecounts.net/menu.svg" alt="Menu" width="25" height="25" onclick="XX()"><div id="menuContent" style="display: none;"><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/privacy/" target="_blank" onclick="YY()">Privacy policy</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/schedule/" target="_blank" onclick="YY()">Schedule</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/giveaway/" target="_blank" onclick="YY()">Giveaway</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/auction/" target="_blank" onclick="YY()">Auction</a></div><hr class="menuDivider"><div class="menuItem"><input id="advancedSearch" type="checkbox" onchange="AO()"><div class="menuItemText">Advanced search</div></div><div class="menuItem"><input id="nightMode" type="checkbox" onchange="AB()"><div class="menuItemText">Night mode</div></div><div class="menuItem"><input id="sound" type="checkbox" onchange="AC()"><div class="menuItemText">Sound</div></div><hr class="menuDivider"><div class="menuItem"><input id="milestone" type="radio" name="smallCount" onchange="AE()"><div class="menuItemText">Subscribers to milestone</div></div><div class="menuItem"><input id="viewCount" type="radio" name="smallCount" onchange="AF()"><div class="menuItemText">View count</div></div><hr class="menuDivider"><div id="bgColor" class="menuItem" onclick="AK()"><div id="bgColorOverlay" class="overlay" style="display:none"></div><div id="bgColorBox" class="colorBox" style="background-color: rgb(208, 228, 254);"></div><input id="bgColorInput" class="colorInput" type="color" value="#d0e4fe" onchange="AG()">Background color...</div><hr class="menuDivider"><div class="menuItem"><div class="menuItemText" onclick="AM()">Reset settings</div></div></div></div>
+    </div>
+</body>
+
+<style>
+    
+</style>
+</body>
+
+<script type="text/javascript">
+      $(document).ready(function() {
+        var channelName1 = "";
+		
+		loadChannel("hDkuUZ3F1GU")
+		
+        function loadChannel(name) {
+			channelName1 = name;
+			var url = 'https://mixerno.space/api/youtube/videoid/statistics/'+name+''
+			$.getJSON(url, function(data) {
+				channelSubs.innerHTML = data.items[0].statistics.likeCount
+			});
+			
+			var url1 = 'https://mixerno.space/api/youtube/videoid/snippet/'+name+''
+			$.getJSON(url1, function(data){
+                channelName.innerHTML = data.items[0].snippet.title
+               
+			
+			});
+		}
+		
+		setInterval(function() {
+		
+						var url = 'https://mixerno.space/api/youtube/videoid/statistics/'+channelName1+''
+			$.getJSON(url, function(data) {
+				channelSubs.innerHTML = (data.items[0].statistics.likeCount)
+			});
+            var url1 = 'https://mixerno.space/api/youtube/videoid/snippet/'+name+''
+			$.getJSON(url1, function(data){
+                channelName.innerHTML = data.items[0].snippet.title
+               
+			
+			});
+			
+		}, 2000);
+        $('#bruh').click( function() {
+			loadChannel($('#choose').val());
+			
+		});
+		
+    });
+</script>
