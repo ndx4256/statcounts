@@ -42,7 +42,7 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'http://161.97.140.254:81/api/api/api/api/api/api/api/api/api/api/api/api/api/api/api/getdata'
+			var url = 'https://cors.mixerno.space/http://161.97.140.254:81/api/api/api/api/api/api/api/api/api/api/api/api/api/api/api/getdata'
 			$.getJSON(url, function(data) {
 				APICount.innerHTML = data
 			});
@@ -51,7 +51,7 @@ $(document).ready(function() {
 		
 		setInterval(function() {
 		
-						var url = 'http://161.97.140.254:81/api/api/api/api/api/api/api/api/api/api/api/api/api/api/api/getdata'
+						var url = 'https://cors.mixerno.space/http://161.97.140.254:81/api/api/api/api/api/api/api/api/api/api/api/api/api/api/api/getdata'
 			$.getJSON(url, function(data) {
 				APICount.innerHTML = (data)
                
