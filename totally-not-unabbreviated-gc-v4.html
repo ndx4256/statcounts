@@ -1,0 +1,70 @@
+<body>
+    <link rel="stylesheet" href="odometer-theme-minimal.css" />
+		<script src="odometer.js"></script>
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <style>
+        *{font-family: Arial !Important}
+        
+    </style>
+    <style>
+        #haha{
+            block-size: 9vh;
+        }
+    </style>
+    <center>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h2>ePIC v4 gobal click! !!!</h2>
+    </center>
+    <center>
+    <div class="odometer odometer-auto-theme" id="APICount" style="color: rgb(0, 0, 0); font-size: 24vh;">0</div>
+    </center>
+    <center>
+    <button id="haha">Click or die</button>
+</center>
+<center>
+    <br>
+    <b>Estimated Full Number:</b>
+    <div class="odometer odometer-auto-theme" id="Est" style="color: rgb(0, 0, 0); font-size: 14vh;">0</div>
+</center>
+</body>
+
+
+<script type="text/javascript">
+//http://161.97.140.254:81/api/verysecretendpoint/getAll
+$(document).ready(function() {
+        var channelName = "";
+		
+		loadChannel("aa")
+		
+        function loadChannel(name) {
+			channelName = name;
+			var url = 'http://161.97.140.254:81/api/api/api/api/api/api/api/api/api/api/api/api/api/api/api/getdata'
+			$.getJSON(url, function(data) {
+				APICount.innerHTML = data
+			});
+			
+		}
+		
+		setInterval(function() {
+		
+						var url = 'http://161.97.140.254:81/api/api/api/api/api/api/api/api/api/api/api/api/api/api/api/getdata'
+			$.getJSON(url, function(data) {
+				APICount.innerHTML = (data)
+               
+			});
+			
+		}, 2000);
+        $('#haha').click(function() {
+            var url = 'https://cors.mixerno.space/http://161.97.140.254:81/api/postclick'
+            $.post(url, function(data) {
+                console.log('MAHAHA')
+            });
+        });
+		
+    });
+
+</script>
