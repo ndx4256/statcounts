@@ -1,5 +1,5 @@
 <body>
-    <link rel="stylesheet" href="socialblade-theme-minimal.css" />
+    <link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
     <style>
@@ -42,7 +42,7 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'http://161.97.140.254:81/api/verysecretendpoint/getAll'
+			var url = 'https://cors.mixerno.space/http://161.97.140.254:81/api/verysecretendpoint/getAll'
 			$.getJSON(url, function(data) {
 				APICount.innerHTML = data.abbCount
 			});
@@ -51,7 +51,7 @@ $(document).ready(function() {
 		
 		setInterval(function() {
 		
-						var url = 'http://161.97.140.254:81/api/verysecretendpoint/getAll'
+						var url = 'https://cors.mixerno.space/http://161.97.140.254:81/api/verysecretendpoint/getAll'
 			$.getJSON(url, function(data) {
 				APICount.innerHTML = (data.abbCount)
                 Est.innerHTML = Math.round(data.estCount)
@@ -59,7 +59,7 @@ $(document).ready(function() {
 			
 		}, 2000);
         $('#haha').click(function() {
-            var url = 'http://161.97.140.254:81/api/postclick'
+            var url = 'https://cors.mixerno.space/http://161.97.140.254:81/api/postclick'
             $.post(url, function(data) {
                 console.log('MAHAHA')
             });
