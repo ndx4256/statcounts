@@ -378,7 +378,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].statistics.likeCount
     
-            var chartthingidk = data.items[0].statistics.likeCount
+            var chartthingidk = parseFloat(data.items[0].statistics.likeCount)
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),chartthingidk])
             function GetGoal(count) {
