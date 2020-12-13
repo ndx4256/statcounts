@@ -341,15 +341,18 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
         var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.items[0].statistics.likeCount
-            PostContents.innerHTML = data.items[0].snippet.title
-            $('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
-            $('#imagething1233').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething3"/img>');
+           
 
             var chartthingidk = data.items[0].statistics.likeCount
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
         });
-        
+        var url = 'https://api.mixerno.space/youtube/videoid/snippet/'+name+''
+        $.getJSON(url, function(data() {
+            PostContents.innerHTML = data.items[0].snippet.title
+            $('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
+            $('#imagething1233').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething3"/img>');
+        });
     }
        
     setInterval(function() {
