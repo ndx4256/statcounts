@@ -348,7 +348,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             
         });
         var url = 'https://api.mixerno.space/youtube/videoid/snippet/'+name+''
-        $.getJSON(url, function(data() {
+        $.getJSON(url, function(data) {
             PostContents.innerHTML = data.items[0].snippet.title
             $('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
             $('#imagething1233').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething3"/img>');
