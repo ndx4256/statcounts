@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <script async src="https://arc.io/widget.js#Zs8wbDVz"></script>
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -8,7 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#">SC</a>
@@ -21,12 +21,12 @@
             <a class="nav-link" href="#"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">API</a>
+            <button id="loal" class="far fa-moon"></button>
           </li>
         </ul>
       </nav>
-      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Twitch Channel</button>
-  
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Channel</button>
+   
       </div>
       
 
@@ -35,17 +35,20 @@
 
 <html>
 	<head>
-		<title>v2- Twitch</title>
+		<title>v2.1- Twitch</title>
 		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
         <link rel="stylesheet" href="livecountsbutreddit.css" />
-        <script src="https://kit.fontawesome.com/229e496f46.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 		
 	<style>
+
+
 	
 	*{
-        font-family: Roboto;
+        font-family: 'Roboto', sans-serif;
     }
 	
 	</style>
@@ -67,7 +70,14 @@
         
     
     }
-
+#loal{
+    color:white;   
+    font-size:3.5vh !Important;
+    background-color: transparent;
+    border-color: transparent;
+    
+ 
+}
     bgimage{
         filter: blur(4px);
     }
@@ -87,6 +97,10 @@
     }
 		</style>
 	
+	
+		<style>
+		
+		</style>
 	
 	<style>
 	
@@ -110,16 +124,16 @@
 #imagething2{
     object-fit: cover;
     z-index: -1;
-    width: 900px !important; 
-    height: 140px !Important; 
-    filter:blur(8px)
+    width: 900px !important; /* width of container */
+    height: 140px !Important; /* height of container */
+    filter:blur(3px)
 }
 
 #imagething3{
     border: solid .95vh !Important;
-    border-radius: 11%;
-    border-color: rgb(33, 96, 231) !Important;
-    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    border-radius: 8%;
+    border-color: rgb(31, 32, 32);
+  
 }
 
 *{
@@ -142,14 +156,6 @@
 }
 
 
-#lol2{
-    width: 40%;
-    display: inline-block;
-}
-#lol3{
-    width: 40%;
-    display: inline-block;
-}
 
 #imagething1233 {
 
@@ -160,20 +166,26 @@ margin-top: -13%;
 
 }
 
+#goalpog{
+    font-size:  5vh;
+}
 
-#PostContents:hover{
-    color:rgb(73, 23, 153) !important;
-    transition: 0.3s !important;
+#anotherodo{
+    font-size:  5vh;
+}
+#statspace1{
+    width: 40%;
+    display: inline-block;
+}
+#statspace2{
+    width: 40%;
+    display: inline-block;
 }
 
 #PostContents{
     font-weight:bold !Important;
 }
 
-
-#channelSubs3{
-    font-size:5vh;
-}
 
 
 </style>
@@ -187,28 +199,37 @@ margin-top: -13%;
 				
 				
 
-							<p style="font-size: 0vh;"id="results"></p>		
+									
 
                 <script src="https://code.highcharts.com/stock/highstock.js"></script>
 				<br></br>
-                <div  class="container p-3 my-3 border">    
+                <div id="statspace"  class="container">    
                     <div id="imagething" style="width:150px"></div>
-                    <div id="imagething1233" style="width:150px"></div> 
-                  
-                    <p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol</p>
+                    <div id="imagething1233" style="width:150px"></div>
+					<p style="font-size: 6vh; color:rgb(0, 0, 0)"id="PostContents">lol </p>
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
                 <p id="subscriberslola" style="color: rgb(0, 0, 0);">Followers</p>
+                <div id="statspace"  class="container">
+                    <div id="statspace1"  class="container">
+                        <p class="odometer odometer-auto-theme" id="goalpog" style="color: rgb(0, 0, 0);">0</p>
+                        <p id="title2">Milestone</p>
+                    </div>
+                    <div id="statspace2"  class="container">
+                        <p class="odometer odometer-auto-theme" id="anotherodo" style="color: rgb(0, 0, 0);">0</p>
+                        <p id="title1">Views</p>
+                    </div>
+                    </div>
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Change Profile</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Change Server</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                            <b>Enter the name of the Twitch User you want to track</b>
+                            <b>enter the NAME of the streamer you want to track.</b>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text" id="lol">twitch.tv/</span>
@@ -218,31 +239,16 @@ margin-top: -13%;
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-                          <button id="updateChannel"type="button" class="btn btn-primary" data-dismiss="modal">Change Profile</button>
+                          <button id="updateChannel"type="button" class="btn btn-dark" data-dismiss="modal">Change Channel</button>
                           </div>
                       </div>
                     </div>
                   </div>
-                  <div class="container p-3 my-3 border">   
-                    <div  class="container p-3 my-3 border">
-                    <div id="lol3" class="container p-3 my-3 border">
-                        <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(0, 0, 0);">0</p>
-                        <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Views</p>
-                      
-                          </div>
-                          <div  id="lol2" class="container p-3 my-3 border">
-                            <p class="odometer odometer-auto-theme" id="channelSubs3" style="color: rgb(0, 0, 0);">0</p>
-                            <p id="subscriberslola2" style="color: rgb(0, 0, 0);">Avg Followers/Hour</p>
-                              </div>
-                        </div>
-                          <div  class="container p-3 my-3 border">   
-                            
-									     <div id="chart"></div>
-                  </div>
+                <div id="chart"></div>
             
             						    
             <script type="text/javascript">
-            var line = "#4287f5"
+            var line = "#343a40"
 
             var chart = new Highcharts.chart({
   chart: {
@@ -258,18 +264,18 @@ margin-top: -13%;
   xAxis: {
       type: 'datetime',
       tickPixelInterval: 500,
-        gridLineColor: '#bdbdbd',
+        gridLineColor: '#4287f5',
         labels: {
             style: {
-                color: '#bdbdbd'
+                color: '#343a40'
             }
         },
         lineColor: line,
-        minorGridLineColor: '#bdbdbd',
-        tickColor: '#bdbdbd',
+        minorGridLineColor: '#4287f5',
+        tickColor: '#343a40',
         title: {
             style: {
-                color: '#bdbdbd'
+                color: '#343a40'
             }
         }
   },
@@ -277,34 +283,33 @@ margin-top: -13%;
       title: {
           text: ''
       },
-        gridLineColor: '#bdbdbd',
+        gridLineColor: 'transparent',
         labels: {
             style: {
-                color: '#bdbdbd'
+                color: '#343a40'
             }
         },
-        lineColor: '#bdbdbd',
-        minorGridLineColor: '#bdbdbd',
-        tickColor: '#bdbdbd'
+        lineColor: '#343a40',
+        minorGridLineColor: 'transparent',
+        tickColor: '#343a40'
   },
   credits: {
-      enabled: false,
-      text: ""
+      enabled: true,
+      text: "StatCounts v2.1-20201212"
   },
 
   series: [{
     showInLegend: false,
-     name: 'Data',
-    marker: { enabled: true },
-    color: 'transparent',
-    lineColor: '#4287f5'
+     name: 'Followers',
+    marker: { enabled: false },
+    color: '#343a40',
+    lineColor: '#343a40'
   }]
 });
             
             </script>	
 											       
                 <script type="text/javascript">
-                 var avg = [];
                     $(document).ready(function() {
 	
                         var defaultCID = "tommyinnit";			
@@ -321,86 +326,51 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     function loadChannel(name) {
         channelName = name;
-    
         var search = 'https://mixerno.space/api/twitch/search/'+name+''
 $.getJSON(search, function(data) {
    results.innerHTML = data[0].id
 });
 
 var bruhwhat =  results.innerHTML
+        
         var url = 'https://mixerno.space/api/twitch/user/'+bruhwhat+''
         $.getJSON(url, function(data) {
-           channelSubs.innerHTML = data.channels[0].followers
+            channelSubs.innerHTML = data.channels[0].followers
             PostContents.innerHTML = data.channels[0].display_name
             $('#imagething').html('<img src="'+data.channels[0].profile_banner+'"< style="width:150px" id="imagething2"/img>');
-           
-
-           
-                    avg.push(Math.floor(data.channels[0].followers))
-                    if (avg.length >= 5) {avg.shift()}
-        var count = 0;
-        for(var i = 0; i < avg.length;i++) {
-            console.log(i)
-          if(i == 0) {
-            count = count + (avg[i] - parseFloat(avg[i]))
-          } else {
-            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
-          }
-        }
-        var deta = count/avg.length
-        channelSubs3.innerHTML = Math.round(deta*3600)
-               
-
-                
-       
             
-            chart.series[0].addPoint([Date.now(),chartthingidk])
-            
-        });
-        var bruhwhat =  results.innerHTML									  
+            var bruhwhat =  results.innerHTML									  
 	var url123 = 'https://mixerno.space/api/twitch/user/'+bruhwhat+''
         $.getJSON(url123, function(data) {
             $('#imagething1233').html('<img src="'+data.channels[0].logo+'"< style="width:150px" id="imagething3"/img>');
         });
-        
+
+            var chartthingidk =  data.channels[0].followers
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+            
+        });
+      
     }
-    
+       
     setInterval(function() {
 
         
-        var bruhwhat =  results.innerHTML
+        var bruhwhat =  results.innerHTML		
         var url = 'https://mixerno.space/api/twitch/user/'+bruhwhat+''
         $.getJSON(url, function(data) {
-            
             PostContents.innerHTML = data.channels[0].display_name
             channelSubs.innerHTML = data.channels[0].followers
-            channelSubs2.innerHTML = data.channels[0].views
+            anotherodo.innerHTML = data.channels[0].views
+            var chartthingidk = data.channels[0].followers
             $('#imagething1233').html('<img src="'+data.channels[0].logo+'"< style="width:150px" id="imagething3"/img>');
             $('#imagething').html('<img src="'+data.channels[0].profile_banner+'"< style="width:150px" id="imagething2"/img>');
-           
-               
-                    avg.push(Math.floor(data.channels[0].followers))
-                    if (avg.length >= 45) {avg.shift()}
-        var count = 0;
-        for(var i = 0; i < avg.length;i++) {
-            console.log(i)
-          if(i == 0) {
-            count = count + (avg[i] - parseFloat(avg[i]))
-          } else {
-            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
-          }
-        }
-        var deta = count/avg.length
-        channelSubs3.innerHTML = Math.round(deta*3600)
-            
-       
-     
-                
-            var chartthingidk = data.channels[0].followers
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),chartthingidk])
-            
-            
+            function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+  goalpog.innerHTML = GetGoal(data.channels[0].followers)
+            anotherodo.innerHTML = data.channels[0].views
             
         });
 
@@ -409,10 +379,9 @@ var bruhwhat =  results.innerHTML
     
     $('#updateChannel').click( function() {
         loadChannel($('#choose').val());
-        
-        var line = "#4287f5"
+        var line = "#d9d9d9"
 
- chart = new Highcharts.chart({
+        chart = new Highcharts.chart({
   chart: {
       renderTo: 'chart',
       type: 'line',
@@ -426,18 +395,18 @@ var bruhwhat =  results.innerHTML
   xAxis: {
       type: 'datetime',
       tickPixelInterval: 500,
-        gridLineColor: '#bdbdbd',
+        gridLineColor: '#4287f5',
         labels: {
             style: {
-                color: '#bdbdbd'
+                color: '#343a40'
             }
         },
         lineColor: line,
-        minorGridLineColor: '#bdbdbd',
-        tickColor: '#bdbdbd',
+        minorGridLineColor: '#4287f5',
+        tickColor: '#343a40',
         title: {
             style: {
-                color: '#bdbdbd'
+                color: '#343a40'
             }
         }
   },
@@ -445,42 +414,124 @@ var bruhwhat =  results.innerHTML
       title: {
           text: ''
       },
-        gridLineColor: '#bdbdbd',
+        gridLineColor: 'transparent',
         labels: {
             style: {
-                color: '#bdbdbd'
+                color: '#343a40'
             }
         },
-        lineColor: '#bdbdbd',
-        minorGridLineColor: '#bdbdbd',
-        tickColor: '#bdbdbd'
+        lineColor: '#343a40',
+        minorGridLineColor: 'transparent',
+        tickColor: '#343a40'
   },
   credits: {
-      enabled: false,
-      text: ""
+      enabled: true,
+      text: "StatCounts v2.1-20201212"
   },
 
   series: [{
     showInLegend: false,
-     name: 'Data',
-    marker: { enabled: true },
-    color: 'transparent',
-    lineColor: '#4287f5'
+     name: 'Members',
+    marker: { enabled: false },
+    color: '#343a40',
+    lineColor: '#343a40'
   }]
 });
-var avg = [];
         
     });
         
     
 
 });
+document.getElementById("loal").value = "OFF"
+
+$('#loal').click(function() {
+    if (document.getElementById("loal").value == "ON") {
+        location.reload();
+        return false;
+    }
+     if (document.getElementById("loal").value == "OFF") {
+        document.getElementById("loal").value = "ON"
+    document.getElementById("body").style.background = "#1a1a1a";
+    document.getElementById("PostContents").style.color = "#ffffff";
+    document.getElementById("channelSubs").style.color = "#ffffff";
+    document.getElementById("goalpog").style.color = "#ffffff";
+    document.getElementById("anotherodo").style.color = "#ffffff";
+    document.getElementById("title1").style.color = "#ffffff";
+    document.getElementById("title2").style.color = "#ffffff";
+    document.getElementById("subscriberslola").style.color = "#ffffff";
+    document.getElementById("lollllll").style.color = "#ffffff";
+    document.getElementById("lollllll").style.background = "#404040";
+    document.getElementById("lollllll").style.border = "#404040";
+    document.getElementById("statspace").style.border = "#404040";
+    var line = "#d9d9d9"
+
+chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Members',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+}
+});
+
                     })
 
                 
                 
                 </script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+				
+				<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -489,7 +540,7 @@ var avg = [];
 
   gtag('config', 'UA-172872844-1');
 </script>		
-				
         </body>
     </head>
+    <p id="results"></p>
 </html>
