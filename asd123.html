@@ -80,8 +80,21 @@
 		loadChannel("hDkuUZ3F1GU")
 		
         function loadChannel(name) {
+		
+		var lolxdhahafunni = [
+ "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+ "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+ "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+ "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
+"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
+"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
+  ] 
 			channelName1 = name;
-			var url = 'https://mixerno.space/api/youtube/videoid/statistics/'+name+''
+			var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data.items[0].statistics.likeCount
 			});
@@ -95,12 +108,25 @@
 		}
 		
 		setInterval(function() {
+			
+					var lolxdhahafunni = [
+ "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
+ "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
+ "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
+ "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
+"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
+"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
+"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
+"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
+"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
+"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
+  ] 
 		
-						var url = 'https://mixerno.space/api/youtube/videoid/statistics/'+channelName1+''
+						var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName1+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = (data.items[0].statistics.likeCount)
 			});
-            var url1 = 'https://mixerno.space/api/youtube/videoid/snippet/'+name+''
+            var url1 = 'https://mixerno.space/api/youtube/videoid/snippet/'+channelName1+''
 			$.getJSON(url1, function(data){
                 channelName.innerHTML = data.items[0].snippet.title
                
