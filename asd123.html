@@ -1,52 +1,87 @@
-<body style="background-color:#d0e4fe;">
-    <head>
-        <script src="odometer.js"></script>
-        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-        <link rel="stylesheet" href="odometer-theme-minimal.css" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>live cunts.space</title>
-      
-    </head>
-    <style>
-        *{font-family:Arial !Important;}
-    </style>
-    <body>
-    <div>
-        <button id="bruh">Change Video</button>
+<!doctype html>
+<title>Live Like Count - Livecounts</title>
+<button id="bruh">Change Video</button>
         <input id="choose">
-        <input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 18.9865; display: block;">
-        <div id="channelName"></div>
-        <div class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0); font-size: 15.5vw;">0</div>
-        <div id="footerBar"><span id="shareButton"></span><img id="menuIcon" src="https://livecounts.net/menu.svg" alt="Menu" width="25" height="25" onclick="XX()"><div id="menuContent" style="display: none;"><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/privacy/" target="_blank" onclick="YY()">Privacy policy</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/schedule/" target="_blank" onclick="YY()">Schedule</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/giveaway/" target="_blank" onclick="YY()">Giveaway</a></div><div class="menuItem"><a class="menuItemText" href="https://livecounts.net/auction/" target="_blank" onclick="YY()">Auction</a></div><hr class="menuDivider"><div class="menuItem"><input id="advancedSearch" type="checkbox" onchange="AO()"><div class="menuItemText">Advanced search</div></div><div class="menuItem"><input id="nightMode" type="checkbox" onchange="AB()"><div class="menuItemText">Night mode</div></div><div class="menuItem"><input id="sound" type="checkbox" onchange="AC()"><div class="menuItemText">Sound</div></div><hr class="menuDivider"><div class="menuItem"><input id="milestone" type="radio" name="smallCount" onchange="AE()"><div class="menuItemText">Subscribers to milestone</div></div><div class="menuItem"><input id="viewCount" type="radio" name="smallCount" onchange="AF()"><div class="menuItemText">View count</div></div><hr class="menuDivider"><div id="bgColor" class="menuItem" onclick="AK()"><div id="bgColorOverlay" class="overlay" style="display:none"></div><div id="bgColorBox" class="colorBox" style="background-color: rgb(208, 228, 254);"></div><input id="bgColorInput" class="colorInput" type="color" value="#d0e4fe" onchange="AG()">Background color...</div><hr class="menuDivider"><div class="menuItem"><div class="menuItemText" onclick="AM()">Reset settings</div></div></div></div>
-    </div>
-</body>
-
-<style>
+<meta name=description content="The best, lightest real-time subscriber counter on the web. View any YouTube channel's real-time subscriber count, updated every 2 seconds.">
+<meta name=twitter:card content=summary_large_image>
+<meta name=twitter:site content=@LivecountsSite>
+<meta name=twitter:title content="Live Like Count - Livecounts">
+<meta name=twitter:description content="The best, lightest live like counter on the web. View any YouTube channel's real-time subscriber count, updated every 2 seconds.">
+<meta name=twitter:creator content=@ColleensCuber>
+<meta name=twitter:image content=https://livecounts.net/logo.jpg>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" href="odometer-theme-minimal.css" />
+        <script src="odometer.js"></script>
+<meta name=viewport content="initial-scale=1.0001,minimum-scale=1.0001,maximum-scale=1.0001,user-scalable=no">
+<link rel=stylesheet href=https://livecounts.net/style.css>
+<canvas id=canvas></canvas>
+<div id=congratsText></div>
+<h1 id=title>Real-Time YouTube Like Count</h1>
+<h5 id=byline>by @ColleensCuber</h5>
+<div id=happyMarquee><b>Click on the channel name below to change channels</b></div>
+<a id=imageLink target=_blank><img id=channelThumbnail alt="Channel thumbnail"></a>
+<input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 1.006; display: block;">
+<div id=channelName></div>
+<div class=odometer id=channelSubs></div>
+<div id=description></div>
+<div id=container>
+   <a id=channelLink target=_blank>
+      <div class=odometer id=channelSubs2></div>
+      <div id=smallText>total video views</div>
+      <div id=messageText></div>
+   </a>
+</div>
+<div id=updateText><i>updated every 2 seconds</i></div>
+<div id=footerBar>
+   <span id=shareButton></span><img id=menuIcon src=https://livecounts.net/menu.svg alt=Menu width=25 height=25 >
+   <div id=menuContent>
     
-</style>
-</body>
+      <hr class=menuDivider>
+      <div class=menuItem>
+         <input id=advancedSearch type=checkbox onchange=AO()>
+         <div class=menuItemText>Advanced search</div>
+      </div>
+      <div class=menuItem>
+         <input id=nightMode type=checkbox onchange=AB()>
+         <div class=menuItemText>Night mode</div>
+      </div>
+      <div class=menuItem>
+         <input id=sound type=checkbox onchange=AC()>
+         <div class=menuItemText>Sound</div>
+      </div>
+      <hr class=menuDivider>
+      <div class=menuItem>
+         <input id=milestone type=radio name=smallCount onchange=AE()>
+         <div class=menuItemText>Subscribers to milestone</div>
+      </div>
+      <div class=menuItem>
+         <input id=viewCount type=radio name=smallCount onchange=AF()>
+         <div class=menuItemText>View count</div>
+      </div>
+      <hr class=menuDivider>
+      <div id=bgColor class=menuItem onclick=AK()>
+         <div id=bgColorOverlay class=overlay style=display:none></div>
+         <div id=bgColorBox class=colorBox></div>
+         <input id=bgColorInput class=colorInput type=color value=#d0e4fe onchange=AG()>Background color...
+      </div>
+      <hr class=menuDivider>
+      <div class=menuItem>
+         <div class=menuItemText onclick=AM()>Reset settings</div>
+      </div>
+   </div>
+</div>
 
+<span id=nothing></span>
+</div>
 <script type="text/javascript">
-      $(document).ready(function() {
+ $(document).ready(function() {
         var channelName1 = "";
 		
 		loadChannel("hDkuUZ3F1GU")
 		
         function loadChannel(name) {
 			channelName1 = name;
-		var lolxdhahafunni = [
- "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
- "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
- "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
- "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
-"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
-"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
-"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
-"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
-"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
-  ] 
-			var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+			var url = 'https://mixerno.space/api/youtube/videoid/statistics/'+name+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = data.items[0].statistics.likeCount
 			});
@@ -60,19 +95,8 @@
 		}
 		
 		setInterval(function() {
-				var lolxdhahafunni = [
- "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
- "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
- "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
- "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
-"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
-"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
-"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
-"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
-"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
-  ] 
-						var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName1+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+		
+						var url = 'https://mixerno.space/api/youtube/videoid/statistics/'+channelName1+''
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = (data.items[0].statistics.likeCount)
 			});
@@ -90,4 +114,8 @@
 		});
 		
     });
+
 </script>
+<noscript>
+   
+</noscript>
