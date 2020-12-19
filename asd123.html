@@ -126,9 +126,9 @@
 			$.getJSON(url, function(data) {
 				channelSubs.innerHTML = (data.items[0].statistics.likeCount)
 			});
-            var url1 = 'https://mixerno.space/api/youtube/videoid/snippet/'+channelName1+''
+            var url1 = 'https://mixerno.space/api/youtube/videoid/statistics/'+channelName1+''
 			$.getJSON(url1, function(data){
-                channelName.innerHTML = data.items[0].snippet.title
+                channelName.innerHTML = data.items[0].statistics.viewCount
                
 			
 			});
