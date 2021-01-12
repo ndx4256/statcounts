@@ -51,7 +51,8 @@
   -moz-transition: -moz-transform 2s;
   -ms-transition: -ms-transform 2s;
   -o-transition: -o-transform 2s;
-  transition: transform 2s;
+  transition: transform 1s;
+  color: #00e658 !Important;
 }
 .odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-minimal.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
   -webkit-transform: translateY(-100%);
@@ -72,7 +73,8 @@
   -moz-transition: -moz-transform 2s;
   -ms-transition: -ms-transform 2s;
   -o-transition: -o-transform 2s;
-  transition: transform 2s;
+  transition: transform 1s;
+  color: red !Important;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
