@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="numeral.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">SC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <button id="loal" class="far fa-moon"></button>
+          </li>
+        </ul>
+      </nav>
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Channels</button>
+   
+      </div>
+      
+
+<body style="background-color: #161616;"></body>
+
+
+<html>
+	<head>
+		<title>v2- YouTube Subs</title>
+		<link rel="stylesheet" href="odometer-theme-minimal.css" />
+		<script src="odometer.js"></script>
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+		
+	<style>
+
+@font-face {
+        font-family: Roboto Regular;
+        src: url(https://mixerno.space/font/Roboto-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Roboto Medium;
+        src: url(https://mixerno.space/font/Roboto-Medium.ttf);
+    }
+    @font-face {
+        font-family: Roboto Bold;
+        src: url(https://mixerno.space/font/Roboto-Bold.ttf);
+    }
+    @font-face {
+        font-family: Roboto Light;
+        src: url(https://mixerno.space/font/Roboto-Light.ttf);
+    }
+	
+	*{
+        font-family: Roboto;
+    }
+	
+	</style>
+	
+		<style>
+		
+		#channelSubs{
+		
+			font-size:15vh;
+            font-weight: bold;
+			
+            font-size: calc(3.1em + 4vw) !important
+		}
+		
+
+        #channelSubs2{
+		
+        font-size:5vh;
+        
+    
+    }
+#loal{
+    color:white;   
+    font-size:3.5vh !Important;
+    background-color: transparent;
+    border-color: transparent;
+    
+ 
+}
+    bgimage{
+        filter: blur(4px);
+    }
+
+    #clickrate{
+		
+        font-size:3vh;
+        
+    
+    }
+
+    #Milestone{
+		
+        font-size:5vh;
+        
+    
+    }
+		</style>
+	
+	
+		<style>
+		
+		</style>
+	
+	<style>
+	
+	.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: Arial, sans-serif;
+    line-height: 1.1em
+}
+	
+    </style>
+    
+	
+<style>
+
+#PostContents{
+    color: rgb(255, 255, 255);
+}
+
+
+
+#imagething2{
+    object-fit: cover;
+    z-index: -1;
+    width: 737% !important; /* width of container */
+    height: 140px !Important; /* height of container */
+    filter:blur(2.5px)
+}
+#imagething22{
+    
+    object-fit: cover;
+    z-index: -1;
+    width: 737% !important; /* width of container */
+    height: 140px !Important; /* height of container */
+    filter:blur(2.5px)
+}
+
+#imagething3{
+    border: solid .95vh !Important;
+    border-radius: 8%;
+    border-color: rgb(31, 32, 32);
+    
+  
+}
+
+*{
+    text-align: center !Important;
+}
+
+
+
+
+</style>
+<style>
+
+
+#subscriberslola{
+    font-weight:bold !Important;
+}#subscriberslola2{
+    font-weight:bold !Important;
+}
+
+
+
+
+
+
+#imagething1233 {
+    float: right;
+    margin-top: -13%;
+    
+/*
+position:absolute;
+left: 70%;
+top: 14%;*/
+}
+
+#lollllll{
+    color: #ffffff;
+    background-color: #404040;
+   border-color: #404040;
+}
+#goalpog{
+    font-size:  5vh;
+}
+
+#anotherodo{
+    font-size:  4vh;
+}
+#goalpog2{
+    font-size:  5vh;
+}
+
+#anotherodo2{
+    font-size:  4vh;
+}
+#statspace1{
+    width: 40%;
+    
+    display: inline-block;
+   background-color: rgb(44, 44, 44);
+    
+}
+#statspace12{
+    width: 40%;
+    
+    display: inline-block;
+   background-color: rgb(44, 44, 44);
+    
+}
+#statspacea{
+    overflow: hidden;
+    background-color: #1a1a1a;
+    float: left;
+    width: 45%;
+    margin-right: 2%;
+    white-space: nowrap !important;
+}
+#gapspace{
+    
+ 
+    overflow: hidden;
+    background-color: #242424;
+	margin:auto !important;
+    width: 70%;
+    padding: 1%;
+    
+}
+#bottomhalf{
+    width: 50%;
+	margin:auto !important;
+  
+}
+#statspacea2{
+    overflow: hidden;
+    background-color: #1a1a1a;
+    float: right;
+    width: 45%;
+    margin-left: 2%;
+    white-space: nowrap !important;
+}
+#statspace2{
+    width: 40%;
+    display: inline-block;
+ 
+    background-color: rgb(44, 44, 44);
+}
+#statspace22{
+    width: 40%;
+    display: inline-block;
+ 
+    background-color: rgb(44, 44, 44);
+}
+
+
+#PostContents{
+    font-weight:bold !Important;
+    font-family: Roboto!Important;
+
+    overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 2em;
+}
+#PostContents2{
+    font-weight:bold !Important;
+    font-family: Roboto!Important;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 2em; /* a x number of line to show (ex : 2 line)  */
+}
+#statspace{
+    padding: 2%;
+}
+#statspace5{
+    padding: 2%;
+}
+#chart{
+    overflow:hidden;
+    width: 70%;
+    height: 230px !Important;
+    
+	margin:auto !important;
+    background-color: rgb(17, 17, 17);
+}
+.modal-content {
+    background-color: #1b1a1a;
+}
+#channelSubs2{
+		
+        font-size:15vh;
+        font-weight: bold;
+        font-size: calc(3.1em + 4vw) !important
+    
+    }
+    #gapoometer{
+		
+        font-size:8vh;
+        font-weight: bold;
+        
+    
+    }
+    #lol1356{
+        font-family: Roboto Medium;
+        font-size: 2vh;
+    }
+    #lol13561{
+        font-family: Roboto Medium;
+        font-size: 2vh;
+    }
+</style>
+	</head>
+	<script type="text/javascript">
+	</script>
+		<body id="body" style="background-color: rgb(0, 0, 0);">
+				
+				<b id="channelName" style="color: rgb(0, 0, 0); border: 3px none green;"></b>
+				
+				
+				
+
+									
+
+                <script src="https://code.highcharts.com/stock/highstock.js"></script>
+				<br></br>
+                <div id="statspacea"  class="container">    
+                    <div id="imagething" style="width:150px"></div>
+             
+                    
+                   
+                
+                <div id="odobox" style="background-color: rgb(24, 24, 24);">
+                    <p style="font-size: 4vh; color:rgb(255, 255, 255)" id="PostContents">lol</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola" style="color: rgb(255, 255, 255);">Subscribers</p>
+            </div>
+                <div id="statspace" style="background-color: #141414;">
+                    
+                    <div id="statspace1">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="goalpog" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title2"style="color: rgb(255, 255, 255);">Milestone</p>
+                    </div>
+                    <div id="statspace2">
+                        <p id="nothing"></p>
+                        <p id="anotherodo" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title1"style="color: rgb(255, 255, 255);">Views</p>
+                    </div>
+                    </div>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle" style="color:rgb(255, 255, 255)">Change Channels</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <b style="color:rgb(255, 255, 255)">enter the CHANNEL ID of the user you want to track.</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol">youtu.be/</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
+                              </div>
+                        </div>
+                        <div class="modal-body">
+                            <b style="color:rgb(255, 255, 255)">enter the CHANNEL ID of the user you want to track.</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol1">youtu.be/</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose11" aria-describedby="lol1"></input>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                          <button id="updateChannel"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Change Channels</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div id="statspacea2"  class="container">    
+                    <div id="imagething21" style="width:150px"></div>
+             
+                    
+                   
+                
+                <div id="odobox2" style="background-color: rgb(24, 24, 24);">
+                    <p style="font-size: 4vh; color:rgb(255, 255, 255)" id="PostContents2">lol</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola2" style="color: rgb(255, 255, 255);">Subscribers</p>
+            </div>
+                <div id="statspace5" style="background-color: #141414;">
+                    
+                    <div id="statspace12">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="goalpog2" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title22"style="color: rgb(255, 255, 255);">Milestone</p>
+                    </div>
+                    <div id="statspace22">
+                        <p id="nothing"></p>
+                        <p id="anotherodo2" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title12"style="color: rgb(255, 255, 255);">Views</p>
+                    </div>
+                    </div>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle" style="color:rgb(255, 255, 255)">Change Video</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <b style="color:rgb(255, 255, 255)">enter the VIDEO ID of the server you want to track.</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol2">youtu.be/</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose2" aria-describedby="lol2"></input>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                          <button id="updateChannel2"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Change Channels</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>  
+				<center><br>
+				<div id="bottomhalf">
+            						  <div id="gapspace">
+                                          <div>
+                                              <p id="lol1356" style="color: white;">Is currently</p>
+                                          </div>
+                                        <p class="odometer odometer-auto-theme" id="gapoometer" style="color: rgb(255, 255, 255);">0</p>
+                                        <div>
+                                            <p id="lol13561" style="color: white;">subscribers ahead of</p>
+                                          </div>
+                                      </div>  
+                                     
+                                    </div><br>
+                                    <div id="chart"></div>
+                                    <button id="fuckgraph"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Clear</button>
+									</center>
+               
+            <script type="text/javascript">
+            var line = "#343a40"
+
+           
+
+chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: '',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+
+
+            
+            </script>	
+											       
+                <script type="text/javascript">
+                         function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }             var FirstCount = 0;
+                var SecondCount = 0;
+                var orderlol = 0;
+                var FirstName = 0;
+                var SecondName = 0;
+                  var likes = 0;
+                 var views = 0;
+                  var viewsC = 0;
+                  var likes1 = 0;
+                 var views1 = 0;
+                  var viewsC1 = 0;
+                    $(document).ready(function() {
+	
+                        var defaultCID = "UC-lHJZR3Gqxm24_Vd_AJ5Yw";			
+function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
+						$(document).ready(function() {
+	
+	var channelName = "";
+				if(getUrlVars()['user1'] !== undefined) {
+					loadChannel(getUrlVars()['user1']);
+				} else  {
+					loadChannel(defaultCID);
+                }
+                
+                //SECOND COUNTER
+                var defaultCID2 = "UCbCmjCuTUZos6Inko4u57UQ";			
+function getUrlVars2(){var vars={};var parts=window.location.href.replace(/[&&]+([^=&]+)=([^&]*)/gi,function(m2,key2,value2){vars[key2]=value2});return vars}
+					
+	
+	var channelName2 = "";
+				if(getUrlVars()['user2'] !== undefined) {
+					loadChannel2(getUrlVars2()['user2']);
+				} else  {
+					loadChannel2(defaultCID2);
+				}
+    
+    function loadChannel(name) {
+        function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+        channelName = name;
+        var url = 'https://asd123proxdn.ndx4256.repl.co/youtube/estimated/'+name+''
+        $.getJSON(url, function(data) {
+           
+
+
+				channelSubs.innerHTML = data.subCount
+              FirstCount = data.subCount
+              FirstName = data.name
+            PostContents.innerHTML = data.name
+            anotherodo.innerHTML = data.viewCount
+            goalpog.innerHTML = GetGoal(data.subCount)
+            $('#imagething').html('<img src="'+data.profilebanner+'"< style="width:200px" id="imagething2"/img>');
+            
+
+            
+        });
+        
+    }
+    function loadChannel2(name2) {
+        
+        channelName2 = name2;
+        var url2 = 'https://asd123proxdn.ndx4256.repl.co/youtube/estimated/'+name2+''
+        $.getJSON(url2, function(data2) {
+            
+                SecondName = data2.name
+                SecondCount = data2.subCount
+                channelSubs2.innerHTML = data2.subCount
+                anotherodo2.innerHTML = data2.viewCount
+                goalpog2.innerHTML = GetGoal(data2.subCount)
+            PostContents2.innerHTML = data2.name
+            $('#imagething21').html('<img src="'+data2.profilebanner+'"< style="width:200px" id="imagething22"/img>');
+            
+
+           
+            
+        });
+        
+    }
+    
+    setInterval(function() {
+       
+        
+    
+        var url = 'https://asd123proxdn.ndx4256.repl.co/youtube/estimated/'+channelName+''
+        $.getJSON(url, function(data) {
+
+                FirstCount = data.subCount
+				channelSubs.innerHTML = data.subCount
+            
+            function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+  goalpog.innerHTML = GetGoal(data.subCount)
+                
+                    anotherodo.innerHTML = numeral(data.viewCount).format('0.0a');
+                
+            
+        });
+        
+        var url2 = 'https://asd123proxdn.ndx4256.repl.co/youtube/estimated/'+channelName2+''
+        $.getJSON(url2, function(data2) {
+           
+           
+                SecondCount = data2.subCount
+                channelSubs2.innerHTML = data2.subCount
+                
+               
+                    anotherodo2.innerHTML = numeral(data2.viewCount).format('0.0a');
+            
+               
+              
+                goalpog2.innerHTML = GetGoal(data2.subCount)
+                });
+    }, 2000);
+    
+    setInterval(function() {
+var gapnumber = Math.floor(FirstCount - SecondCount);
+if (gapnumber <= -1) {
+var actualgap = Math.abs(gapnumber)
+gapoometer.innerHTML = actualgap
+orderlol = 1
+var chartthingidk = parseFloat(actualgap)
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+} else {
+gapoometer.innerHTML = gapnumber
+orderlol = 2
+var chartthingidk = parseFloat(gapnumber)
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+}
+}, 2000);
+
+setInterval(() => {
+    if (orderlol == 1) {
+    document.querySelector("#lol1356").innerHTML = `${SecondName} is currently`
+document.querySelector("#lol13561").innerHTML = `subscribers ahead of ${FirstName}`
+    } if (orderlol == 2) {
+        document.querySelector("#lol1356").innerHTML = `${FirstName} is currently`
+        document.querySelector("#lol13561").innerHTML = `subscribers ahead of ${SecondName}`
+    }
+}, 2000);
+$('#fuckgraph').click( function() {
+    chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: '',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+});
+    $('#updateChannel').click( function() {
+        loadChannel($('#choose').val());
+        loadChannel2($('#choose11').val());
+        var line = "#343a40"
+
+        chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: '',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+        
+    });
+        
+    
+
+});
+document.getElementById("loal").value = "OFF"
+
+$('#loal').click(function() {
+    if (document.getElementById("loal").value == "ON") {
+        location.reload();
+        return false;
+    }
+     if (document.getElementById("loal").value == "OFF") {
+        document.getElementById("loal").value = "ON"
+    document.getElementById("body").style.background = "#1a1a1a";
+    document.getElementById("PostContents").style.color = "#ffffff";
+    document.getElementById("channelSubs").style.color = "#ffffff";
+    document.getElementById("goalpog").style.color = "#ffffff";
+    document.getElementById("anotherodo").style.color = "#ffffff";
+    document.getElementById("title1").style.color = "#ffffff";
+    document.getElementById("title2").style.color = "#ffffff";
+    document.getElementById("subscriberslola").style.color = "#ffffff";
+    document.getElementById("lollllll").style.color = "#ffffff";
+    document.getElementById("lollllll").style.background = "#404040";
+    document.getElementById("lollllll").style.border = "#404040";
+    document.getElementById("statspace").style.border = "#404040";
+    var line = "#d9d9d9"
+
+chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Views',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+}
+});
+
+                    })
+
+                
+                
+                </script>
+				
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172872844-1');
+</script>		 <script async src="https://arc.io/widget.min.js#Zs8wbDVz"></script>
+        </body>
+    </head>
+</html>
