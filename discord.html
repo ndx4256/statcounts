@@ -410,7 +410,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             function GetGoal(count) {
     if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
   }
-  goalpog.innerHTML = data.membersCount
+  goalpog.innerHTML = GetGoal(data.membersCount)
             anotherodo.innerHTML = data.onlineCount
             
         });
