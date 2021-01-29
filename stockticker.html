@@ -377,7 +377,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     function loadChannel(name) {
         channelName = name;
-        var url = 'http://asd123proxdn.ndx4256.repl.co/stonks/ticker/'+name+''
+        var url = 'https://asd123proxdn.ndx4256.repl.co/stonks/ticker/'+name+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.stonkPrice
             PostContents.innerHTML = data.stonkName
@@ -395,7 +395,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 
         
     
-        var url = 'http://asd123proxdn.ndx4256.repl.co/stonks/ticker/'+channelName+''
+        var url = 'https://asd123proxdn.ndx4256.repl.co/stonks/ticker/'+channelName+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.stonkPrice
     
