@@ -377,7 +377,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     function loadChannel(name) {
         channelName = name;
-        var url = 'http://asd123proxdn.ndx4256.repl.co/youtube/videos/'+name+''
+        var url = 'https://asd123proxdn.ndx4256.repl.co/youtube/videos/'+name+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.likesCount
             PostContents.innerHTML = data.name
@@ -395,7 +395,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
 
         
     
-        var url = 'http://asd123proxdn.ndx4256.repl.co/youtube/videos/'+channelName+''
+        var url = 'https://asd123proxdn.ndx4256.repl.co/youtube/videos/'+channelName+''
         $.getJSON(url, function(data) {
             channelSubs.innerHTML = data.likesCount
     
@@ -575,7 +575,7 @@ lineColor: '#d9d9d9'
   gtag('js', new Date());
 
   gtag('config', 'UA-172872844-1');
-</script>		  <script async src="https://arc.io/widget.min.js#Zs8wbDVz"></script>
+</script>		<script async src="https://arc.io/widget.min.js#Zs8wbDVz"></script>
         </body>
     </head>
 </html>
