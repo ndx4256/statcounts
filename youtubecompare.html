@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a  class="nav-link" href="#">StatCounts - YouTube Subscriber Counter</a>
+            <a class="nav-link" href="#">SC</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">API</a>
+            <button id="loal" class="far fa-moon"></button>
           </li>
         </ul>
       </nav>
-      <div id="alertbox" class="alert alert-danger">
-        <strong></strong> Thanks Hexzd (t1ch.com) for the estimations api! | yay compare
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Video</button>
+   
       </div>
+      
 
-<body style="background-color: rgb(74, 74, 74);">
+<body style="background-color: #161616;"></body>
+
 
 <html>
 	<head>
-		<title>Live YouTube Subscriber Counter</title>
+		<title>v2- YouTube Views</title>
 		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-		<link rel="stylesheet" href="livecountsbutreddit.css" />
 		
 	<style>
+
+@font-face {
+        font-family: Roboto Regular;
+        src: url(https://mixerno.space/font/Roboto-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Roboto Medium;
+        src: url(https://mixerno.space/font/Roboto-Medium.ttf);
+    }
+    @font-face {
+        font-family: Roboto Bold;
+        src: url(https://mixerno.space/font/Roboto-Bold.ttf);
+    }
+    @font-face {
+        font-family: Roboto Light;
+        src: url(https://mixerno.space/font/Roboto-Light.ttf);
+    }
 	
-	*{font-family:Arial !Important}
+	*{
+        font-family: Roboto;
+    }
 	
 	</style>
 	
@@ -42,24 +70,44 @@
 		
 		#channelSubs{
 		
-			font-size:12vh;
+			font-size:15vh;
+            font-weight: bold;
 			
 		
 		}
+		
+
         #channelSubs2{
 		
-        font-size:12vh;
+        font-size:5vh;
+        
+    
+    }
+#loal{
+    color:white;   
+    font-size:3.5vh !Important;
+    background-color: transparent;
+    border-color: transparent;
+    
+ 
+}
+    bgimage{
+        filter: blur(4px);
+    }
+
+    #clickrate{
+		
+        font-size:3vh;
         
     
     }
 
-		#apicount{
+    #Milestone{
 		
-		font-size: 5vh;
-		
-	
-	}
-		
+        font-size:5vh;
+        
+    
+    }
 		</style>
 	
 	
@@ -72,139 +120,378 @@
 	.odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
     font-family: Arial, sans-serif;
-    line-height: 1.25em
+    line-height: 1.1em
 }
 	
-	</style>
+    </style>
+    
 	
 <style>
 
-#channelSubs,
-#container,
-#subscribeButton,
-.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
-.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
-canvas {
-    
+#PostContents{
+    color: rgb(255, 255, 255);
 }
+
+
+
+#imagething2{
+    object-fit: cover;
+    z-index: -1;
+    width: 737% !important; /* width of container */
+    height: 140px !Important; /* height of container */
+    filter:blur(2.5px)
+}
+#imagething22{
+    
+    object-fit: cover;
+    z-index: -1;
+    width: 737% !important; /* width of container */
+    height: 140px !Important; /* height of container */
+    filter:blur(2.5px)
+}
+
+#imagething3{
+    border: solid .95vh !Important;
+    border-radius: 8%;
+    border-color: rgb(31, 32, 32);
+    
+  
+}
+
+*{
+    text-align: center !Important;
+}
+
+
+
 
 </style>
 <style>
 
-#alertbox{
-    text-align: center;
+
+#subscriberslola{
+    font-weight:bold !Important;
+}#subscriberslola2{
+    font-weight:bold !Important;
 }
 
 
 
 
-#PostContents {
-    color: white;
+
+
+#imagething1233 {
+    float: right;
+    margin-top: -13%;
+    
+/*
+position:absolute;
+left: 70%;
+top: 14%;*/
 }
 
-img {
-    border-radius: 50%;
-  }
-
-#img {
-    border: solid .5vh !Important;
-    border-radius: 100%;
-    border-color: rgb(79, 79, 79) !Important;
+#lollllll{
+    color: #ffffff;
+    background-color: #404040;
+   border-color: #404040;
+}
+#goalpog{
+    font-size:  5vh;
 }
 
-#imagething {
-    align-content: center;
-    display: block;
-    margin-left: auto;
-  margin-right: auto;
+#anotherodo{
+    font-size:  5vh;
 }
-#body > div.container.p-3.my-3.bg-dark.text-white {
-    text-align: center;
+#goalpog2{
+    font-size:  5vh;
 }
 
-#imagething2 {
-    border: solid .5vh !Important;
-    border-radius: 100%;
-    border-color: rgb(255, 255, 255) !Important;
+#anotherodo2{
+    font-size:  5vh;
 }
-#imagething3 {
-    align-content: center;
-    display: block;
-    margin-left: auto;
-  margin-right: auto;
+#statspace1{
+    width: 40%;
+    
+    display: inline-block;
+   background-color: rgb(44, 44, 44);
+    
 }
-#imagething4 {
-    border: solid .5vh !Important;
-    border-radius: 100%;
-    border-color: rgb(255, 255, 255) !Important;
+#statspace12{
+    width: 40%;
+    
+    display: inline-block;
+   background-color: rgb(44, 44, 44);
+    
+}
+#statspacea{
+    overflow: hidden;
+    background-color: #1a1a1a;
+    float: left;
+    width: 45%;
+    margin-right: 2%;
+    white-space: nowrap !important;
+}
+#gapspace{
+    
+ 
+    overflow: hidden;
+    background-color: #242424;
+	margin:auto !important;
+    width: 70%;
+    padding: 1%;
+    
+}
+#bottomhalf{
+    width: 50%;
+	margin:auto !important;
+  
+}
+#statspacea2{
+    overflow: hidden;
+    background-color: #1a1a1a;
+    float: right;
+    width: 45%;
+    margin-left: 2%;
+    white-space: nowrap !important;
+}
+#statspace2{
+    width: 40%;
+    display: inline-block;
+ 
+    background-color: rgb(44, 44, 44);
+}
+#statspace22{
+    width: 40%;
+    display: inline-block;
+ 
+    background-color: rgb(44, 44, 44);
 }
 
+
+#PostContents{
+    font-weight:bold !Important;
+    font-family: Roboto!Important;
+
+    overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 2em;
+}
+#PostContents2{
+    font-weight:bold !Important;
+    font-family: Roboto!Important;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 2em; /* a x number of line to show (ex : 2 line)  */
+}
+#statspace{
+    padding: 2%;
+}
+#statspace5{
+    padding: 2%;
+}
+#chart{
+    overflow:hidden;
+    width: 70%;
+    height: 230px !Important;
+    
+	margin:auto !important;
+    background-color: rgb(17, 17, 17);
+}
+.modal-content {
+    background-color: #1b1a1a;
+}
+#channelSubs2{
+		
+        font-size:15vh;
+        font-weight: bold;
+        
+    
+    }
+    #gapoometer{
+		
+        font-size:8vh;
+        font-weight: bold;
+        
+    
+    }
+    #lol1356{
+        font-family: Roboto Medium;
+        font-size: 2vh;
+    }
+    #lol13561{
+        font-family: Roboto Medium;
+        font-size: 2vh;
+    }
 </style>
 	</head>
 	<script type="text/javascript">
 	</script>
-		<body id="body" style="background-color: rgb(208, 228, 254);">
+		<body id="body" style="background-color: rgb(0, 0, 0);">
 				
-				<b id=channelName" style="color: rgb(255, 255, 255); border: 3px none green;"></b>
+				<b id="channelName" style="color: rgb(0, 0, 0); border: 3px none green;"></b>
 				
 				
 				
 
 									
 
-
+                <script src="https://code.highcharts.com/stock/highstock.js"></script>
 				<br></br>
-					<div class="container p-3 my-3 bg-dark text-white">       
-                        <p id="imagething" style="width:150px"></p>
-					<p style="font-size: 6vh;"id="PostContents">doodoo internet</p> 
-                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
-                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Subscribers</p>
-                <input type="text" id="choose" placeholder="Channel ID"></input>
+                <div id="statspacea"  class="container">    
+                    <div id="imagething" style="width:150px"></div>
+             
+                    
+                   
                 
-                <button id="updateChannel" type="button" class="btn btn-danger">Change Channel</button>
-                <br></br>
-                <p class="odometer odometer-auto-theme" id="apicount" style="color: rgb(255, 255, 255);">0</p>
-                <p id="subscriberslola" style="color: rgb(230, 230, 230);">Sub Gap</p>
-                <p id="imagething3" style="width:150px"></p>
-                <p style="font-size: 6vh;"id="PostContents2">doodoo internet</p> 
+                <div id="odobox" style="background-color: rgb(24, 24, 24);">
+                    <p style="font-size: 4vh; color:rgb(255, 255, 255)" id="PostContents">lol</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola" style="color: rgb(255, 255, 255);">Views</p>
+            </div>
+                <div id="statspace" style="background-color: #141414;">
+                    
+                    <div id="statspace1">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="goalpog" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title2"style="color: rgb(255, 255, 255);">Likes</p>
+                    </div>
+                    <div id="statspace2">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="anotherodo" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title1"style="color: rgb(255, 255, 255);">viewCount [API]</p>
+                    </div>
+                    </div>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle" style="color:rgb(255, 255, 255)">Change Video</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <b style="color:rgb(255, 255, 255)">enter the VIDEO ID of the server you want to track.</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol">youtu.be/</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                          <button id="updateChannel"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Change Video</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div id="statspacea2"  class="container">    
+                    <div id="imagething21" style="width:150px"></div>
+             
+                    
+                   
+                
+                <div id="odobox2" style="background-color: rgb(24, 24, 24);">
+                    <p style="font-size: 4vh; color:rgb(255, 255, 255)" id="PostContents2">lol</p>
                 <p class="odometer odometer-auto-theme" id="channelSubs2" style="color: rgb(255, 255, 255);">0</p>
-                <p id="subscriberslola2" style="color: rgb(230, 230, 230);">Subscribers</p>
-                <input type="text" id="choose2" placeholder="Channel ID"></input>
-				<button id="updateChannel2" type="button" class="btn btn-danger">Change Channel 2</button>
-				
-			</div>
-			
-			<div class="container p-3 my-3 bg-dark text-white">  
-				<div id="chart"></div>
-			</div>
-			<script src="https://code.highcharts.com/stock/highstock.js"></script>	
-				<script type="text/javascript">
-				var chart = new Highcharts.chart({
+                <p id="subscriberslola2" style="color: rgb(255, 255, 255);">Views</p>
+            </div>
+                <div id="statspace5" style="background-color: #141414;">
+                    
+                    <div id="statspace12">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="goalpog2" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title22"style="color: rgb(255, 255, 255);">Likes</p>
+                    </div>
+                    <div id="statspace22">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="anotherodo2" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title12"style="color: rgb(255, 255, 255);">viewCount [API]</p>
+                    </div>
+                    </div>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle" style="color:rgb(255, 255, 255)">Change Video</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <b style="color:rgb(255, 255, 255)">enter the VIDEO ID of the server you want to track.</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol2">youtu.be/</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose2" aria-describedby="lol2"></input>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                          <button id="updateChannel2"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Change Video</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>  
+				<center><br>
+				<div id="bottomhalf">
+            						  <div id="gapspace">
+                                          <div>
+                                              <p id="lol1356" style="color: white;">Is currently</p>
+                                          </div>
+                                        <p class="odometer odometer-auto-theme" id="gapoometer" style="color: rgb(255, 255, 255);">0</p>
+                                        <div>
+                                            <p id="lol13561" style="color: white;">subscribers ahead of</p>
+                                          </div>
+                                      </div>  
+                                     
+                                    </div><br>
+                                    <div id="chart"></div>
+									</center>
+               
+            <script type="text/javascript">
+            var line = "#343a40"
+
+           
+
+chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
-type: 'spline',
+type: 'line',
 zoomType: 'x',
 backgroundColor: 'transparent',
 plotBorderColor: 'transparent'
 },
 title: {
-text: 'Subscribers'
+text: ''
 },
 xAxis: {
 type: 'datetime',
 tickPixelInterval: 500,
-gridLineColor: '#ff5454',
+gridLineColor: '#d9d9d9',
 labels: {
 style: {
-    color: 'transparent'
+    color: '#d9d9d9'
 }
 },
-lineColor: '#ff5454',
-minorGridLineColor: 'transparent',
-tickColor: '#00000',
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
 title: {
 style: {
-    color: '#000'
+    color: '#d9d9d9'
 }
 }
 },
@@ -215,12 +502,12 @@ text: ''
 gridLineColor: 'transparent',
 labels: {
 style: {
-    color: '#666666'
+    color: '#d9d9d9'
 }
 },
-lineColor: '#ff5454',
+lineColor: '#d9d9d9',
 minorGridLineColor: 'transparent',
-tickColor: 'transparent'
+tickColor: '#d9d9d9'
 },
 credits: {
 enabled: false,
@@ -229,129 +516,209 @@ text: ""
 
 series: [{
 showInLegend: false,
-name: 'Subscribers',
+name: 'Views',
 marker: { enabled: false },
-color: '#ff5454',
-lineColor: '#ff5454'
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
 }]
 });
-				
-				
+
+
+            
+            </script>	
+											       
+                <script type="text/javascript">
+                var orderlol = 0;
+                var FirstName = 0;
+                var SecondName = 0;
+                  var likes = 0;
+                 var views = 0;
+                  var viewsC = 0;
+                  var likes1 = 0;
+                 var views1 = 0;
+                  var viewsC1 = 0;
+                    $(document).ready(function() {
+	
+                        var defaultCID = "xeb5k1yaW6Q";			
+function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
 	
 	var channelName = "";
+				if(getUrlVars()['user1'] !== undefined) {
+					loadChannel(getUrlVars()['user1']);
+				} else  {
+					loadChannel(defaultCID);
+                }
+                
+                //SECOND COUNTER
+                var defaultCID2 = "xeb5k1yaW6Q";			
+function getUrlVars2(){var vars={};var parts=window.location.href.replace(/[&&]+([^=&]+)=([^&]*)/gi,function(m2,key2,value2){vars[key2]=value2});return vars}
+					
 	
-	loadChannel("UC-lHJZR3Gqxm24_Vd_AJ5Yw")
-	
-	function loadChannel(name) {
-		channelName = name;
-		var url = 'https://api.t1ch.com/youtube/'+name+''
-		$.getJSON(url, function(data) {
-			channelSubs.innerHTML = data.subscriberCount
-            var chartthingidk = channelSubs2 - channelSubs
-		chart.series[0].addPoint([Date.now(), chartthingidk])
-			
-		});
-		
-		var url1 = 'https://api.t1ch.com/caching/'+name+'';
-		$.getJSON(url1, function(data){
-			PostContents.innerHTML = data.channeltitle 
-			$('#imagething').html('<img src="'+data.cached.picURL+'"< style="width:150px" id="imagething2"/img>');
+	var channelName2 = "";
+				if(getUrlVars()['user2'] !== undefined) {
+					loadChannel2(getUrlVars2()['user2']);
+				} else  {
+					loadChannel2(defaultCID2);
+				}
+    
+    function loadChannel(name) {
+        
+        channelName = name;
+        var url = 'https://asd123proxdn.ndx4256.repl.co/youtube/videos/'+name+''
+        $.getJSON(url, function(data) {
+            var ratio = parseFloat(data.viewsCount) / parseFloat(data.likesCount)
+                    console.log(ratio)
+                    views = (Math.floor(parseFloat(views) + ratio * (parseFloat(data.likesCount) - likes)))
+                    if (viewsC == data.viewsCount) { } else {
+                        views = (Math.floor(parseFloat(data.viewsCount)))
+                    }
+                    viewsC = (Math.floor(data.viewsCount))
+                    likes = (Math.floor(data.likesCount))
+
+
+				channelSubs.innerHTML = views
+          
+            PostContents.innerHTML = data.name
+            anotherodo.innerHTML = data.viewsCount
+            goalpog.innerHTML = data.likesCount
+            $('#imagething').html('<img src="'+data.thumbnailMaxRes.url+'"< style="width:200px" id="imagething2"/img>');
             
-		
-		});
-	}
+
+            
+        });
+        
+    }
+    function loadChannel2(name2) {
+        
+        channelName2 = name2;
+        var url2 = 'https://asd123proxdn.ndx4256.repl.co/youtube/videos/'+name2+''
+        $.getJSON(url2, function(data2) {
+            var ratio1 = parseFloat(data2.viewsCount) / parseFloat(data2.likesCount)
+                    console.log(ratio1)
+                    views1 = (Math.floor(parseFloat(views1) + ratio1 * (parseFloat(data2.likesCount) - likes1)))
+                    if (viewsC1 == data2.viewsCount) { } else {
+                        views1 = (Math.floor(parseFloat(data2.viewsCount)))
+                    }
+                    viewsC1 = (Math.floor(data2.viewsCount))
+                    likes1 = (Math.floor(data2.likesCount))
 
 
+                channelSubs2.innerHTML = views1
+                anotherodo2.innerHTML = data2.viewsCount
+                goalpog2.innerHTML = data2.likesCount
+            PostContents2.innerHTML = data2.name
+            $('#imagething21').html('<img src="'+data2.thumbnailMaxRes.url+'"< style="width:200px" id="imagething22"/img>');
+            
 
-setInterval(function() {
-    var chartthingidk = channelSubs2 - channelSubs
-		if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
-		chart.series[0].addPoint([Date.now(), chartthingidk])
+           
+            
+        });
+        
+    }
+    
+    setInterval(function() {
+       
+        
+    
+        var url = 'https://asd123proxdn.ndx4256.repl.co/youtube/videos/'+channelName+''
+        $.getJSON(url, function(data) {
+
+            var ratio = parseFloat(data.viewsCount) / parseFloat(data.likesCount)
+                    console.log(ratio)
+                    views = (Math.floor(parseFloat(views) + ratio * (parseFloat(data.likesCount) - likes)))
+                    if (viewsC == data.viewsCount) { } else {
+                        views = (Math.floor(parseFloat(data.viewsCount)))
+                    }
+                    viewsC = (Math.floor(data.viewsCount))
+                    likes = (Math.floor(data.likesCount))
+
+                   FirstName = data.uploaderName
+				channelSubs.innerHTML = views
+            
+            function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+  goalpog.innerHTML = data.likesCount
+            anotherodo.innerHTML = data.viewsCount
+            
+        });
+        
+        var url2 = 'https://asd123proxdn.ndx4256.repl.co/youtube/videos/'+channelName2+''
+        $.getJSON(url2, function(data2) {
+            var ratio1 = parseFloat(data2.viewsCount) / parseFloat(data2.likesCount)
+                    console.log(ratio1)
+                    views1 = (Math.floor(parseFloat(views1) + ratio1 * (parseFloat(data2.likesCount) - likes1)))
+                    if (viewsC1 == data2.viewsCount) { } else {
+                        views1 = (Math.floor(parseFloat(data2.viewsCount)))
+                    }
+                    viewsC1 = (Math.floor(data2.viewsCount))
+                    likes1 = (Math.floor(data2.likesCount))
+
+
+                channelSubs2.innerHTML = views1
+                SecondName = data2.uploaderName
+                anotherodo2.innerHTML = data2.viewsCount
+                goalpog2.innerHTML = data2.likesCount
+                });
+    }, 2000);
+    setInterval(function() {
+var gapnumber = Math.floor(views - views1);
+if (gapnumber <= -1) {
+var actualgap = Math.abs(gapnumber)
+gapoometer.innerHTML = actualgap
+orderlol = 1
+var chartthingidk = parseFloat(actualgap)
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+} else {
+gapoometer.innerHTML = gapnumber
+orderlol = 2
+var chartthingidk = parseFloat(gapnumber)
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+}
 }, 2000);
 
+setInterval(() => {
+    if (orderlol == 1) {
+    document.querySelector("#lol1356").innerHTML = `${SecondName}'s video is currently`
+document.querySelector("#lol13561").innerHTML = `views ahead of ${FirstName}'s video`
+    } else {
+        document.querySelector("#lol1356").innerHTML = `${FirstName}'s video is currently`
+        document.querySelector("#lol13561").innerHTML = `views ahead of ${SecondName}'s video`
+    }
+}, 2000);
+    $('#updateChannel').click( function() {
+        loadChannel($('#choose').val());
+        var line = "#343a40"
 
-
-
-    var channelName1 = "";
-	
-	loadChannel2("UCbCmjCuTUZos6Inko4u57UQ")
-	
-	function loadChannel2(name1) {
-		channelName1 = name1;
-		var url = 'https://api.t1ch.com/youtube/'+name1+''
-		$.getJSON(url, function(data) {
-			channelSubs2.innerHTML = data.subscriberCount
-			
-			
-		});
-		
-		var url1 = 'https://api.t1ch.com/caching/'+name1+'';
-		$.getJSON(url1, function(data){
-			PostContents2.innerHTML = data.channeltitle 
-			$('#imagething3').html('<img src="'+data.cached.picURL+'"< style="width:150px" id="imagething2"/img>');
-            
-		
-		});
-	}
-	// fix pls future me
-	setInterval(function() {
-	
-					var url = 'https://api.t1ch.com/youtube/'+channelName+''
-		$.getJSON(url, function(data) {
-			channelSubs.innerHTML = data.subscriberCount
-			apicount.innerHTML = channelSubs2 - channelSubs
-		});
-
-        apicount.innerHTML = channelSubs2 - channelSubs
-
-
-        var url = 'https://api.t1ch.com/youtube/'+channelName1+''
-		$.getJSON(url, function(data) {
-			channelSubs2.innerHTML = data.subscriberCount
-			
-		});
-		
-		var url1 = 'https://api.t1ch.com/caching/'+channelName1+'';
-		$.getJSON(url1, function(data){
-			PostContents2.innerHTML = data.channeltitle 
-			$('#imagething3').html('<img src="'+data.cached.picURL+'"< style="width:150px" id="imagething2"/img>');
-            
-		
-		});
-
-        
-		
-	}, 2000);
-	
-	$('#updateChannel').click( function() {
-		loadChannel($('#choose').val());
-		chart = new Highcharts.chart({
+        chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
-type: 'spline',
+type: 'line',
 zoomType: 'x',
 backgroundColor: 'transparent',
 plotBorderColor: 'transparent'
 },
 title: {
-text: 'Sub Gap'
+text: ''
 },
 xAxis: {
 type: 'datetime',
 tickPixelInterval: 500,
-gridLineColor: '#ff5454',
+gridLineColor: '#d9d9d9',
 labels: {
 style: {
-    color: 'transparent'
+    color: '#d9d9d9'
 }
 },
-lineColor: '#ff5454',
-minorGridLineColor: 'transparent',
-tickColor: '#00000',
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
 title: {
 style: {
-    color: '#000'
+    color: '#d9d9d9'
 }
 }
 },
@@ -362,12 +729,12 @@ text: ''
 gridLineColor: 'transparent',
 labels: {
 style: {
-    color: '#666666'
+    color: '#d9d9d9'
 }
 },
-lineColor: '#ff5454',
+lineColor: '#d9d9d9',
 minorGridLineColor: 'transparent',
-tickColor: 'transparent'
+tickColor: '#d9d9d9'
 },
 credits: {
 enabled: false,
@@ -376,23 +743,115 @@ text: ""
 
 series: [{
 showInLegend: false,
-name: 'Sub Gap:',
+name: 'Views',
 marker: { enabled: false },
-color: '#ff5454',
-lineColor: '#ff5454'
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
 }]
 });
-		
-	});
-		
+        
+    });
+        
+    
 
 });
+document.getElementById("loal").value = "OFF"
 
-$('#updateChannel2').click( function() {
-		loadChannel2($('#choose2').val());
+$('#loal').click(function() {
+    if (document.getElementById("loal").value == "ON") {
+        location.reload();
+        return false;
+    }
+     if (document.getElementById("loal").value == "OFF") {
+        document.getElementById("loal").value = "ON"
+    document.getElementById("body").style.background = "#1a1a1a";
+    document.getElementById("PostContents").style.color = "#ffffff";
+    document.getElementById("channelSubs").style.color = "#ffffff";
+    document.getElementById("goalpog").style.color = "#ffffff";
+    document.getElementById("anotherodo").style.color = "#ffffff";
+    document.getElementById("title1").style.color = "#ffffff";
+    document.getElementById("title2").style.color = "#ffffff";
+    document.getElementById("subscriberslola").style.color = "#ffffff";
+    document.getElementById("lollllll").style.color = "#ffffff";
+    document.getElementById("lollllll").style.background = "#404040";
+    document.getElementById("lollllll").style.border = "#404040";
+    document.getElementById("statspace").style.border = "#404040";
+    var line = "#d9d9d9"
 
-})
-				</script>
+chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Views',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+}
+});
+
+                    })
+
+                
+                
+                </script>
+				
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172872844-1');
+</script>		 <script async src="https://arc.io/widget.min.js#Zs8wbDVz"></script>
         </body>
     </head>
 </html>
