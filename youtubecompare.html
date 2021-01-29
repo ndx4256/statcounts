@@ -73,7 +73,7 @@
 			font-size:15vh;
             font-weight: bold;
 			
-		
+            font-size: calc(3.1em + 4vw) !important
 		}
 		
 
@@ -310,7 +310,7 @@ top: 14%;*/
 		
         font-size:15vh;
         font-weight: bold;
-        
+        font-size: calc(3.1em + 4vw) !important
     
     }
     #gapoometer{
@@ -377,12 +377,21 @@ top: 14%;*/
                           </button>
                         </div>
                         <div class="modal-body">
-                            <b style="color:rgb(255, 255, 255)">enter the VIDEO ID of the server you want to track.</b>
+                            <b style="color:rgb(255, 255, 255)">enter the VIDEO ID of the video you want to track.</b>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text" id="lol">youtu.be/</span>
                                 </div>
                                 <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
+                              </div>
+                        </div>
+                        <div class="modal-body">
+                            <b style="color:rgb(255, 255, 255)">enter the VIDEO ID of the video you want to track.</b>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lol1">youtu.be/</span>
+                                </div>
+                                <input type="text" class="form-control" id="choose11" aria-describedby="lol1"></input>
                               </div>
                         </div>
                         <div class="modal-footer">
@@ -691,6 +700,7 @@ document.querySelector("#lol13561").innerHTML = `views ahead of ${FirstName}'s v
 }, 2000);
     $('#updateChannel').click( function() {
         loadChannel($('#choose').val());
+        loadChannel2($('#choose11').val());
         var line = "#343a40"
 
         chart = new Highcharts.chart({
