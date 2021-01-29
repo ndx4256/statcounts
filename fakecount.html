@@ -8,7 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#">SC</a>
@@ -21,27 +21,44 @@
             <a class="nav-link" href="#"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">API</a>
+            <button id="loal" class="far fa-moon"></button>
           </li>
         </ul>
       </nav>
-      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Settings</button>
-    
+      <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Edit</button>
+   
       </div>
       
 
-<body style="background-color: rgb(255, 255, 255);"></body>
+<body style="background-color: #161616;"></body>
 
 
 <html>
 	<head>
-		<title>v2- fakecount</title>
+		<title>v2 - Custom</title>
 		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-		<link rel="stylesheet" href="livecountsbutreddit.css" />
 		
 	<style>
+
+@font-face {
+        font-family: Roboto Regular;
+        src: url(https://mixerno.space/fonts/Roboto-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Roboto Medium;
+        src: url(https://mixerno.space/fonts/Roboto-Medium.ttf);
+    }
+    @font-face {
+        font-family: Roboto Bold;
+        src: url(https://mixerno.space/fonts/Roboto-Bold.ttf);
+    }
+    @font-face {
+        font-family: Roboto Light;
+        src: url(https://mixerno.space/fonts/Roboto-Light.ttf);
+    }
 	
 	*{
         font-family: Roboto;
@@ -53,7 +70,7 @@
 		
 		#channelSubs{
 		
-			font-size:12vh;
+			font-size:15vh;
             font-weight: bold;
 			
 		
@@ -66,7 +83,14 @@
         
     
     }
-
+#loal{
+    color:white;   
+    font-size:3.5vh !Important;
+    background-color: transparent;
+    border-color: transparent;
+    
+ 
+}
     bgimage{
         filter: blur(4px);
     }
@@ -96,7 +120,7 @@
 	.odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
     font-family: Arial, sans-serif;
-    line-height: 1.4em
+    line-height: 1.1em
 }
 	
     </style>
@@ -105,7 +129,7 @@
 <style>
 
 #PostContents{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -113,16 +137,17 @@
 #imagething2{
     object-fit: cover;
     z-index: -1;
-    width: 900px !important; /* width of container */
+    width: 737% !important; /* width of container */
     height: 140px !Important; /* height of container */
-    filter:blur(8px)
+    filter:blur(2.5px)
 }
 
 #imagething3{
     border: solid .95vh !Important;
-    border-radius: 11%;
-    border-color: rgb(33, 96, 231) !Important;
-    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    border-radius: 8%;
+    border-color: rgb(31, 32, 32);
+    
+  
 }
 
 *{
@@ -141,29 +166,66 @@
 }
 
 #PostContents {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    
 }
 
 
 
 #imagething1233 {
-
-display: block;
-margin-left: auto;
-margin-right: 2.5%;
-margin-top: -13%;
-
+    float: right;
+    margin-top: -13%;
+    
+/*
+position:absolute;
+left: 70%;
+top: 14%;*/
+}
+#lollllll{
+    color: #ffffff;
+    background-color: #404040;
+   border-color: #404040;
+}
+#goalpog{
+    font-size:  5vh;
 }
 
-
+#anotherodo{
+    font-size:  5vh;
+}
+#statspace1{
+    width: 40%;
+    
+    display: inline-block;
+   background-color: rgb(44, 44, 44);
+    
+}
+#statspacea{
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+#statspace2{
+    width: 40%;
+    display: inline-block;
+ 
+    background-color: rgb(44, 44, 44);
+}
 
 
 #PostContents{
     font-weight:bold !Important;
 }
 
-
-
+#statspace{
+    padding: 2%;
+}
+#chart{
+    padding: 2%;
+    background-color: rgb(17, 17, 17);
+}
+.modal-content {
+    background-color: #1b1a1a;
+}
 </style>
 	</head>
 	<script type="text/javascript">
@@ -179,170 +241,104 @@ margin-top: -13%;
 
                 <script src="https://code.highcharts.com/stock/highstock.js"></script>
 				<br></br>
-                <div  class="container p-3 my-3 border">    
+                <div id="statspacea"  class="container">    
                     <div id="imagething" style="width:150px"></div>
-                    <div id="imagething1233" style="width:150px"></div>
-					<p style="font-size: 6vh; color:rgb(25, 64, 100)"id="PostContents">lol </p>
-                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
-                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Subscribers</p>
-                <div id="chart"></div>
+             
+                    
+                   
+                
+                <div id="odobox" style="background-color: rgb(24, 24, 24);">
+                    <p style="font-size: 6vh; color:rgb(255, 255, 255)" id="PostContents">SC // Edit Values</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola" style="color: rgb(255, 255, 255);">Subscribers</p>
+            </div>
+                <div id="statspace" style="background-color: #141414;">
+                    
+                    <div id="statspace1">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="goalpog" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title2"style="color: rgb(255, 255, 255);">Milestone</p>
+                    </div>
+                    <div id="statspace2">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="anotherodo" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title1"style="color: rgb(255, 255, 255);">API</p>
+                    </div>
+                    </div>
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Change Settings</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle" style="color:rgb(255, 255, 255)">Fake Count</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
-                          
                         </div>
                         <div class="modal-body">
-                            <b>Create A Subcount</b>
+                           
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="misubRate">Subscriber Count</span>
+                                  <span class="input-group-text" id="lol">Subscribers</span>
                                 </div>
-                                <input type="text" class="form-control" id="choose1" aria-describedby="misubRate"></input>
+                                <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
                               </div>
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="masubRate">subGain Daily Average:</span>
+                                  <span class="input-group-text" id="lolh">Min Rate (minute)</span>
                                 </div>
-                                <input type="text" class="form-control" id="choose2" aria-describedby="masubRate"></input>
+                                <input type="text" class="form-control" id="min" aria-describedby="lolh"></input>
                               </div>
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="chanName">Name</span>
+                                  <span class="input-group-text" id="lolhh">Max Rate (minute)</span>
                                 </div>
-                                <input type="text" class="form-control" id="choose4" aria-describedby="chanName"></input>
+                                <input type="text" class="form-control" id="max" aria-describedby="lolhh"></input>
                               </div>
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="img1URL">Banner URL</span>
+                                  <span class="input-group-text" id="lolhhh">Image URL</span>
                                 </div>
-                                <input type="text" class="form-control" id="choose5" aria-describedby="imgURL"></input>
+                                <input type="text" class="form-control" id="choosehhh" aria-describedby="lolhhh"></input>
                               </div>
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="img2URL">PFP URL</span>
+                                  <span class="input-group-text" id="lolhhhh">Username</span>
                                 </div>
-                                <input type="text" class="form-control" id="choose6" aria-describedby="imgURL2"></input>
+                                <input type="text" class="form-control" id="choosehhhh" aria-describedby="lolhhhh"></input>
                               </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="lolhhhhh">Prefix/Suffix</span>
+                                </div>
+                                <input type="text" class="form-control" id="choosehhhhh" aria-describedby="lolhhhhh"></input>
+                              </div>
+                              <button id="ResetAll"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Reset</button>
+                              <button id="updateBanner"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Edit Banner</button>
+                              <button id="updateMinRate"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)" onclick="setMinMax(min.value, max.value)">Edit Rate</button>
+                              <button id="updateName"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)" onclick=" PostContents.innerHTML = $('#choosehhhh').val();">Edit Name</button>
+                              <button id="updateCounter"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)"  onclick="setSubs(choose.value)">Edit Count</button>
+                              <button id="destroyGraph"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Reset Graph</button>
+                              <button id="updatePrefix"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Edit Prefix/Suffix</button>
+                           
                         </div>
                         <div class="modal-footer">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="issubsAbbreviated">
-                                <label class="form-check-label" for="issubsAbbreviated">nofunction</label>
-                              </div>
-                              <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="isAPIupdatesOn">
-                                <label class="form-check-label" for="isAPIupdatesOn">nofunction</label>
-                              </div>
-                            <button id="updateIMG" type="button" class="btn btn-danger" >Change Banner URL</button>
-                            <button id="updateIMG2" type="button" class="btn btn-danger" >Change PFP URL</button>
-                            <button id="updateRate" type="button" class="btn btn-danger" >Change Sub Rate</button>
-                          <button id="updateCount" type="button" class="btn btn-danger" >Change Sub Count</button>
-                          <button id="updateChannel"type="button" class="btn btn-danger" >Change Name</button>
-                          <button id="close1"type="button" class="btn btn-dark" data-dismiss="modal" >Close</button>
-                          
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                          <button id="destroyModal"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)" >Keep On Side</button>
+                          <button id="updateChannel"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Edit All</button>
                           </div>
                       </div>
                     </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                    
                   </div>
-                
+                 
+                <div id="chart"></div>
             
             						    
             <script type="text/javascript">
-            var line = "#4287f5"
+            var line = "#343a40"
 
-            var chart = new Highcharts.chart({
-  chart: {
-      renderTo: 'chart',
-      type: 'line',
-        zoomType: 'x',
-        backgroundColor: 'transparent',
-        plotBorderColor: 'transparent'
-  },
-  title: {
-      text: ''
-  },
-  xAxis: {
-      type: 'datetime',
-      tickPixelInterval: 500,
-        gridLineColor: '#4287f5',
-        labels: {
-            style: {
-                color: '#4287f5'
-            }
-        },
-        lineColor: line,
-        minorGridLineColor: '#4287f5',
-        tickColor: line,
-        title: {
-            style: {
-                color: '#4287f5'
-            }
-        }
-  },
-  yAxis: {
-      title: {
-          text: ''
-      },
-        gridLineColor: 'transparent',
-        labels: {
-            style: {
-                color: '#4287f5'
-            }
-        },
-        lineColor: '#4287f5',
-        minorGridLineColor: 'transparent',
-        tickColor: '#4287f5'
-  },
-  credits: {
-      enabled: false,
-      text: ""
-  },
+           
 
-  series: [{
-    showInLegend: false,
-     name: 'Total # of Clicks',
-    marker: { enabled: false },
-    color: '#4287f5',
-    lineColor: '#4287f5'
-  }]
-});
-            
-            </script>	
-											       
-                <script type="text/javascript">
-                    $(document).ready(function() {
-	
-
-var y = 0;
-var Data = undefined;
-var funcTimers = [];
-var _0x1ed9=['round','length','push'];(function(_0x2b40ad,_0x1ed968){var _0x504ba3=function(_0x4c4bed){while(--_0x4c4bed){_0x2b40ad['push'](_0x2b40ad['shift']());}};_0x504ba3(++_0x1ed968);}(_0x1ed9,0x140));var _0x504b=function(_0x2b40ad,_0x1ed968){_0x2b40ad=_0x2b40ad-0x0;var _0x504ba3=_0x1ed9[_0x2b40ad];return _0x504ba3;};function _min(_0x4c4bed,_0x533738){var _0x146b9a=_0x504b,_0x168a96=_0x4c4bed,_0x2fc6b5=_0x4c4bed/0x15180*0x4,_0x2e0ea7=[],_0x1507cb=0x0;_0x2e0ea7[_0x146b9a('0x0')](_0x168a96);for(var _0x55c3aa=0x1;_0x55c3aa<_0x533738;_0x55c3aa++){_0x2e0ea7['push']((_0x168a96+_0x2fc6b5)/_0x55c3aa),_0x1507cb+=_0x2e0ea7[_0x55c3aa];}return-Math[_0x146b9a('0x1')](_0x1507cb/_0x2e0ea7[_0x146b9a('0x2')]*0x4/_0x4c4bed);}function _max(_0x5c16d3,_0x40ee48){var _0x25bd5f=_0x504b,_0x8b3181=_0x5c16d3,_0x1e3050=_0x5c16d3/0x15180*0x4,_0x3078bd=[],_0x2d417a=0x0;_0x3078bd['push'](_0x8b3181);for(var _0x26687c=0x1;_0x26687c<_0x40ee48;_0x26687c++){_0x3078bd['push'](_0x8b3181-_0x1e3050),_0x2d417a+=_0x3078bd[_0x26687c];}return Math[_0x25bd5f('0x1')](_0x2d417a/_0x3078bd['length']*0x4/_0x5c16d3);}
-var _0x3b4f=['now','apiSubCount','estSubGain','log','random','subscriberCountTemp','duration','lastTime','expiresNow','cid','pow','round'];(function(_0x18f727,_0x3b4f17){var _0x518b51=function(_0x34a092){while(--_0x34a092){_0x18f727['push'](_0x18f727['shift']());}};_0x518b51(++_0x3b4f17);}(_0x3b4f,0x112));var _0x518b=function(_0x18f727,_0x3b4f17){_0x18f727=_0x18f727-0x0;var _0x518b51=_0x3b4f[_0x18f727];return _0x518b51;};function easing(_0x34a092,_0x1683dd,_0x24bc26){var _0x46a527=_0x518b;return _0x34a092*0x3/Math['pow'](_0x1683dd,0x3)*Math[_0x46a527('0x0')](_0x24bc26,0x2);}function getMin(_0x3b9dfa){var _0x3c819a=_0x518b;return Math[_0x3c819a('0x1')](_min(_0x3b9dfa,0x1e));}function getMax(_0x10788b){return Math['round'](_max(_0x10788b,0x1e));}function random(_0x10b92a,_0x36b5fa){var _0x1f880d=_0x518b;return Math['floor'](Math[_0x1f880d('0x6')]()*(_0x36b5fa-_0x10b92a))+_0x10b92a;}function startCalcAvgSubs(_0x4198f0,_0xebf5bc){var _0x53de43=_0x518b,_0x49c33b=_0x4198f0['estSubGain'],_0x4d741a=Math[_0x53de43('0x1')](_0x4198f0[_0x53de43('0x9')]),_0x13924c=Math['abs'](_0x4d741a/_0x49c33b),_0x578bc2=Math[_0x53de43('0x1')](Date[_0x53de43('0x2')]()+_0x13924c/0x15180*0x4),_0x5cad77=_0x4198f0[_0x53de43('0x9')];(_0x4198f0[_0x53de43('0xa')]==undefined||_0x4198f0[_0x53de43('0xa')]==![])&&(_0x4198f0[_0x53de43('0x8')]=_0x578bc2,_0x4198f0[_0x53de43('0xa')]=!![]);(_0x4198f0[_0x53de43('0x8')]==null||_0x4198f0[_0x53de43('0x8')]==undefined)&&(_0x4198f0['expiresNow']=![]);if(_0x4198f0[_0x53de43('0x8')]<=0x0||_0x4198f0[_0x53de43('0x8')]>=Infinity||_0x4198f0['duration']==NaN)return;funcTimers[_0x4198f0[_0x53de43('0xb')]]=setTimeout(function(){var _0x3f68cb=_0x53de43,_0x2b6969=_0x4198f0[_0x3f68cb('0x4')],_0x52810d=getMin(_0x4198f0[_0x3f68cb('0x4')]),_0x230d87=getMax(_0x4198f0[_0x3f68cb('0x4')]),_0x4b39b2=_0x4198f0[_0x3f68cb('0x3')];console[_0x3f68cb('0x5')](_0x13924c/0x15180*0x4);var _0x375f22=Math[_0x3f68cb('0x1')](_0x4198f0[_0x3f68cb('0x4')]/0x15180*_0x230d87),_0x2591c3=random(_0x52810d,_0x230d87+_0x375f22),_0x2c7506=_0x2591c3;if(_0x49c33b>=0x1&&Date['now']()>=_0x4198f0['duration'])_0x4198f0['subscriberCountTemp']+=_0x2591c3,_0x4198f0['expiresNow']=![];else _0x49c33b<=-0x1&&Date[_0x3f68cb('0x2')]()>=_0x4198f0[_0x3f68cb('0x8')]&&(_0x4198f0[_0x3f68cb('0x7')]-=_0x2591c3,_0x4198f0[_0x3f68cb('0xa')]=![]);});}
-function updateSubCount(count) {
-	channelSubs.innerHTML = count
-	var chartthingidk = count
-if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
-chart.series[0].addPoint([Date.now(), chartthingidk])
-}
-//var Data = undefined;
-$('#updateRate').click( function() {
-	//y = $('#choose69').val();
-	lastHour = Date.now()
-	//var api = parseInt($('#choose1').val().substring(3)),"_;
-	Data = {"cid":"fakecount","apiSubCount":0,"subscriberCountTemp":parseInt($('#choose1').val()),"_duration":3,"estSubGain":parseInt($('#choose2').val()),"lastTime":Date.now()};
-	startCalcAvgSubs(Data,0);
-	updateSubCount(Math.round(Data.subscriberCountTemp));
-	chart = new Highcharts.chart({
+chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
 type: 'line',
@@ -351,23 +347,23 @@ backgroundColor: 'transparent',
 plotBorderColor: 'transparent'
 },
 title: {
-text: 'Subscribers'
+text: ''
 },
 xAxis: {
 type: 'datetime',
 tickPixelInterval: 500,
-gridLineColor: '#4287f5',
+gridLineColor: '#d9d9d9',
 labels: {
 style: {
-    color: 'transparent'
+    color: '#d9d9d9'
 }
 },
-lineColor: '#4287f5',
-minorGridLineColor: 'transparent',
-tickColor: '#00000',
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
 title: {
 style: {
-    color: '#000'
+    color: '#d9d9d9'
 }
 }
 },
@@ -378,12 +374,12 @@ text: ''
 gridLineColor: 'transparent',
 labels: {
 style: {
-    color: '#666666'
+    color: '#d9d9d9'
 }
 },
-lineColor: '#4287f5',
+lineColor: '#d9d9d9',
 minorGridLineColor: 'transparent',
-tickColor: 'transparent'
+tickColor: '#d9d9d9'
 },
 credits: {
 enabled: false,
@@ -392,38 +388,250 @@ text: ""
 
 series: [{
 showInLegend: false,
-name: 'Subscribers',
+name: '',
 marker: { enabled: false },
-color: '#4287f5',
-lineColor: '#4287f5'
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
 }]
 });
+
+
+            
+            </script>	
+											       
+                <script type="text/javascript">
+                $('#imagething').html('<img src="https://designshack.net/wp-content/uploads/placeholder-image.png"< style="width:200px" id="imagething2"/img>');
+                function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+                 var count1 = 0;
+            var gainrate = [0, 0];
+function setSubs(count) {
+   count1 = parseFloat(count)
+   channelSubs.innerHTML = Math.round(count1)
+
+   goalpog.innerHTML = GetGoal(Math.round(count1))
+}
+function setMinMax(min, max) {
+   gainrate = [parseFloat(min)/60, parseFloat(max)/60];
+}
+var show = true;
+setInterval(function() {
+   count1 = count1 + randomIntFromInterval(gainrate[0], gainrate[1])
+   function abbreviateNumber(numbr) {
+    if (numbr <= 999) {
+      return numbr
+    } else if (numbr > 999 && numbr < 9999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '0');
+    } else if (numbr > 9999 && numbr < 99999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '00');
+    } else if (numbr > 99999 && numbr < 999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '000');
+    } else if (numbr > 999999 && numbr < 9999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '0000');
+    } else if (numbr > 9999999 && numbr < 99999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '00000');
+    } else if (numbr > 99999999 && numbr < 999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '000000');
+    } else if (numbr > 999999999 && numbr < 9999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '0000000');
+    } else if (numbr > 9999999999 && numbr < 99999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '00000000');
+    } else if (numbr > 99999999999 && numbr < 999999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '000000000');
+    } else if (numbr > 999999999999 && numbr < 9999999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '0000000000');
+    } else if (numbr > 9999999999999 && numbr < 99999999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '00000000000');
+    } else if (numbr > 99999999999999 && numbr < 999999999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '000000000000');
+    } else if (numbr > 999999999999999 && numbr < 9999999999999999) {
+      return parseInt(((numbr.toString()).slice(0, 3)) + '0000000000000');
+    }
+  }
+  goalpog.innerHTML = GetGoal((Math.round(count1)))
+           
+   channelSubs.innerHTML = (Math.round(count1))
+   anotherodo.innerHTML = abbreviateNumber(Math.round(count1))
+  
+   
+   var chartthingidk = parseFloat((Math.round(count1)))
+            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            chart.series[0].addPoint([Date.now(),chartthingidk])
+}, 2000); // update interval
+function randomIntFromInterval(min, max) { // min and max included 
+        return parseFloat((Math.random() * (min - max) + max))
+    }
+            function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+ 
+            
+ 
+    
+    $('#updateChannel').click( function() {
+        setMinMax(min.value, max.value);
+        setSubs(choose.value);
+        PostContents.innerHTML = $('#choosehhhh').val();
+        $('#imagething').html('<img src="'+$('#choosehhh').val()+'"< style="width:200px" id="imagething2"/img>');
+        var line = "#343a40"
+
+        chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: '',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+        
+    });
+        
+    
+
+$('#updateBanner').click(function() {
+    $('#imagething').html('<img src="'+$('#choosehhh').val()+'"< style="width:200px" id="imagething2"/img>');
+});
+$('#updatePrefix').click(function() {
+    subscriberslola.innerHTML = $('#choosehhhhh').val();
+});
+document.getElementById("loal").value = "OFF"
+
+$('#loal').click(function() {
+    if (document.getElementById("loal").value == "ON") {
+        location.reload();
+        return false;
+    }
+     if (document.getElementById("loal").value == "OFF") {
+        document.getElementById("loal").value = "ON"
+    document.getElementById("body").style.background = "#1a1a1a";
+    document.getElementById("PostContents").style.color = "#ffffff";
+    document.getElementById("channelSubs").style.color = "#ffffff";
+    document.getElementById("goalpog").style.color = "#ffffff";
+    document.getElementById("anotherodo").style.color = "#ffffff";
+    document.getElementById("title1").style.color = "#ffffff";
+    document.getElementById("title2").style.color = "#ffffff";
+    document.getElementById("subscriberslola").style.color = "#ffffff";
+    document.getElementById("lollllll").style.color = "#ffffff";
+    document.getElementById("lollllll").style.background = "#404040";
+    document.getElementById("lollllll").style.border = "#404040";
+    document.getElementById("statspace").style.border = "#404040";
+    var line = "#d9d9d9"
+
+chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: '',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
+});
+}
 });
 
-setInterval((aylmao) => {
-	if(Data != undefined) {
-	startCalcAvgSubs(Data,0);
-	updateSubCount(Math.round(Data.subscriberCountTemp));
-	//updateSubCount(Math.round(parseInt($('#choose2').val())+toAvgSubs((Date.now()/1000)-(lastHour/1000), "a", parseInt($('#choose1').val()), parseInt($('#choose2').val()))));
-	}
-}, 2000);
+                 
 
-
-
-$('#updateChannel').click( function() {
-	PostContents.innerHTML = ($('#choose4').val());
-});
-
-$('#updateIMG').click( function() {
-	$('#imagething').html('<img src="'+$('#choose5').val()+'"< style="width:150px" id="imagething2"/img>');
-});
-$('#updateIMG2').click( function() {
-	$('#imagething1233').html('<img src="'+$('#choose6').val()+'"< style="width:150px" id="imagething3"/img>');
-});
-                    });
+                
+                
                 </script>
 				
-			<!-- Global site tag (gtag.js) - Google Analytics -->
+				<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -431,7 +639,7 @@ $('#updateIMG2').click( function() {
   gtag('js', new Date());
 
   gtag('config', 'UA-172872844-1');
-</script>			
+</script>		 <script async src="https://arc.io/widget.min.js#Zs8wbDVz"></script>
         </body>
     </head>
 </html>
