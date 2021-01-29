@@ -35,7 +35,7 @@
 
 <html>
 	<head>
-		<title>v2- YouTube Likes</title>
+		<title>v2- Discord</title>
 		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
@@ -386,9 +386,14 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
             channelSubs.innerHTML = data.membersCount
           
             PostContents.innerHTML = data.userName
-            $('#imagething').html('<img src="https://cdn.discordapp.com/banners/'+data.guildId+'/'+data.bannerId+'.jpeg"< style="width:200px" id="imagething2"/img>');
+            if (data.membersCount <= 1500) {
+                $('#imagething').html('<img src="https://cdn.discordapp.com/banners/'+data.guildId+'/'+data.iconId+'.jpeg"< style="width:200px" id="imagething2"/img>');
+            } else {
+                $('#imagething').html('<img src="https://cdn.discordapp.com/banners/'+data.guildId+'/'+data.bannerId+'.jpeg"< style="width:200px" id="imagething2"/img>');
+            }
+           
             
-
+            
             var chartthingidk = parseFloat(data.membersCount)
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
@@ -472,7 +477,7 @@ text: ""
 
 series: [{
 showInLegend: false,
-name: 'Likes',
+name: '',
 marker: { enabled: false },
 color: '#d9d9d9',
 lineColor: '#d9d9d9'
