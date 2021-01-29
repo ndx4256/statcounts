@@ -30,23 +30,38 @@
       </div>
       
 
-<body style="background-color: rgb(255, 255, 255);"></body>
+<body style="background-color: #161616;"></body>
 
 
 <html>
 	<head>
-		<title>v2.1- YouTube</title>
-        <link rel="stylesheet" href="odometer-theme-minimal.css" />
-        
+		<title>v2- YouTube Likes</title>
+		<link rel="stylesheet" href="odometer-theme-minimal.css" />
 		<script src="odometer.js"></script>
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-		<link rel="stylesheet" href="livecountsbutreddit.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		
 	<style>
 
+@font-face {
+        font-family: Roboto Regular;
+        src: url(https://mixerno.space/fonts/Roboto-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Roboto Medium;
+        src: url(https://mixerno.space/fonts/Roboto-Medium.ttf);
+    }
+    @font-face {
+        font-family: Roboto Bold;
+        src: url(https://mixerno.space/fonts/Roboto-Bold.ttf);
+    }
+    @font-face {
+        font-family: Roboto Light;
+        src: url(https://mixerno.space/fonts/Roboto-Light.ttf);
+    }
+	
 	*{
-        font-family: 'Roboto', sans-serif;
+        font-family: Roboto;
     }
 	
 	</style>
@@ -55,7 +70,7 @@
 		
 		#channelSubs{
 		
-			font-size:12vh;
+			font-size:15vh;
             font-weight: bold;
 			
 		
@@ -105,7 +120,7 @@
 	.odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
     font-family: Arial, sans-serif;
-    line-height: 1.4em
+    line-height: 1.1em
 }
 	
     </style>
@@ -114,7 +129,7 @@
 <style>
 
 #PostContents{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -122,18 +137,16 @@
 #imagething2{
     object-fit: cover;
     z-index: -1;
-    width: 900px !important; /* width of container */
+    width: 737% !important; /* width of container */
     height: 140px !Important; /* height of container */
-    filter:blur(3px)
+    filter:blur(2.5px)
 }
 
 #imagething3{
     border: solid .95vh !Important;
     border-radius: 8%;
     border-color: rgb(31, 32, 32);
-    object-fit: cover;
-    width: 160px;
-    height: 150px;
+    
   
 }
 
@@ -153,21 +166,26 @@
 }
 
 #PostContents {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    
 }
 
 
 
 #imagething1233 {
-
-display: block;
-margin-left: auto;
-margin-right: 2.5%;
-margin-top: -13%;
-
-
+    float: right;
+    margin-top: -13%;
+    
+/*
+position:absolute;
+left: 70%;
+top: 14%;*/
 }
-
+#lollllll{
+    color: #ffffff;
+    background-color: #404040;
+   border-color: #404040;
+}
 #goalpog{
     font-size:  5vh;
 }
@@ -177,19 +195,37 @@ margin-top: -13%;
 }
 #statspace1{
     width: 40%;
+    
     display: inline-block;
+   background-color: rgb(44, 44, 44);
+    
+}
+#statspacea{
+    overflow: hidden;
+    background-color: #1a1a1a;
 }
 #statspace2{
     width: 40%;
     display: inline-block;
+ 
+    background-color: rgb(44, 44, 44);
 }
+
 
 #PostContents{
     font-weight:bold !Important;
 }
 
-
-
+#statspace{
+    padding: 2%;
+}
+#chart{
+    padding: 2%;
+    background-color: rgb(17, 17, 17);
+}
+.modal-content {
+    background-color: #1b1a1a;
+}
 </style>
 	</head>
 	<script type="text/javascript">
@@ -205,118 +241,129 @@ margin-top: -13%;
 
                 <script src="https://code.highcharts.com/stock/highstock.js"></script>
 				<br></br>
-                <div id="statspace"  class="container">  
-                    <div class="sGrid">
+                <div id="statspacea"  class="container">    
                     <div id="imagething" style="width:150px"></div>
-                    <div id="imagething1233" style="width:150px"></div>
-                </div>  
-					<p style="font-size: 6vh; color:rgb(0, 0, 0)"id="PostContents">lol </p>
-                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</p>
-                <p id="subscriberslola" style="color: rgb(0, 0, 0);">Likes</p>
-                <div id="statspace"  class="container">
-                    <div id="statspace1"  class="container">
-                        <p class="odometer odometer-auto-theme" id="goalpog" style="color: rgb(0, 0, 0);">0</p>
-                        <p id="title2">Milestone</p>
+             
+                    
+                   
+                
+                <div id="odobox" style="background-color: rgb(24, 24, 24);">
+                    <p style="font-size: 6vh; color:rgb(255, 255, 255)" id="PostContents">lol</p>
+                <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
+                <p id="subscriberslola" style="color: rgb(255, 255, 255);">Likes</p>
+            </div>
+                <div id="statspace" style="background-color: #141414;">
+                    
+                    <div id="statspace1">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="goalpog" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title2"style="color: rgb(255, 255, 255);">Milestone</p>
                     </div>
-                    <div id="statspace2"  class="container">
-                        <p class="odometer odometer-auto-theme" id="anotherodo" style="color: rgb(0, 0, 0);">0</p>
-                        <p id="title1">Views</p>
+                    <div id="statspace2">
+                        <p id="nothing"></p>
+                        <p class="odometer odometer-auto-theme" id="anotherodo" style="color: rgb(255, 255, 255);">0</p>
+                        <p id="title1"style="color: rgb(255, 255, 255);">Views</p>
                     </div>
                     </div>
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Change Video</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle" style="color:rgb(255, 255, 255)">Change Video</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                            <b>enter the VIDEO ID of the video you want to track.</b>
+                            <b style="color:rgb(255, 255, 255)">enter the VIDEO ID of the server you want to track.</b>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="lol">youtube.com/watch?v=</span>
+                                  <span class="input-group-text" id="lol">youtu.be/</span>
                                 </div>
                                 <input type="text" class="form-control" id="choose" aria-describedby="lol"></input>
                               </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-                          <button id="updateChannel"type="button" class="btn btn-dark" data-dismiss="modal">Change Video</button>
+                          <button id="updateChannel"type="button" class="btn btn-outline-dark" data-dismiss="modal" style="color:rgb(255, 255, 255)">Change Video</button>
                           </div>
                       </div>
                     </div>
                   </div>
+                 
                 <div id="chart"></div>
             
             						    
             <script type="text/javascript">
             var line = "#343a40"
 
-            var chart = new Highcharts.chart({
-  chart: {
-      renderTo: 'chart',
-      type: 'line',
-        zoomType: 'x',
-        backgroundColor: 'transparent',
-        plotBorderColor: 'transparent'
-  },
-  title: {
-      text: ''
-  },
-  xAxis: {
-      type: 'datetime',
-      tickPixelInterval: 500,
-        gridLineColor: '#4287f5',
-        labels: {
-            style: {
-                color: '#343a40'
-            }
-        },
-        lineColor: line,
-        minorGridLineColor: '#4287f5',
-        tickColor: '#343a40',
-        title: {
-            style: {
-                color: '#343a40'
-            }
-        }
-  },
-  yAxis: {
-      title: {
-          text: ''
-      },
-        gridLineColor: 'transparent',
-        labels: {
-            style: {
-                color: '#343a40'
-            }
-        },
-        lineColor: '#343a40',
-        minorGridLineColor: 'transparent',
-        tickColor: '#343a40'
-  },
-  credits: {
-      enabled: true,
-      text: "StatCounts v2.1-20201212"
-  },
+           
 
-  series: [{
-    showInLegend: false,
-     name: 'Likes',
-    marker: { enabled: false },
-    color: '#343a40',
-    lineColor: '#343a40'
-  }]
+chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
+
+series: [{
+showInLegend: false,
+name: 'Likes',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
 });
+
+
             
             </script>	
 											       
                 <script type="text/javascript">
                     $(document).ready(function() {
 	
-                        var defaultCID = "hDkuUZ3F1GU";			
+                        var defaultCID = "xeb5k1yaW6Q";			
 function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
 						$(document).ready(function() {
 	
@@ -329,63 +376,37 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     
     function loadChannel(name) {
-        var lolxdhahafunni = [
- "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
- "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
- "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
- "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
-"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
-"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
-"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
-"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
-"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
-  ] 
         channelName = name;
-        var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+name+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+        var url = 'http://asd123proxdn.ndx4256.repl.co/youtube/videos/'+name+''
         $.getJSON(url, function(data) {
-            channelSubs.innerHTML = data.items[0].statistics.likeCount
-           
+            channelSubs.innerHTML = data.likesCount
+            PostContents.innerHTML = data.name
+            $('#imagething').html('<img src="'+data.thumbnailMaxRes.url+'"< style="width:200px" id="imagething2"/img>');
+            
 
-            var chartthingidk = parseFloat(data.items[0].statistics.likeCount)
+            var chartthingidk = parseFloat(data.likesCount)
             chart.series[0].addPoint([Date.now(),chartthingidk])
             
         });
-        var url = 'https://api.mixerno.space/youtube/videoid/snippet/'+name+''
-        $.getJSON(url, function(data) {
-            PostContents.innerHTML = data.items[0].snippet.title
-            $('#imagething').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething2"/img>');
-            $('#imagething1233').html('<img src="'+data.items[0].snippet.thumbnails.high.url+'"< style="width:150px" id="imagething3"/img>');
-        });
+        
     }
        
     setInterval(function() {
 
-        var lolxdhahafunni = [
- "AIzaSyCLGrBNLqePqnC03wfsZ8VoF7DBTAWQn4U",
- "AIzaSyA2r4CDebiusOD9gkvhGHaq654CoHR6RVg",
- "AIzaSyDYYWBGWvgw-4a4IjhZA96GMhi2dgyuqAc",
- "AIzaSyCT3zuXv9UjRvn_hDhTH17bMy-CtEtMU8k",
-"AIzaSyD1eBIWmLWtMrB5SUPbRng6jUsXi1mQ3cQ",
-"AIzaSyDaMGPNNy7cpiy-I11ZJv8ZgZKRcYgi06k",
-"AIzaSyDf50ivIGDFWKfbPg_unYYlIILg3A9EEMA",
-"AIzaSyDxCxSJ_tiuVtmxBnL9jOVMKm6iS9ILJW0",
-"AIzaSyArhayXp_owxapS-9VWA4Hs5flsWqvryno",
-"AIzaSyA-T7PE2GTxoEDX5s0jt5-rSYR0IOC2mq8"
-  ] 
+        
     
-        var url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id='+channelName+'&key='+lolxdhahafunni[Math.floor(Math.random()*lolxdhahafunni.length)]+''
+        var url = 'http://asd123proxdn.ndx4256.repl.co/youtube/videos/'+channelName+''
         $.getJSON(url, function(data) {
-            channelSubs.innerHTML = data.items[0].statistics.likeCount
+            channelSubs.innerHTML = data.likesCount
     
-            var chartthingidk = parseFloat(data.items[0].statistics.likeCount)
+            var chartthingidk = parseFloat(data.likesCount)
             if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(),chartthingidk])
             function GetGoal(count) {
     if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
   }
-  goalpog.innerHTML = GetGoal(data.items[0].statistics.likeCount)
-            anotherodo.innerHTML = data.items[0].statistics.viewCount
+  goalpog.innerHTML = GetGoal(data.likesCount)
+            anotherodo.innerHTML = data.viewsCount
             
         });
 
@@ -394,63 +415,63 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     $('#updateChannel').click( function() {
         loadChannel($('#choose').val());
-        var line = "#d9d9d9"
+        var line = "#343a40"
 
         chart = new Highcharts.chart({
-  chart: {
-      renderTo: 'chart',
-      type: 'line',
-        zoomType: 'x',
-        backgroundColor: 'transparent',
-        plotBorderColor: 'transparent'
-  },
-  title: {
-      text: ''
-  },
-  xAxis: {
-      type: 'datetime',
-      tickPixelInterval: 500,
-        gridLineColor: '#4287f5',
-        labels: {
-            style: {
-                color: '#343a40'
-            }
-        },
-        lineColor: line,
-        minorGridLineColor: '#4287f5',
-        tickColor: '#343a40',
-        title: {
-            style: {
-                color: '#343a40'
-            }
-        }
-  },
-  yAxis: {
-      title: {
-          text: ''
-      },
-        gridLineColor: 'transparent',
-        labels: {
-            style: {
-                color: '#343a40'
-            }
-        },
-        lineColor: '#343a40',
-        minorGridLineColor: 'transparent',
-        tickColor: '#343a40'
-  },
-  credits: {
-      enabled: true,
-      text: "StatCounts v2.1-20201213"
-  },
+chart: {
+renderTo: 'chart',
+type: 'line',
+zoomType: 'x',
+backgroundColor: 'transparent',
+plotBorderColor: 'transparent'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 500,
+gridLineColor: '#d9d9d9',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: line,
+minorGridLineColor: '#d9d9d9',
+tickColor: line,
+title: {
+style: {
+    color: '#d9d9d9'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: '#d9d9d9'
+}
+},
+lineColor: '#d9d9d9',
+minorGridLineColor: 'transparent',
+tickColor: '#d9d9d9'
+},
+credits: {
+enabled: false,
+text: ""
+},
 
-  series: [{
-    showInLegend: false,
-     name: 'Likes',
-    marker: { enabled: false },
-    color: '#343a40',
-    lineColor: '#343a40'
-  }]
+series: [{
+showInLegend: false,
+name: 'Likes',
+marker: { enabled: false },
+color: '#d9d9d9',
+lineColor: '#d9d9d9'
+}]
 });
         
     });
@@ -531,7 +552,7 @@ text: ""
 
 series: [{
 showInLegend: false,
-name: 'Likes',
+name: 'Members',
 marker: { enabled: false },
 color: '#d9d9d9',
 lineColor: '#d9d9d9'
@@ -554,8 +575,7 @@ lineColor: '#d9d9d9'
   gtag('js', new Date());
 
   gtag('config', 'UA-172872844-1');
-</script>		
+</script>		  <script async src="https://arc.io/widget.min.js#Zs8wbDVz"></script>
         </body>
-        <script async src="https://arc.io/widget.min.js#Zs8wbDVz"></script>
     </head>
 </html>
