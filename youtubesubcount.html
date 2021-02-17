@@ -8,24 +8,34 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">     
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav id="topbarnav"class="navbar navbar-expand-sm ">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">SC</a>
+            <i id="loal"class="fas fa-chart-area"></i>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/StatCounts">Twitter</a>
+            <a id="twitterpromo" class="fab fa-twitter" href="https://twitter.com/statcounts"></a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
+            <a id="twitterpromo"class="fab fa-discord"></a>
           </li>
           <li class="nav-item">
-            <button id="loal" class="far fa-moon"></button>
+            <a id="twitterpromo"class="fab fa-youtube" href="https://youtube.com/statcounts"></a>
+          </li>
+         
+          <li>
+         
           </li>
         </ul>
+        <button id="loal2" class="fas fa-expand"></button>
       </nav>
+      
+      
       <button id="lollllll" type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Change Channel</button>
+      <div class="alert alert-info">
+        <strong>Notice anything?</strong> Site design update, yet again! this may change a ton, and there may be bugs right now.
+      </div>
    
       </div>
       
@@ -83,6 +93,12 @@
         
     
     }
+    #twitterpromo{
+      color:white; 
+      font-size: 1.8vh;
+      float:left;
+      padding: 7px;
+    }
 #loal{
     color:white;   
     font-size:3.5vh !Important;
@@ -91,6 +107,21 @@
     
  
 }
+#loal2{
+    color:white;   
+    font-size:3.5vh !Important;
+    position: absolute;
+    right: 1%;
+    background-color: transparent;
+    border-color: transparent;
+    
+ 
+}
+
+#topbarnav{
+  background-color: rgb(44, 44, 44);
+}
+
     bgimage{
         filter: blur(4px);
     }
@@ -163,6 +194,7 @@
 
 #subscriberslola{
     font-weight:bold !Important;
+    
 }
 
 #PostContents {
@@ -237,6 +269,10 @@ top: 14%;*/
 #lold{
   display: inline
 }
+#subs{
+  color: white;
+  display: inline;
+}
 </style>
 	</head>
 	<script type="text/javascript">
@@ -261,7 +297,8 @@ top: 14%;*/
                 <div id="odobox" style="background-color: rgb(24, 24, 24);">
                     <p style="font-size: 6vh; color:rgb(255, 255, 255)" id="PostContents">lol</p>
                 <p class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(255, 255, 255);">0</p>
-                <p id="subscriberslola" style="color: rgb(255, 255, 255);">Subscribers</p>
+                 <p id="subscriberslola" style="color: rgb(255, 255, 255);">Subscribers</p> 
+                 
             </div>
                 <div id="statspace" style="background-color: #141414;">
                     
@@ -288,7 +325,7 @@ top: 14%;*/
                         <div class="modal-body">
                   
                           <svg class="spinner" width="120px" height="120px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                            <circle class="path" fill="none" stroke-width="1" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
                          </svg>
                          <p id="lold" style="color: rgb(255, 255, 255); font-size: 2vh;">Waiting for user input</p>
                             <div id="Results">
@@ -325,6 +362,9 @@ font-size: 3vh;
 #resultCount{
 font-size: 3vh;
 
+}
+#choose{
+  background-color: rgb(17, 17, 17);
 }
 #resultImg{
 border-radius: 50%;
@@ -435,7 +475,7 @@ border-color: transparent;
 chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
-type: 'line',
+type: 'area',
 zoomType: 'x',
 backgroundColor: 'transparent',
 plotBorderColor: 'transparent'
@@ -485,7 +525,9 @@ showInLegend: false,
 name: '',
 marker: { enabled: false },
 color: line,
-lineColor: line
+lineColor: line,
+threshold: null,
+fillOpacity: 0.2
 }]
 });
 
@@ -530,6 +572,7 @@ lineColor: line
                  
                 }
                     $(document).ready(function() {
+                      
                       document.querySelector("#Results").style.display = "none"
                         var defaultCID = "UC-lHJZR3Gqxm24_Vd_AJ5Yw";			
 function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value});return vars}
@@ -544,6 +587,7 @@ function getUrlVars(){var vars={};var parts=window.location.href.replace(/[?&]+(
     
     
     function loadChannel(name) {
+      
         channelName = name;
         var url = 'https://asd123proxdn.ndx4256.repl.co/youtube/estimated/'+name+''
         var urlAPI = 'https://asd123proxdn.ndx4256.repl.co/youtube/'+name+''
@@ -635,11 +679,12 @@ $('#loal').click(function() {
     document.getElementById("lollllll").style.border = "#404040";
     document.getElementById("statspace").style.border = "#404040";
     var line = "#d9d9d9"
+       
 
-chart = new Highcharts.chart({
+    chart = new Highcharts.chart({
 chart: {
 renderTo: 'chart',
-type: 'line',
+type: 'area',
 zoomType: 'x',
 backgroundColor: 'transparent',
 plotBorderColor: 'transparent'
@@ -686,12 +731,15 @@ text: ""
 
 series: [{
 showInLegend: false,
-name: 'Members',
+name: '',
 marker: { enabled: false },
-color: '#d9d9d9',
-lineColor: '#d9d9d9'
+color: line,
+lineColor: line,
+threshold: null,
+fillOpacity: 0.2
 }]
 });
+
 }
 });
 
