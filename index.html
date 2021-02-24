@@ -9,7 +9,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
 </head>    
-
+<link rel="stylesheet" href="odometer-theme-home-minimal.css" />
+<script src="odometer.js"></script>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 <body style="background-color: #1a1a1a;"></body>
 <title>StatCounts v2.11</title>
 <style>
@@ -40,6 +42,12 @@
   background-color: rgb(20, 20, 20);
   
   
+}
+#ReqCount{
+    line-height:1em;
+}
+#CCount{
+    line-height:1em;
 }
 #boxcounts2{
  
@@ -346,25 +354,50 @@ body > div.alert.alert-dark{
                     <br></br>
                   </div>
                   <div id="announcementsbox">
-                    <h1 style="color: rgb(224, 224, 224);"id="lolfuck">Changes</h1>
-                    <b id="changelogheader" style="color:white; font-size: 5vh;">Welcome to v2.11!</b>
-                    <p id="publishedby" style="color: rgb(204, 204, 204); font-size: 1vh;">Published by StatCounts/xdn [OWNER] on 2021-01-19, 5:41PM MST</p>
-                    <a id="changelogbody1" style="color: white;">hello! there has recently been some obvious changes to my site in the past few hours,</a>
-                    <a id="changelogbody2" style="color: white;">This is because I'm trying to update the site to v2.1, and I have a new type of plan</a>
-                    <a id="changelogbody3" style="color: white;">on how I am going to do so!</a>
-                    <a id="changelogbody4" style="color: white;">Back in September 2020, I released StatCounts v2! And it worked for a whole 1 week.</a>
-                    <a id="changelogbody5" style="color: white;">Annnddd, then everything broke.. :(  -  V2.11 is going to fix that.</a>
-                    <a id="changelogbody6" style="color: white;">Things like the fact that some counters only update every 10 - 15 Minutes, (jeez..)</a>
-                    <a id="changelogbody7" style="color: white;">And how mobile support is currently non-existant lol.</a>
-                    <a id="changelogbody8" style="color: white;">You know how there was a greyed out "API" text on the top navbar ever since July?</a>
-                    <a id="changelogbody9" style="color: white;">Well, I'm finally making it! :D - statcounts.com/api is coming very soon, and it's</a>
-                    <a id="changelogbody10" style="color: white;">what all the counters are going to use!, It will even be for public use!*</a>
-                    <a id="changelogbody11" style="color: white;">*to keep it from dying, I'm going to limit the rate of which you can request</a>
-                    <a id="changelogbody12" style="color: white;">to about 75/minute. Although, if you contact me on Discord, I may up that!</a>
-                    <a id="changelogbody13" style="color: white;">(https://discord.gg/6tRsT3D4Jq), Thank you for reading! <3, -StatCounts</a>
+                    <h1 style="color: rgb(224, 224, 224);"id="lolfuck">Stats</h1>
+                    <b id="changelogheader" style="color:white; font-size: 5vh;">StatCounts API v1</b>
+                    <br>
+                    <div id="lolwhat" style="text-align: center;">
+                        <br>
+                   <p id=ReqCount style="color:white; font-size: min(max(50px, calc(3.125rem + ((1vw - 7.68px) * 6.0764))), 120px); font-weight: bold;" class=odometer>0</p>
+                   <p id=ReqCountText style="color:white; font-size: 5vh;">Total API Requests</p>
+                   <p id=CCount style="color:white; font-size: 5vh; font-weight: bold;" class=odometer>0</p>
+                   <p id=aah style="color:white; font-size: 2vh;">Concurrent Users Now</p>
+                   </div>   
                   </div>
                     	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172872844-1"></script>
+    <script type="text/javascript">
+     var prevCont = 123;
+ var current = 0;
+ var r8 = 0;
+    fetch('https://asd123proxdn.ndx4256.repl.co/site/analytics').then(res => res.json()).then(data => {
+            ReqCount.innerHTML = data
+    })
+
+    setInterval(() => {
+        fetch('https://asd123proxdn.ndx4256.repl.co/site/analytics').then(res => res.json()).then(data => {
+            ReqCount.innerHTML = data
+            current = data
+    })
+    setInterval(() => {
+            prevCont = current
+            }, 2000);
+    }, 2000);
+
+       
+    function estOnline(reqRate) {
+      r8 = Math.abs(parseFloat(prevCont) - parseFloat(current))
+     
+      CCount.innerHTML = (Math.round((parseFloat(r8) / 2)))
+      
+    }
+
+    setInterval(() => {
+       estOnline()
+    }, 2000);
+    </script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
